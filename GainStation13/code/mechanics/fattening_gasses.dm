@@ -12,13 +12,14 @@
 			// message_admins("Lipoifium pp is [gas_breathed]")
 			// message_admins("Lipoifium moles are [lipoifium_moles]")
 			H.adjust_fatness(2 * gas_breathed, FATTENING_TYPE_ATMOS)
+			// var/BFI_gained =
 			breath.adjust_moles(GAS_FAT, -gas_breathed)
 			// TODO: the entire code below is a workaround for default odor not working
 			// The problem seems to be auxmos'es get_gasses function not acknowledging that lipoifium exists
 			// which is strange, considering that everything else regarding this gas and auxmos works
 			// I do not know what kind of spaghetti coding must be going on there, but I pray god has in his
 			// care the poor sods who have to work on that
-			var/smell_chance = min(lipoifium_moles * 100 / total_moles, 20)
+			var/smell_chance = min(lipoifium_moles * 100 / total_moles, 7.5)
 			if(prob(smell_chance))
 				to_chat(owner, "<span class='notice'>You can smell lard.</span>")
 

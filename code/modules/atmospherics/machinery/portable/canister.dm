@@ -62,7 +62,8 @@
 		"methane" = /obj/machinery/portable_atmospherics/canister/methane,
 		"methyl bromide" = /obj/machinery/portable_atmospherics/canister/methyl_bromide,
 		// GS13 - edit
-		"lipoifium" = /obj/machinery/portable_atmospherics/canister/lipoifium // :D
+		"lipoifium" = /obj/machinery/portable_atmospherics/canister/lipoifium,
+		"galbanium" = /obj/machinery/portable_atmospherics/canister/galbanium
 		//GS13 - end edit
 	)
 
