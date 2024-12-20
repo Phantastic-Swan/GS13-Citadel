@@ -46,7 +46,6 @@
   cut_overlays()
   var/mutable_appearance/reagent_overlay = mutable_appearance(icon, "reagent")
   if(reagents.reagent_list.len)
-    var/datum/reagent/R = reagents.get_master_reagent()
     /*if(!renamedByPlayer)
       name = "bottle of " + R.name
       desc = R.glass_desc*/

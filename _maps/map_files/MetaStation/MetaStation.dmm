@@ -48118,12 +48118,13 @@
 /turf/open/floor/plating,
 /area/maintenance/starboard)
 "dMm" = (
-/obj/machinery/door/airlock/external{
-	name = "Supply Dock Airlock";
-	req_access_txt = "31"
-	},
 /obj/effect/mapping_helpers/airlock/cyclelink_helper{
 	dir = 8
+	},
+/obj/machinery/door/airlock/external{
+	name = "Supply Dock Airlock";
+	req_access_txt = "31";
+	dir = 4
 	},
 /turf/open/floor/plating,
 /area/cargo/storage)
@@ -52715,6 +52716,11 @@
 /obj/structure/cable/yellow{
 	icon_state = "1-2"
 	},
+/obj/machinery/door/airlock/security/glass{
+	id_tag = "innerbrig";
+	name = "Brig";
+	req_access_txt = "63"
+	},
 /turf/open/floor/plasteel,
 /area/security/office)
 "gzG" = (
@@ -55330,14 +55336,9 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
 /obj/structure/disposalpipe/segment,
 /obj/machinery/door/airlock/security/glass{
-	bound_width = 64;
-	doorOpen = 'sound/machines/bigairlockopen.ogg';
-	icon = 'icons/obj/doors/airlocks/station/securitydouble.dmi';
 	id_tag = "innerbrig";
-	name = "Security Office";
-	note_overlay_file = 'icons/obj/doors/airlocks/station/overlaysdouble.dmi';
-	overlays_file = 'icons/obj/doors/airlocks/station/overlaysdouble.dmi';
-	req_one_access_txt = "1;4"
+	name = "Brig";
+	req_access_txt = "63"
 	},
 /turf/open/floor/plasteel,
 /area/security/office)
@@ -58988,11 +58989,12 @@
 /turf/open/floor/plasteel/dark,
 /area/commons/cryopod)
 "kff" = (
-/obj/machinery/door/airlock/external{
-	name = "Mining Dock Airlock"
-	},
 /obj/effect/mapping_helpers/airlock/cyclelink_helper{
 	dir = 4
+	},
+/obj/machinery/door/airlock/external{
+	name = "Mining Dock Airlock";
+	dir = 8
 	},
 /turf/open/floor/plating,
 /area/cargo/miningoffice)
@@ -62043,11 +62045,12 @@
 /turf/open/floor/plating,
 /area/construction/storage_wing)
 "lQC" = (
+/obj/effect/mapping_helpers/airlock/cyclelink_helper{
+	dir = 8
+	},
 /obj/machinery/door/airlock/mining/glass{
 	name = "Mining Dock";
-	req_access_txt = "48"
-	},
-/obj/effect/mapping_helpers/airlock/cyclelink_helper{
+	req_access_txt = "48";
 	dir = 8
 	},
 /turf/open/floor/plasteel,
@@ -66379,11 +66382,12 @@
 /turf/open/floor/plating,
 /area/cargo/storage)
 "otk" = (
+/obj/effect/mapping_helpers/airlock/cyclelink_helper{
+	dir = 4
+	},
 /obj/machinery/door/airlock/external{
 	name = "Supply Dock Airlock";
-	req_access_txt = "31"
-	},
-/obj/effect/mapping_helpers/airlock/cyclelink_helper{
+	req_access_txt = "31";
 	dir = 4
 	},
 /turf/open/floor/plating,

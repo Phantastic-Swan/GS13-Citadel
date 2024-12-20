@@ -275,3 +275,11 @@ GLOBAL_LIST_INIT(uncapped_resize_areas, list(/area/command/bridge, /area/mainten
 	var/fat_to_add = ((amount * CONFIG_GET(number/damage_multiplier)) * FAT_DAMAGE_TO_FATNESS)
 	adjust_fatness(fat_to_add, FATTENING_TYPE_WEAPON)
 	return fat_to_add
+
+/mob/living/carbon/proc/applyPermaFatnessDamage(amount)
+	if(!client?.prefs?.weight_gain_permanent) // If we cant apply permafat, apply regular fat
+		return applyFatnessDamage(amount)
+
+	var/fat_to_add = ((amount * CONFIG_GET(number/damage_multiplier)) * PERMA_FAT_DAMAGE_TO_FATNESS)
+	adjust_perma(fat_to_add, FATTENING_TYPE_WEAPON)
+	return fat_to_add

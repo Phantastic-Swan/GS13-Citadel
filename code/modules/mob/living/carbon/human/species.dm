@@ -2325,6 +2325,8 @@ GLOBAL_LIST_EMPTY(roundstart_race_names)
 		// GS13 EDIT
 		if(FAT)
 			H.applyFatnessDamage(damage * hit_percent)
+		if(PERMA_FAT)
+			H.applyPermaFatnessDamage(damage * hit_percent)
 
 	return TRUE
 
