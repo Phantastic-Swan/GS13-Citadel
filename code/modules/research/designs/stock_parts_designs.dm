@@ -3,6 +3,7 @@
 ////////////////////////////////////////
 
 /datum/design/RPED
+        // ORIGINAL name = "Rapid Part Exchange Device"
 	name = "Rapid Part Exchange Device (RPED)"
 	desc = "Special mechanical module made to store, sort, and apply standard machine parts."
 	id = "rped"
@@ -13,6 +14,7 @@
 	departmental_flags = DEPARTMENTAL_FLAG_ENGINEERING | DEPARTMENTAL_FLAG_SCIENCE
 
 /datum/design/BS_RPED
+        // ORIGINAL name = "Bluespace RPED"
 	name = "Bluespace Rapid Part Exchange Device (RPED)"
 	desc = "Powered by bluespace technology, this RPED variant can upgrade buildings from a distance, without needing to remove the panel first."
 	id = "bs_rped"

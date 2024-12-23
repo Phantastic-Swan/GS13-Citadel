@@ -17,6 +17,7 @@
 	description = "Pushing the boundaries of physics, one chainsaw-fist at a time."
 	prereq_ids = list("engineering", "emp_basic")
 	design_ids = list("engine_goggles", "magboots", "forcefield_projector", "weldingmask" , "rcd_loaded", "rpd",
+        // ORIGINAL "rcd_upgrade_frames", "rcd_upgrade_simple_circuits", "rcd_ammo_large", "sheetifier")
 	"rcd_upgrade_frames", "rcd_upgrade_simple_circuits", "rcd_ammo_large", "sheetifier", "double_emergency_oxygen_engi")
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 4000)
 

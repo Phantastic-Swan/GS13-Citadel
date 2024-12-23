@@ -742,6 +742,7 @@
 	category = list("Equipment")
 	departmental_flags = DEPARTMENTAL_FLAG_ENGINEERING
 
+//GS13 EDIT START
 /datum/design/double_emergency_oxygen_engi
 	name = "Double Engineering Emergency Oxygen Tank"
 	desc = "An double emergency oxygen tank for engineers."
@@ -751,6 +752,7 @@
 	build_path = /obj/item/tank/internals/emergency_oxygen/double/empty
 	category = list("Equipment")
 	departmental_flags = DEPARTMENTAL_FLAG_ENGINEERING
+//GS13 EDIT END
 
 /////////////////////////////////////////
 /////////////////Tape////////////////////
