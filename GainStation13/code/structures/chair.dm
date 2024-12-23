@@ -72,6 +72,31 @@
 	desc = "A comfy beanbag chair. This one seems to a super duper cutesy GATO mascot."
 	icon_state = "beanbag_gato"
 
+/obj/structure/chair/beanbag/attackby(obj/item/W, mob/user, params)
+	// GS13 EDIT - replaced wrench check with a check based on material and tool - chairs made from any material other
+	// than cloth will function the same as before, but chairs made from cloth will be destructible using a wirecutter
+	// var/wrench_deconstruct = W.tool_behaviour == TOOL_WRENCH && buildstacktype != /obj/item/stack/sheet/cloth
+	// var/wirecutter_deconstruct = W.tool_behaviour == TOOL_WIRECUTTER && buildstacktype == /obj/item/stack/sheet/cloth
+	// if((wrench_deconstruct || wirecutter_deconstruct) && !(flags_1 & NODECONSTRUCT_1))
+	// GS13 END EDIT
+	if(W.tool_behaviour == TOOL_WIRECUTTER && !(flags_1 & NODECONSTRUCT_1))
+		W.play_tool_sound(src)
+		deconstruct()
+	else if(istype(W, /obj/item/assembly/shock_kit))
+		if(!user.temporarilyRemoveItemFromInventory(W))
+			return
+		var/obj/item/assembly/shock_kit/SK = W
+		var/obj/structure/chair/e_chair/E = new /obj/structure/chair/e_chair(src.loc)
+		playsound(src.loc, 'sound/items/deconstruct.ogg', 50, 1)
+		E.setDir(dir)
+		E.part = SK
+		SK.forceMove(E)
+		SK.master = E
+		qdel(src)
+	else
+		var/obj/item/alternate_tool = W
+		alternate_tool.tool_behaviour = TOOL_WIRECUTTER
+		return ..(alternate_tool, user, params)
 
 //beanbag chair colors
 /obj/structure/chair/beanbag/red
