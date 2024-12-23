@@ -73,12 +73,6 @@
 	icon_state = "beanbag_gato"
 
 /obj/structure/chair/beanbag/attackby(obj/item/W, mob/user, params)
-	// GS13 EDIT - replaced wrench check with a check based on material and tool - chairs made from any material other
-	// than cloth will function the same as before, but chairs made from cloth will be destructible using a wirecutter
-	// var/wrench_deconstruct = W.tool_behaviour == TOOL_WRENCH && buildstacktype != /obj/item/stack/sheet/cloth
-	// var/wirecutter_deconstruct = W.tool_behaviour == TOOL_WIRECUTTER && buildstacktype == /obj/item/stack/sheet/cloth
-	// if((wrench_deconstruct || wirecutter_deconstruct) && !(flags_1 & NODECONSTRUCT_1))
-	// GS13 END EDIT
 	if(W.tool_behaviour == TOOL_WIRECUTTER && !(flags_1 & NODECONSTRUCT_1))
 		W.play_tool_sound(src)
 		deconstruct()
@@ -94,9 +88,14 @@
 		SK.master = E
 		qdel(src)
 	else
-		var/obj/item/alternate_tool = W
-		alternate_tool.tool_behaviour = TOOL_WIRECUTTER
-		return ..(alternate_tool, user, params)
+		// this is fucking horrible but BYOND forces my hand
+		// because BYOND seems to have NO CONCEPT of skipping the parent object and calling the parent of a parent
+		// and it seems we have no other way to just call the attackby function of /obj
+		// we have to copy and paste it 1:1
+		if(. & STOP_ATTACK_PROC_CHAIN)
+			return
+		if(obj_flags & CAN_BE_HIT)
+			. |= W.attack_obj(src, user)
 
 //beanbag chair colors
 /obj/structure/chair/beanbag/red
