@@ -31,3 +31,21 @@
 	air.set_temperature(max((temperature * old_heat_capacity + energy_released) / new_heat_capacity, TCMB))
 
 	return REACTING
+
+/datum/gas_reaction/galbanium_formation
+	priority = 8
+	name = "Galbanium Formation"
+	id = "galbanium_formation"
+
+/datum/gas_reaction/galbanium_formation/init_reqs()
+	min_requirements = list(
+		"TEMP" = 5000,
+		GAS_FAT = 10,
+		GAS_N2 = 10,
+		GAS_CO2 = 10
+	)
+
+/datum/gas_reaction/galbanium_formation/react(datum/gas_mixture/air)
+	if (air.get_moles(GAS_FAT) < 10 || air.get_moles(GAS_NITRYL) < 10 || air.get_moles(GAS_CO2) < 10 || air.return_temperature() < 5000)
+		return NO_REACTION
+

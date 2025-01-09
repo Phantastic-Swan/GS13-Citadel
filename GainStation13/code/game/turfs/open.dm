@@ -59,3 +59,11 @@
 	name = "gato-themed carpet"
 	icon_state = "tile-carpet-gato"
 	turf_type = /turf/open/floor/carpet/gato
+
+/turf/open/rad_act(pulse_strength)
+	if (air.get_moles(GAS_FAT) && air.get_moles(GAS_PLASMA))
+		pulse_strength = min(pulse_strength,air.get_moles(GAS_FAT)*1000,air.get_moles(GAS_PLASMA)*2000) //Ensures matter is conserved properly
+		air.set_moles(GAS_FAT, max(air.get_moles(GAS_FAT)-(pulse_strength/1000),0))
+		air.set_moles(GAS_PLASMA, max(air.get_moles(GAS_PLASMA)-(pulse_strength/2000),0))
+		air.adjust_moles(GAS_GALB, pulse_strength/10000)
+	..()

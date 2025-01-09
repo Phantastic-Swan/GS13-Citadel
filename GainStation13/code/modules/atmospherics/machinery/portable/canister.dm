@@ -9,5 +9,5 @@
 	name = "galbanium canister"
 	desc = "Galbanium. Enriched Lipoifium, causes buildup of adipose that cannot be removed by normal means."
 	icon = 'GainStation13/icons/obj/atmos.dmi'
-	icon_state = "galganium"
+	icon_state = "galbanium"
 	gas_type = GAS_GALB

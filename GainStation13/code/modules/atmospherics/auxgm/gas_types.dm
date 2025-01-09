@@ -13,5 +13,21 @@
 	specific_heat = 35
 	name = "Galbanium"
 	moles_visible = MOLES_GAS_VISIBLE
-	color = "#F00" // TODO: get galbanic color
+	color = "#E70C0C"
 	price = 5.5
+
+/datum/gas/lipocidium
+	id = GAS_SLIM
+	specific_heat = 15
+	name = "Lipocidium"
+	moles_visible = MOLES_GAS_VISIBLE
+	color = "#F0FFF0"
+	price = 3
+
+/datum/gas/macerinium
+	id = GAS_MACER
+	specific_heat = 35
+	name = "Macerinium"
+	moles_visible = MOLES_GAS_VISIBLE
+	color = "#3b0ce7"
+	price = 6
