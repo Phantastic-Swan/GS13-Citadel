@@ -56,7 +56,18 @@ GLOBAL_LIST_INIT(metal_recipes, list ( \
 		)), \
 	null, \
 	new/datum/stack_recipe("rack parts", /obj/item/rack_parts), \
-	new/datum/stack_recipe("closet", /obj/structure/closet, 2, time = 15, one_per_turf = TRUE, on_floor = TRUE), \
+	new/datum/stack_recipe_list("closets", list( \
+		new/datum/stack_recipe("closet", /obj/structure/closet, 2, time = 15, one_per_turf = TRUE, on_floor = TRUE), \
+		new/datum/stack_recipe("emergency closet", /obj/structure/closet/emcloset, 2, time = 15, one_per_turf = TRUE, on_floor = TRUE), \
+		new/datum/stack_recipe("fire closet", /obj/structure/closet/firecloset, 2, time = 15, one_per_turf = TRUE, on_floor = TRUE), \
+		new/datum/stack_recipe("tool closet", /obj/structure/closet/toolcloset, 2, time = 15, one_per_turf = TRUE, on_floor = TRUE), \
+		new/datum/stack_recipe("radiation suit closet", /obj/structure/closet/radiation, 2, time = 15, one_per_turf = TRUE, on_floor = TRUE), \
+		new/datum/stack_recipe("biohazard gear closet", /obj/structure/closet/l3closet, 2, time = 15, one_per_turf = TRUE, on_floor = TRUE), \
+		new/datum/stack_recipe("virology biohazard gear closet", /obj/structure/closet/l3closet/virology, 2, time = 15, one_per_turf = TRUE, on_floor = TRUE), \
+		new/datum/stack_recipe("security biohazard gear closet", /obj/structure/closet/l3closet/security, 2, time = 15, one_per_turf = TRUE, on_floor = TRUE), \
+		new/datum/stack_recipe("janitor's biohazard gear closet", /obj/structure/closet/l3closet/janitor, 2, time = 15, one_per_turf = TRUE, on_floor = TRUE), \
+
+		)), \
 	null, \
 	new/datum/stack_recipe("canister", /obj/machinery/portable_atmospherics/canister, 10, time = 15, one_per_turf = TRUE, on_floor = TRUE), \
 	new/datum/stack_recipe("trash bin", /obj/structure/closet/crate/bin, 10, time = 15, one_per_turf = TRUE, on_floor = TRUE),\
