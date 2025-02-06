@@ -39,10 +39,11 @@
 #define DAMAGE_INCREASE_MULTIPLIER 0.25
 
 
-#define THERMAL_RELEASE_MODIFIER 350         //Higher == more heat released during reaction, not to be confused with the above values
+#define THERMAL_RELEASE_MODIFIER 50         //Higher == more heat released during reaction, not to be confused with the above values
 #define THERMAL_RELEASE_CAP_MODIFIER 250     //Higher == lower cap on how much heat can be released per tick--currently 1.3x old value
 #define PLASMA_RELEASE_MODIFIER 750        //Higher == less plasma released by reaction
-#define OXYGEN_RELEASE_MODIFIER 550        //Higher == less oxygen released at high temperature/power
+// #define OXYGEN_RELEASE_MODIFIER 550        //Higher == less oxygen released at high temperature/power
+#define OXYGEN_RELEASE_MODIFIER 325        //Higher == less oxygen released at high temperature/power
 
 #define REACTION_POWER_MODIFIER 0.55       //Higher == more overall power
 
@@ -455,7 +456,7 @@ GLOBAL_DATUM(main_supermatter_engine, /obj/machinery/power/supermatter_crystal)
 	and CO2 tesla delaminations basically require multiple grounding rods to stabilize it long enough to not have it vent.
 	*********/
 
-	if(!removed || !removed.total_moles() || isspaceturf(T)) //we're in space or there is no gas to process
+	if(!removed || !removed.total_moles() || (isspaceturf(T) && !isshuttleturf(T))) //we're in space or there is no gas to process
 		if(takes_damage)
 			damage += max((power / 1000) * DAMAGE_INCREASE_MULTIPLIER, 0.1) // always does at least some damage
 		combined_gas = max(0, combined_gas - 0.5)		// Slowly wear off.
@@ -597,16 +598,54 @@ GLOBAL_DATUM(main_supermatter_engine, /obj/machinery/power/supermatter_crystal)
 	//Power * 0.55 * a value between 1 and 0.8
 	var/device_energy = power * REACTION_POWER_MODIFIER
 
-	var/max_temp_increase = effective_temperature + ((device_energy * dynamic_heat_modifier) / THERMAL_RELEASE_CAP_MODIFIER)
+	//var/max_temp_increase = effective_temperature + ((device_energy * dynamic_heat_modifier) / THERMAL_RELEASE_CAP_MODIFIER)
 	//Calculate how much gas to release
 	//Varies based on power and gas content
-	removed.adjust_moles(GAS_PLASMA, clamp((device_energy * dynamic_heat_modifier) / PLASMA_RELEASE_MODIFIER, 0, 50))
+	// removed.adjust_moles(GAS_PLASMA, clamp((device_energy * dynamic_heat_modifier) / PLASMA_RELEASE_MODIFIER, 0, 50))
+	removed.adjust_moles(GAS_PLASMA, max((device_energy * dynamic_heat_modifier) / PLASMA_RELEASE_MODIFIER, 0))
 	//Varies based on power, gas content, and heat
-	removed.adjust_moles(GAS_O2, clamp((device_energy * dynamic_heat_modifier + effective_temperature - T20C) / OXYGEN_RELEASE_MODIFIER, 0, 100))
+	// removed.adjust_moles(GAS_O2, clamp((device_energy * dynamic_heat_modifier + effective_temperature - T20C) / OXYGEN_RELEASE_MODIFIER, 0, 100))
+	removed.adjust_moles(GAS_O2, max((device_energy * dynamic_heat_modifier + effective_temperature - T20C) / OXYGEN_RELEASE_MODIFIER, 0))
 
-	if(removed.return_temperature() < max_temp_increase)
-		removed.adjust_heat(device_energy * dynamic_heat_modifier * THERMAL_RELEASE_MODIFIER)
-	removed.set_temperature(min(removed.return_temperature(), max_temp_increase))
+	// citadel hugbox rock
+	// if(removed.return_temperature() < max_temp_increase)
+	// 	removed.adjust_heat(device_energy * dynamic_heat_modifier * THERMAL_RELEASE_MODIFIER)
+	// removed.set_temperature(min(removed.return_temperature(), max_temp_increase))
+
+	// hyper schizorock
+	// removed.temperature = max(0, min(removed.temperature, 2500 * dynamic_heat_modifier))
+	// removed.set_temperature(removed.return_temperature() + (device_energy * dynamic_heat_modifier / THERMAL_RELEASE_MODIFIER))
+
+	var/heat_released = device_energy * dynamic_heat_modifier
+	if (power > 4500)
+		heat_released = heat_released * sqrt(removed.total_moles()) * THERMAL_RELEASE_MODIFIER**2 // OH LAWD HE COMIN
+	if (power <= 4500 && power > 2000)
+		heat_released = heat_released * sqrt(removed.total_moles()) * THERMAL_RELEASE_MODIFIER // big boy
+	if (power <= 2000 && power > 1000)
+		heat_released = heat_released * THERMAL_RELEASE_MODIFIER // normal mode
+	if (power <= 1000)
+		heat_released = heat_released // easy mode, since the crystal is effectively off
+	removed.adjust_heat(heat_released)
+	removed.set_temperature(max(0, min(removed.return_temperature(), 2500 * dynamic_heat_modifier)))
+
+
+	// var/heat_debug = device_energy * dynamic_heat_modifier * THERMAL_RELEASE_MODIFIER
+	// var/removed_energy = removed.thermal_energy()
+	// var/removed_temp = removed.return_temperature()
+
+	// removed.adjust_heat(heat_debug)
+
+	// removed_energy = removed.thermal_energy()
+	// removed_temp = removed.return_temperature()
+
+
+
+	// var/dynamic_modifier = min(removed.return_temperature(), 2500 * dynamic_heat_modifier)
+	// removed.set_temperature(dynamic_modifier)
+
+	// removed_energy = removed.thermal_energy()
+	// removed_temp = removed.return_temperature()
+	// dynamic_modifier = min(removed.return_temperature(), 2500 * dynamic_heat_modifier)
 
 
 	if(produces_gas)
