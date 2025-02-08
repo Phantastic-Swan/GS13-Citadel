@@ -53,6 +53,7 @@ export const CSS_COLORS = [
   'pink',
   'brown',
   'grey',
+  'lipo',
   'good',
   'average',
   'bad',
@@ -246,6 +247,12 @@ const GASES = [
     'name': 'Quark Matter',
     'label': 'QGP',
     'color': 'pink',
+  },
+  {
+    'id': 'lipoifium',
+    'name': 'Lipoifium',
+    'label': 'Lipoifium',
+    'color': 'lipo',
   },
 ];
 

@@ -519,11 +519,14 @@ GLOBAL_DATUM(main_supermatter_engine, /obj/machinery/power/supermatter_crystal)
 	var/list/inhibition = gas_info[POWERLOSS_INHIBITION]
 
 	//We're concerned about pluoxium being too easy to abuse at low percents, so we make sure there's a substantial amount.
-	var/pluoxiumbonus = (gas_comp[GAS_PLUOXIUM] >= 0.15) //makes pluoxium only work at 15%+
+	// var/pluoxiumbonus = (gas_comp[GAS_PLUOXIUM] >= 0.15) //makes pluoxium only work at 15%+
 	var/h2obonus = 1 - (gas_comp[GAS_H2O] * 0.25)//At min this value should be 0.75
-//		var/freonbonus = (gas_comp[/datum/gas/freon] <= 0.03) //Let's just yeet power output if this shit is high
+	//		var/freonbonus = (gas_comp[/datum/gas/freon] <= 0.03) //Let's just yeet power output if this shit is high
 
-	threshold_mod[GAS_PLUOXIUM] = pluoxiumbonus
+	// threshold_mod[GAS_PLUOXIUM] = pluoxiumbonus
+
+	if(gas_comp[GAS_PLUOXIUM] < 0.15)
+		threshold_mod[GAS_PLUOXIUM] = 0
 
 	//No less then zero, and no greater then one, we use this to do explosions and heat to power transfer
 	//Be very careful with modifing this var by large amounts, and for the love of god do not push it past 1
@@ -555,14 +558,14 @@ GLOBAL_DATUM(main_supermatter_engine, /obj/machinery/power/supermatter_crystal)
 	//Ramps up or down in increments of 0.02 up to the proportion of co2
 	//Given infinite time, powerloss_dynamic_scaling = co2comp
 	//Some value between 0 and 1
-	if (combined_gas > POWERLOSS_INHIBITION_MOLE_THRESHOLD && powerloss_inhibition_gas > POWERLOSS_INHIBITION_GAS_THRESHOLD) //If there are more then 20 mols, and more then 20% co2
-		powerloss_dynamic_scaling = clamp(powerloss_dynamic_scaling + clamp(powerloss_inhibition_gas - powerloss_dynamic_scaling, -0.02, 0.02), 0, 1)
+	if (combined_gas > POWERLOSS_INHIBITION_MOLE_THRESHOLD && abs(powerloss_inhibition_gas) > POWERLOSS_INHIBITION_GAS_THRESHOLD) //If there are more then 20 mols, and more then 20% co2
+		powerloss_dynamic_scaling = clamp(powerloss_dynamic_scaling + clamp(powerloss_inhibition_gas - powerloss_dynamic_scaling, -0.02, 0.02), -1, 1)
 	else
 		powerloss_dynamic_scaling = clamp(powerloss_dynamic_scaling - 0.05, 0, 1)
 	//Ranges from 0 to 1 (1-(value between 0 and 1 * ranges from 1 to 1.5(mol / 500)))
 	//0 means full inhibition, 1 means no inhibition
 	//We take the mol count, and scale it to be our inhibitor
-	powerloss_inhibitor = clamp(1-(powerloss_dynamic_scaling * clamp(combined_gas/POWERLOSS_INHIBITION_MOLE_BOOST_THRESHOLD, 1, 1.5)), 0, 1)
+	powerloss_inhibitor = clamp(1-(powerloss_dynamic_scaling * clamp(combined_gas/POWERLOSS_INHIBITION_MOLE_BOOST_THRESHOLD, 1, 1.5)), 0, 2)
 
 	//Releases stored power into the general pool
 	//We get this by consuming shit or being scalpeled
@@ -618,7 +621,7 @@ GLOBAL_DATUM(main_supermatter_engine, /obj/machinery/power/supermatter_crystal)
 
 	var/heat_released = device_energy * dynamic_heat_modifier
 	if (power > 4500)
-		heat_released = heat_released * sqrt(removed.total_moles()) * THERMAL_RELEASE_MODIFIER**2 // OH LAWD HE COMIN
+		heat_released = heat_released * sqrt(removed.total_moles()) * THERMAL_RELEASE_MODIFIER//**2 // OH LAWD HE COMIN
 	if (power <= 4500 && power > 2000)
 		heat_released = heat_released * sqrt(removed.total_moles()) * THERMAL_RELEASE_MODIFIER // big boy
 	if (power <= 2000 && power > 1000)
