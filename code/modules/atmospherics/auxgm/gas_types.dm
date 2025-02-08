@@ -98,7 +98,7 @@
 
 /datum/gas/pluoxium
 	id = GAS_PLUOXIUM
-	specific_heat = 80
+	specific_heat = 150
 	name = "Pluoxium"
 	fusion_power = 10
 	oxidation_temperature = FIRE_MINIMUM_TEMPERATURE_TO_EXIST * 25 // it is VERY stable
@@ -107,6 +107,7 @@
 	powermix = -1
 	heat_penalty = -1
 	transmit_modifier = -5
+	powerloss_inhibition = -0.8
 	heat_resistance = 3
 	price = 6
 
@@ -159,6 +160,9 @@
 /datum/gas/hypernoblium
 	id = GAS_HYPERNOB
 	specific_heat = 2000
+	transmit_modifier = 3
+	powermix = 1
+	heat_penalty = -15
 	name = "Hyper-noblium"
 	gas_overlay = "freon"
 	moles_visible = MOLES_GAS_VISIBLE
