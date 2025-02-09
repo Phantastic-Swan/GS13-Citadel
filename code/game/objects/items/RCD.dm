@@ -495,13 +495,14 @@ RLD
 	var/list/choices = list(
 		"Airlock" = image(icon = 'icons/mob/radial.dmi', icon_state = "airlock"),
 		"Grilles & Windows" = image(icon = 'icons/mob/radial.dmi', icon_state = "grillewindow"),
-		"Floors & Walls" = image(icon = 'icons/mob/radial.dmi', icon_state = "wallfloor")
+		"Floors & Walls" = image(icon = 'icons/mob/radial.dmi', icon_state = "wallfloor"),
+		"Girder" = image(icon = 'GainStation13/icons/mob/radial.dmi', icon_state = "girder") //GS13 - adding girder mode
 	)
 	if(upgrade & RCD_UPGRADE_FRAMES)
 		choices += list(
 		"Deconstruct" = image(icon= 'icons/mob/radial.dmi', icon_state = "delete"),
 		"Machine Frames" = image(icon = 'icons/mob/radial.dmi', icon_state = "machine"),
-		"Computer Frames" = image(icon = 'icons/mob/radial.dmi', icon_state = "computer_dir"),
+		"Computer Frames" = image(icon = 'icons/mob/radial.dmi', icon_state = "computer_dir")
 		)
 	if(mode == RCD_AIRLOCK)
 		choices += list(
@@ -525,6 +526,8 @@ RLD
 			mode = RCD_DECONSTRUCT
 		if("Grilles & Windows")
 			mode = RCD_WINDOWGRILLE
+		if("Girder")
+			mode = RCD_GIRDER //GS13 - adding girder mode
 		if("Machine Frames")
 			mode = RCD_MACHINE
 		if("Computer Frames")

@@ -468,6 +468,7 @@
 /obj/structure/table/wood,
 /obj/item/radio/intercom,
 /obj/effect/decal/cleanable/dirt,
+/obj/item/book/manual/gato_spacelaw,
 /turf/open/floor/plasteel,
 /area/security/courtroom)
 "aaW" = (
@@ -5246,7 +5247,6 @@
 /area/service/chapel/office)
 "ajf" = (
 /obj/structure/table/reinforced,
-/obj/item/book/manual/wiki/security_space_law,
 /obj/item/taperecorder,
 /obj/effect/turf_decal/tile/red{
 	dir = 1
@@ -7256,6 +7256,9 @@
 	},
 /obj/structure/reagent_dispensers/peppertank{
 	pixel_x = 30
+	},
+/obj/item/book/manual/gato_spacelaw{
+	pixel_x = 12
 	},
 /turf/open/floor/plasteel/dark,
 /area/command/heads_quarters/hos)
@@ -9568,6 +9571,7 @@
 	name = "Station Intercom (Command)";
 	pixel_x = 1
 	},
+/obj/item/book/manual/gato_spacelaw,
 /turf/open/floor/plasteel/dark,
 /area/command/bridge)
 "aqE" = (
@@ -12263,7 +12267,7 @@
 /area/medical/genetics)
 "avj" = (
 /obj/structure/table/wood,
-/obj/item/storage/fancy/donut_box,
+/obj/item/book/manual/gato_spacelaw,
 /turf/open/floor/carpet,
 /area/command/heads_quarters/captain)
 "avk" = (
@@ -12413,11 +12417,11 @@
 	dir = 1
 	},
 /obj/item/storage/briefcase,
-/obj/item/book/manual/wiki/security_space_law,
 /obj/machinery/airalarm{
 	dir = 8;
 	pixel_x = 24
 	},
+/obj/item/book/manual/gato_spacelaw,
 /turf/open/floor/plasteel/dark,
 /area/security/courtroom)
 "avw" = (
@@ -22257,7 +22261,7 @@
 	pixel_y = -30
 	},
 /obj/item/crowbar,
-/obj/item/book/manual/wiki/security_space_law,
+/obj/item/book/manual/gato_spacelaw,
 /turf/open/floor/plasteel/dark,
 /area/security/checkpoint/engineering)
 "aMi" = (
@@ -41425,7 +41429,8 @@
 	},
 /obj/machinery/door/airlock/maintenance/external{
 	name = "mass driver intersection";
-	req_access_txt = "12"
+	req_access_txt = "12";
+	dir = 8
 	},
 /turf/open/floor/plating,
 /area/maintenance/port/fore)
@@ -58431,10 +58436,7 @@
 	dir = 1
 	},
 /obj/structure/table,
-/obj/item/toy/figure/assistant{
-	pixel_x = 8;
-	pixel_y = 6
-	},
+/obj/item/book/lorebooks/welcome_to_gato,
 /turf/open/floor/plasteel,
 /area/hallway/secondary/entry)
 "bTD" = (
@@ -58610,6 +58612,10 @@
 	pixel_y = 4
 	},
 /obj/item/pen,
+/obj/item/toy/figure/assistant{
+	pixel_x = 8;
+	pixel_y = 6
+	},
 /turf/open/floor/plasteel,
 /area/hallway/secondary/entry)
 "bTO" = (
@@ -74507,6 +74513,9 @@
 	dir = 8;
 	pixel_x = 32
 	},
+/obj/machinery/computer/gateway_control{
+	dir = 8
+	},
 /turf/open/floor/plasteel/dark,
 /area/command/gateway)
 "cvR" = (
@@ -76506,7 +76515,8 @@
 	},
 /obj/machinery/door/airlock/maintenance/external{
 	name = "mass driver intersection";
-	req_access_txt = "12"
+	req_access_txt = "12";
+	dir = 8
 	},
 /turf/open/floor/plating,
 /area/maintenance/fore)
@@ -77742,11 +77752,11 @@
 /turf/open/floor/plating,
 /area/maintenance/aft)
 "cEp" = (
+/obj/effect/decal/cleanable/dirt,
 /obj/machinery/door/airlock/maintenance{
 	req_access_txt = "12";
-	welded = 1
+	dir = 4
 	},
-/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel/dark,
 /area/maintenance/starboard/fore)
 "cEr" = (
@@ -81131,6 +81141,17 @@
 "cZm" = (
 /turf/closed/wall/rust,
 /area/security/prison)
+"day" = (
+/obj/effect/turf_decal/tile/blue{
+	dir = 4
+	},
+/obj/effect/turf_decal/tile/red,
+/obj/structure/chair{
+	dir = 8
+	},
+/obj/item/book/lorebooks/welcome_to_gato,
+/turf/open/floor/plasteel,
+/area/hallway/secondary/exit/departure_lounge)
 "dbY" = (
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer1{
 	dir = 1
@@ -81596,6 +81617,12 @@
 	},
 /turf/open/floor/plasteel/dark,
 /area/service/theater)
+"fVp" = (
+/obj/effect/turf_decal/vg_decals/atmos/nitrogen,
+/turf/open/floor/engine/n2{
+	initial_gas_mix = "n2=1000;TEMP=293.15"
+	},
+/area/engineering/atmos)
 "fXq" = (
 /obj/effect/turf_decal/tile/neutral{
 	dir = 8
@@ -81988,9 +82015,6 @@
 "hNk" = (
 /turf/closed/wall/r_wall/rust,
 /area/security/prison)
-"hOQ" = (
-/turf/open/floor/catwalk_floor,
-/area/space/station_ruins)
 "hPN" = (
 /obj/structure/cable{
 	icon_state = "0-2"
@@ -82620,6 +82644,12 @@
 /obj/machinery/holopad,
 /turf/open/floor/plasteel,
 /area/cargo/storage)
+"kBh" = (
+/obj/effect/turf_decal/vg_decals/atmos/nitrous_oxide,
+/turf/open/floor/engine/n2o{
+	initial_gas_mix = "n2o=1000;TEMP=293.15"
+	},
+/area/engineering/atmos)
 "kFQ" = (
 /turf/open/space/basic,
 /area/solars/starboard/aft)
@@ -83176,6 +83206,12 @@
 	},
 /turf/open/floor/plasteel/dark,
 /area/hallway/secondary/exit/departure_lounge)
+"ohq" = (
+/obj/effect/turf_decal/vg_decals/atmos/carbon_dioxide,
+/turf/open/floor/engine/co2{
+	initial_gas_mix = "co2=1000;TEMP=293.15"
+	},
+/area/engineering/atmos)
 "ohv" = (
 /obj/effect/decal/cleanable/blood/old,
 /obj/effect/decal/cleanable/dirt,
@@ -83987,6 +84023,12 @@
 	},
 /turf/open/floor/plating/asteroid/airless,
 /area/space/nearstation)
+"sqP" = (
+/obj/effect/turf_decal/vg_decals/atmos/oxygen,
+/turf/open/floor/engine/o2{
+	initial_gas_mix = "o2=1000;TEMP=293.15"
+	},
+/area/engineering/atmos)
 "ssF" = (
 /turf/closed/wall/r_wall,
 /area/engineering/atmos)
@@ -84035,6 +84077,10 @@
 "sAn" = (
 /obj/effect/spawner/structure/window/plasma/reinforced,
 /turf/open/floor/plating,
+/area/engineering/atmos)
+"sCq" = (
+/obj/effect/turf_decal/vg_decals/atmos/air,
+/turf/open/floor/engine/air,
 /area/engineering/atmos)
 "sDr" = (
 /obj/machinery/cryopod/tele,
@@ -84287,6 +84333,12 @@
 	icon_state = "panelscorched"
 	},
 /area/maintenance/port/aft)
+"tUa" = (
+/obj/effect/turf_decal/vg_decals/atmos/plasma,
+/turf/open/floor/engine/plasma{
+	initial_gas_mix = "plasma=1000;TEMP=293.15"
+	},
+/area/engineering/atmos)
 "tVh" = (
 /obj/structure/sign/warning/nosmoking,
 /turf/closed/wall,
@@ -87961,7 +88013,7 @@ uoV
 uoV
 uoV
 uoV
-hOQ
+uoV
 uoV
 uoV
 uoV
@@ -111050,15 +111102,15 @@ bFa
 cBb
 bFa
 aFM
-aDz
+fVp
 aDA
 aML
 aFM
-aDC
+sqP
 aDD
 aMO
 aFM
-aMY
+sCq
 bUQ
 aMY
 bFP
@@ -113895,7 +113947,7 @@ acm
 sAn
 aHe
 aFm
-aFc
+ohq
 caK
 acK
 acm
@@ -114923,7 +114975,7 @@ acm
 sAn
 aHh
 aFn
-aFd
+tUa
 ccT
 acK
 aaa
@@ -115951,7 +116003,7 @@ acm
 sAn
 aHk
 aFo
-aFe
+kBh
 ctr
 acK
 acm
@@ -127744,7 +127796,7 @@ bPf
 bQZ
 bQZ
 wHR
-bQZ
+day
 bWA
 bXB
 bPe

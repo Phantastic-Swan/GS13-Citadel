@@ -8910,8 +8910,8 @@
 /obj/machinery/light/small{
 	dir = 8
 	},
-/obj/item/book/manual/wiki/security_space_law,
 /obj/item/camera/detective,
+/obj/item/book/manual/gato_spacelaw,
 /turf/open/floor/plasteel/grimy,
 /area/security/detectives_office)
 "aDJ" = (
@@ -23848,10 +23848,6 @@
 /obj/item/pen,
 /obj/structure/table/reinforced,
 /obj/item/folder/red,
-/obj/item/book/manual/wiki/security_space_law{
-	pixel_x = 3;
-	pixel_y = 4
-	},
 /obj/machinery/newscaster/security_unit{
 	pixel_y = 32
 	},
@@ -55192,6 +55188,7 @@
 /obj/effect/turf_decal/tile/green{
 	dir = 8
 	},
+/obj/item/book/manual/gato_spacelaw,
 /turf/open/floor/plasteel/dark,
 /area/command/bridge)
 "hma" = (
@@ -62891,6 +62888,7 @@
 	name = "Interrogation Intercom";
 	pixel_y = -31
 	},
+/obj/item/book/manual/gato_spacelaw,
 /turf/open/floor/plasteel/grimy,
 /area/security/office)
 "llE" = (
@@ -64629,6 +64627,7 @@
 /obj/effect/turf_decal/tile/red{
 	dir = 8
 	},
+/obj/item/book/manual/gato_spacelaw,
 /turf/open/floor/plasteel,
 /area/security/checkpoint/medical)
 "mgJ" = (

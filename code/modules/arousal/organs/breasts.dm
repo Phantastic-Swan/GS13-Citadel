@@ -98,10 +98,16 @@
 			size = breast_values[rounded_cached]
 		if(9 to 15) //massive
 			size = breast_values[rounded_cached]
-		if(16 to INFINITY) //rediculous
+		if(16) //rediculous
 			size = "huge"
+		if(17 to 24)
+			size = "massive"
+		if(25 to 29)
+			size = "giga"
+		if(30 to INFINITY)
+			size = "impossible"
 
-	if(rounded_cached < 16 && owner)//Because byond doesn't count from 0, I have to do this.
+	if(rounded_cached < 30 && owner)//Because byond doesn't count from 0, I have to do this.
 		var/mob/living/carbon/human/H = owner
 		var/r_prev_size = round(prev_size)
 		if (rounded_cached > r_prev_size)

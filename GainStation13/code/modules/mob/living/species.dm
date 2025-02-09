@@ -260,12 +260,15 @@
 			LAZYREMOVE(fatness_delay_modifiers, modifier)
 
 /datum/species/proc/apply_fatness_speed_modifiers(mob/living/carbon/human/H, fatness_delay)
+	var/delay_cap = FATNESS_MAX_MOVE_PENALTY
+	if(HAS_TRAIT(H, TRAIT_WEAKLEGS))
+		delay_cap = 60
 	for(var/datum/fatness_delay_modifier/modifier in H.fatness_delay_modifiers)
 		fatness_delay = fatness_delay + modifier.amount
 	for(var/datum/fatness_delay_modifier/modifier in H.fatness_delay_modifiers)
 		fatness_delay *= modifier.multiplier
 	fatness_delay = max(fatness_delay, 0)
-	fatness_delay = min(fatness_delay, FATNESS_MAX_MOVE_PENALTY)
+	fatness_delay = min(fatness_delay, delay_cap)
 	return fatness_delay
 
 /datum/species/proc/handle_fatness(mob/living/carbon/human/H)

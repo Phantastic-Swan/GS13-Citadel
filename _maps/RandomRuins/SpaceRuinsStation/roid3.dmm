@@ -1,7 +1,7 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
 "a" = (
-/obj/structure/bed,
-/obj/item/bedsheet,
+/obj/structure/bed/double,
+/obj/item/bedsheet/double_red,
 /turf/open/floor/wood,
 /area/ruin/space/has_grav/powered)
 "c" = (
@@ -27,8 +27,15 @@
 /area/ruin/space)
 "i" = (
 /obj/structure/fireplace{
-	dir = 8
+	dir = 8;
+	pixel_x = -22
 	},
+/obj/item/stack/sheet/mineral/wood,
+/obj/item/stack/sheet/mineral/wood,
+/obj/item/stack/sheet/mineral/wood,
+/obj/item/stack/sheet/mineral/wood,
+/obj/item/stack/sheet/mineral/wood,
+/obj/item/stack/sheet/mineral/wood,
 /turf/open/floor/wood,
 /area/ruin/space/has_grav/powered)
 "j" = (
@@ -72,8 +79,15 @@
 /obj/item/plant_analyzer,
 /turf/open/floor/plating/asteroid/airless,
 /area/ruin/space)
+"x" = (
+/turf/open/floor/carpet/red,
+/area/ruin/space/has_grav/powered)
 "y" = (
-/obj/structure/dresser,
+/obj/item/kirbyplants/random,
+/turf/open/floor/wood,
+/area/ruin/space/has_grav/powered)
+"z" = (
+/obj/structure/closet/secure_closet/personal/cabinet,
 /turf/open/floor/wood,
 /area/ruin/space/has_grav/powered)
 "A" = (
@@ -81,12 +95,21 @@
 /turf/open/floor/plating/asteroid/airless,
 /area/ruin/space)
 "C" = (
-/obj/structure/chair/wood/normal{
-	dir = 1
-	},
+/obj/item/instrument/guitar,
+/turf/open/floor/wood,
+/area/ruin/space/has_grav/powered)
+"D" = (
+/obj/item/chair/wood,
 /turf/open/floor/wood,
 /area/ruin/space/has_grav/powered)
 "E" = (
+/obj/structure/sink/kitchen{
+	pixel_y = 28
+	},
+/obj/structure/mirror{
+	name = "dusty mirror";
+	pixel_y = 32
+	},
 /turf/open/floor/plasteel/showroomfloor,
 /area/ruin/space/has_grav/powered)
 "F" = (
@@ -94,21 +117,26 @@
 /turf/open/floor/plating/asteroid/airless,
 /area/ruin/space)
 "J" = (
-/obj/machinery/light,
+/obj/structure/rack/shelf,
+/obj/item/reagent_containers/rag/towel,
+/obj/effect/turf_decal/loading_area{
+	dir = 8;
+	icon_state = "drain";
+	name = "drain"
+	},
+/obj/machinery/light/small{
+	dir = 8
+	},
 /turf/open/floor/plasteel/showroomfloor,
 /area/ruin/space/has_grav/powered)
 "K" = (
-/obj/structure/table/wood,
 /obj/machinery/light{
 	dir = 4
 	},
-/obj/item/reagent_containers/food/drinks/bottle/wine,
+/obj/structure/dresser,
 /turf/open/floor/wood,
 /area/ruin/space/has_grav/powered)
 "L" = (
-/obj/structure/mirror{
-	pixel_x = 28
-	},
 /obj/effect/turf_decal/bot,
 /obj/machinery/shower{
 	dir = 8;
@@ -120,14 +148,22 @@
 /obj/structure/toilet{
 	dir = 4
 	},
+/obj/effect/turf_decal/loading_area{
+	dir = 8;
+	icon_state = "drain";
+	name = "drain"
+	},
 /turf/open/floor/plasteel/showroomfloor,
 /area/ruin/space/has_grav/powered)
 "N" = (
-/obj/structure/rack,
-/obj/item/stack/sheet/mineral/wood,
-/obj/item/stack/sheet/mineral/wood,
+/obj/structure/table/wood,
+/obj/item/reagent_containers/food/drinks/bottle/wine,
 /turf/open/floor/wood,
 /area/ruin/space/has_grav/powered)
+"O" = (
+/obj/structure/rack,
+/turf/open/floor/plating/asteroid/airless,
+/area/ruin/space)
 "P" = (
 /obj/structure/table/wood,
 /obj/item/clothing/head/festive,
@@ -140,6 +176,12 @@
 /obj/item/shovel/spade,
 /turf/open/floor/plating/asteroid/airless,
 /area/ruin/space)
+"V" = (
+/obj/structure/chair/sofachair{
+	dir = 4
+	},
+/turf/open/floor/wood,
+/area/ruin/space/has_grav/powered)
 "W" = (
 /obj/item/cultivator,
 /turf/open/floor/plating/asteroid/airless,
@@ -234,9 +276,9 @@ d
 d
 p
 p
+O
 d
-d
-d
+O
 e
 j
 p
@@ -298,10 +340,10 @@ W
 d
 t
 Y
-C
+D
+v
 v
 n
-y
 t
 p
 d
@@ -318,9 +360,9 @@ d
 t
 P
 C
-v
-v
-v
+x
+x
+z
 t
 p
 d
@@ -337,9 +379,9 @@ d
 m
 v
 v
-v
-v
-v
+x
+x
+y
 t
 p
 d
@@ -354,10 +396,10 @@ s
 s
 d
 t
-v
-v
-v
-v
+n
+V
+x
+x
 v
 t
 p
@@ -417,7 +459,7 @@ p
 p
 p
 p
-d
+p
 q
 "}
 (15,1,1) = {"
@@ -434,7 +476,7 @@ p
 p
 p
 p
-d
+p
 d
 q
 q

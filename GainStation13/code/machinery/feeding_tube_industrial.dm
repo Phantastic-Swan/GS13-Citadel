@@ -210,11 +210,15 @@
 	if(clogged)
 		clog(H.contents)
 	else
+		var/start_pumping = FALSE
 		for(var/atom/movable/AM in H.contents)
 			pump_stuff += AM // Get ready to pump!
 			AM.forceMove(src)
 			if(!pumping) //Lets start a new pump cycle if we arnt pumping. Otherwise, it'll just be added to the queue.
-				pump()
+				start_pumping = TRUE
+				pumping = TRUE
+		if(start_pumping)
+			pump()
 	qdel(H)
 
 /obj/structure/disposaloutlet/industrial_feeding_tube/proc/pump(repeat = TRUE, unlimited = FALSE)
@@ -256,10 +260,18 @@
 
 						SEND_SIGNAL(food, COMSIG_FOOD_EATEN, attached)
 
-						food_reagents.reaction(attached, INGEST, food_size)
-						food_reagents.trans_to(attached, food_size)
-
-						food.checkLiked(food_size, attached) //...Hopefully you like the taste.
+						// Check to see if the person is wearing a bluespace collar
+						var/obj/item/clothing/neck/petcollar/locked/bluespace_collar_transmitter/K = 0
+						if(istype(attached, /mob/living/carbon/human))
+							var/mob/living/carbon/human/human_eater = attached
+							K = human_eater.wear_neck
+						if (!(istype(K, /obj/item/clothing/neck/petcollar/locked/bluespace_collar_transmitter) && K.transpose_industrial_feeding(food, food_reagents, attached))) //If wearing a BS collar, use BS proc. If not, continue as normal
+							food_reagents.reaction(attached, INGEST, food_size)
+							food_reagents.trans_to(attached, food_size)
+							if(istype(attached, /mob/living/carbon/human))
+								var/mob/living/carbon/human/human_eater = attached
+								human_eater.fullness += food_size //Added industrial feeding tube's causing fullness (But ignores limits~)
+							food.checkLiked(food_size, attached) //...Hopefully you like the taste.
 
 
 					if(food.trash) //Lets make the trash the food's supposed to make, if it has any

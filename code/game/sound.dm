@@ -340,4 +340,28 @@ distance_multiplier - Can be used to multiply the distance at which the sound is
 			if("smdelam")
 				soundin = pick('sound/machines/sm/accent/delam/1.ogg', 'sound/machines/sm/accent/normal/2.ogg', 'sound/machines/sm/accent/normal/3.ogg', 'sound/machines/sm/accent/normal/4.ogg', 'sound/machines/sm/accent/normal/5.ogg', 'sound/machines/sm/accent/normal/6.ogg', 'sound/machines/sm/accent/normal/7.ogg', 'sound/machines/sm/accent/normal/8.ogg', 'sound/machines/sm/accent/normal/9.ogg', 'sound/machines/sm/accent/normal/10.ogg', 'sound/machines/sm/accent/normal/11.ogg', 'sound/machines/sm/accent/normal/12.ogg', 'sound/machines/sm/accent/normal/13.ogg', 'sound/machines/sm/accent/normal/14.ogg', 'sound/machines/sm/accent/normal/15.ogg', 'sound/machines/sm/accent/normal/16.ogg', 'sound/machines/sm/accent/normal/17.ogg', 'sound/machines/sm/accent/normal/18.ogg', 'sound/machines/sm/accent/normal/19.ogg', 'sound/machines/sm/accent/normal/20.ogg', 'sound/machines/sm/accent/normal/21.ogg', 'sound/machines/sm/accent/normal/22.ogg', 'sound/machines/sm/accent/normal/23.ogg', 'sound/machines/sm/accent/normal/24.ogg', 'sound/machines/sm/accent/normal/25.ogg', 'sound/machines/sm/accent/normal/26.ogg', 'sound/machines/sm/accent/normal/27.ogg', 'sound/machines/sm/accent/normal/28.ogg', 'sound/machines/sm/accent/normal/29.ogg', 'sound/machines/sm/accent/normal/30.ogg', 'sound/machines/sm/accent/normal/31.ogg', 'sound/machines/sm/accent/normal/32.ogg', 'sound/machines/sm/accent/normal/33.ogg')
 			//END OF CIT CHANGES
+			// GS13 Start - Gainstation sounds
+			if("belch")
+				soundin = pick(	'GainStation13/sound/voice/belch1.ogg', 'GainStation13/sound/voice/belch2.ogg',
+								'GainStation13/sound/voice/belch3.ogg', 'GainStation13/sound/voice/belch4.ogg',
+								'GainStation13/sound/voice/belch5.ogg', 'GainStation13/sound/voice/belch6.ogg',
+								'GainStation13/sound/voice/belch7.ogg', 'GainStation13/sound/voice/belch8.ogg',
+								'GainStation13/sound/voice/belch9.ogg', 'GainStation13/sound/voice/belch10.ogg',
+								'GainStation13/sound/voice/belch11.ogg')
+			if("brap")
+				soundin = pick(	'GainStation13/sound/voice/brap1.ogg', 'GainStation13/sound/voice/brap2.ogg',
+								'GainStation13/sound/voice/brap3.ogg', 'GainStation13/sound/voice/brap4.ogg',
+								'GainStation13/sound/voice/brap5.ogg', 'GainStation13/sound/voice/brap6.ogg',
+								'GainStation13/sound/voice/brap7.ogg', 'GainStation13/sound/voice/brap8.ogg')
+			if("burp")
+				soundin = pick(	'GainStation13/sound/voice/burp1.ogg')
+			if("burunyu")
+				soundin = pick(	'GainStation13/sound/voice/funnycat.ogg')
+			if("fart")
+				soundin = pick(	'GainStation13/sound/voice/fart1.ogg', 'GainStation13/sound/voice/fart2.ogg',
+								'GainStation13/sound/voice/fart3.ogg', 'GainStation13/sound/voice/fart4.ogg')
+			if("gurgle")
+				soundin = pick(	'GainStation13/sound/voice/gurgle1.ogg', 'GainStation13/sound/voice/gurgle2.ogg',
+								'GainStation13/sound/voice/gurgle3.ogg')
+			// GS13 end
 	return soundin

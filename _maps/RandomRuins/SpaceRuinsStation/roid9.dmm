@@ -2,6 +2,25 @@
 "a" = (
 /turf/closed/wall/mineral/iron,
 /area/ruin/space/has_grav)
+"b" = (
+/obj/structure/table,
+/obj/effect/turf_decal/loading_area{
+	dir = 9;
+	icon_state = "steel_decals10"
+	},
+/obj/effect/turf_decal/loading_area{
+	dir = 10;
+	icon_state = "steel_decals10"
+	},
+/obj/item/radio/headset,
+/turf/open/floor/plasteel,
+/area/ruin/space/has_grav)
+"c" = (
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer1{
+	dir = 4
+	},
+/turf/open/floor/catwalk_floor,
+/area/ruin/space/has_grav)
 "d" = (
 /obj/structure/table/wood,
 /obj/item/flashlight/lamp,
@@ -22,8 +41,23 @@
 /turf/open/floor/plasteel,
 /area/ruin/space/has_grav)
 "h" = (
-/obj/machinery/light/small,
-/turf/open/floor/wood,
+/obj/effect/turf_decal/loading_area{
+	dir = 5;
+	icon_state = "steel_panel";
+	name = "steel pannel"
+	},
+/turf/open/floor/plasteel/freezer,
+/area/ruin/space/has_grav)
+"i" = (
+/turf/open/floor/plasteel/freezer,
+/area/ruin/space/has_grav)
+"j" = (
+/obj/structure/rack/shelf,
+/obj/item/reagent_containers/food/snacks/cannedpeaches,
+/obj/item/reagent_containers/food/snacks/cannedpeaches,
+/obj/item/reagent_containers/food/snacks/cannedpeaches,
+/obj/item/reagent_containers/food/snacks/cannedpeaches,
+/turf/open/floor/plasteel/freezer,
 /area/ruin/space/has_grav)
 "k" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer1{
@@ -36,20 +70,31 @@
 /turf/open/floor/wood,
 /area/ruin/space/has_grav)
 "m" = (
-/obj/structure/table/wood,
-/turf/open/floor/wood,
+/obj/effect/turf_decal/loading_area{
+	dir = 6;
+	icon_state = "steel_panel";
+	name = "steel pannel"
+	},
+/obj/machinery/door/airlock/public{
+	dir = 4
+	},
+/turf/open/floor/plasteel/freezer,
 /area/ruin/space/has_grav)
 "n" = (
+/obj/item/export/bottle/vodka,
+/obj/item/export/bottle/vodka{
+	pixel_y = 8;
+	pixel_x = -12
+	},
+/obj/item/reagent_containers/food/drinks/drinkingglass/shotglass{
+	pixel_x = 12;
+	pixel_y = 5
+	},
 /turf/open/floor/wood,
 /area/ruin/space/has_grav)
 "o" = (
-/obj/structure/table/wood,
-/obj/item/reagent_containers/food/snacks/beans,
-/obj/item/reagent_containers/food/snacks/beans,
-/obj/machinery/light/small{
-	dir = 4
-	},
-/turf/open/floor/wood,
+/obj/structure/table,
+/turf/open/floor/plasteel/freezer,
 /area/ruin/space/has_grav)
 "p" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer1{
@@ -64,6 +109,14 @@
 /obj/machinery/atmospherics/components/unary/tank/air{
 	dir = 8
 	},
+/obj/effect/turf_decal/loading_area{
+	dir = 2;
+	icon_state = "steel_decals10"
+	},
+/obj/effect/turf_decal/loading_area{
+	dir = 4;
+	icon_state = "steel_decals10"
+	},
 /turf/open/floor/plasteel,
 /area/ruin/space/has_grav)
 "r" = (
@@ -75,17 +128,59 @@
 	},
 /turf/open/floor/plasteel,
 /area/ruin/space/has_grav)
-"u" = (
-/obj/structure/chair/comfy/black{
-	dir = 1
+"s" = (
+/obj/effect/turf_decal/loading_area{
+	dir = 8;
+	icon_state = "drain";
+	name = "drain"
+	},
+/obj/structure/toilet{
+	pixel_y = 6
+	},
+/obj/machinery/shower{
+	dir = 4
+	},
+/turf/open/floor/plasteel/freezer,
+/area/ruin/space/has_grav)
+"t" = (
+/obj/structure/table,
+/obj/item/storage/toolbox/mechanical,
+/obj/item/clothing/gloves/color/yellow,
+/obj/item/multitool,
+/obj/effect/turf_decal/loading_area{
+	dir = 9;
+	icon_state = "steel_decals10"
+	},
+/obj/effect/turf_decal/loading_area{
+	dir = 10;
+	icon_state = "steel_decals10"
 	},
 /turf/open/floor/plasteel,
 /area/ruin/space/has_grav)
+"u" = (
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer1,
+/turf/open/floor/plating/asteroid/airless,
+/area/ruin/space)
 "v" = (
 /turf/open/floor/plating/asteroid/airless,
 /area/ruin/space)
 "w" = (
 /obj/machinery/atmospherics/components/unary/vent_pump/on,
+/obj/effect/turf_decal/loading_area{
+	dir = 6;
+	icon_state = "steel_decals3"
+	},
+/obj/effect/turf_decal/loading_area{
+	icon_state = "steel_decals3"
+	},
+/obj/effect/turf_decal/loading_area{
+	dir = 10;
+	icon_state = "steel_decals10"
+	},
+/obj/effect/turf_decal/loading_area{
+	dir = 9;
+	icon_state = "steel_decals10"
+	},
 /turf/open/floor/plasteel,
 /area/ruin/space/has_grav)
 "x" = (
@@ -104,19 +199,16 @@
 	dir = 4
 	},
 /obj/machinery/door/airlock/highsecurity,
-/obj/structure/fans/tiny,
-/turf/open/floor/plasteel,
+/turf/open/floor/catwalk_floor,
 /area/ruin/space/has_grav)
 "A" = (
-/obj/structure/table/wood,
-/obj/item/export/bottle/wine,
-/obj/item/reagent_containers/food/drinks/drinkingglass,
-/obj/item/reagent_containers/food/drinks/drinkingglass,
-/turf/open/floor/wood,
+/obj/machinery/computer/security{
+	dir = 8
+	},
+/turf/open/floor/plasteel,
 /area/ruin/space/has_grav)
 "B" = (
 /obj/structure/table/wood,
-/obj/item/storage/box/donkpockets,
 /obj/machinery/atmospherics/components/unary/vent_pump/on{
 	dir = 1
 	},
@@ -135,16 +227,33 @@
 /obj/machinery/light/small{
 	dir = 4
 	},
+/obj/effect/turf_decal/loading_area{
+	dir = 9;
+	icon_state = "steel_decals10"
+	},
+/obj/effect/turf_decal/loading_area{
+	dir = 10;
+	icon_state = "steel_decals10"
+	},
 /turf/open/floor/plasteel,
 /area/ruin/space/has_grav)
 "F" = (
-/obj/structure/table,
-/obj/item/storage/firstaid/regular,
+/obj/machinery/computer/crew{
+	dir = 8
+	},
 /turf/open/floor/plasteel,
 /area/ruin/space/has_grav)
 "G" = (
-/obj/machinery/computer/security,
+/obj/effect/turf_decal/loading_area{
+	icon_state = "steel_decals_central6"
+	},
+/obj/item/chair,
 /turf/open/floor/plasteel,
+/area/ruin/space/has_grav)
+"I" = (
+/obj/structure/table,
+/obj/machinery/microwave,
+/turf/open/floor/plasteel/freezer,
 /area/ruin/space/has_grav)
 "J" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer1{
@@ -153,18 +262,56 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
 /turf/open/floor/wood,
 /area/ruin/space/has_grav)
+"K" = (
+/obj/structure/table,
+/obj/item/storage/box/donkpockets,
+/turf/open/floor/plasteel/freezer,
+/area/ruin/space/has_grav)
+"L" = (
+/obj/effect/turf_decal/loading_area{
+	dir = 8;
+	icon_state = "drain";
+	name = "drain"
+	},
+/obj/structure/sink{
+	dir = 8;
+	pixel_x = -12
+	},
+/obj/machinery/light/small,
+/turf/open/floor/plasteel/freezer,
+/area/ruin/space/has_grav)
+"M" = (
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer1{
+	dir = 4
+	},
+/obj/structure/fans/tiny,
+/obj/machinery/door/airlock/external{
+	name = "Escape Airlock";
+	dir = 4
+	},
+/turf/open/floor/catwalk_floor,
+/area/ruin/space/has_grav)
 "N" = (
 /obj/structure/table,
-/obj/item/storage/toolbox/mechanical,
-/obj/item/clothing/gloves/color/yellow,
-/obj/item/multitool,
-/turf/open/floor/plasteel,
+/obj/item/storage/firstaid/regular,
+/obj/structure/window/reinforced/spawner{
+	dir = 8
+	},
+/turf/open/floor/plasteel/freezer,
 /area/ruin/space/has_grav)
 "O" = (
 /turf/open/floor/plasteel,
 /area/ruin/space/has_grav)
 "P" = (
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer1,
+/obj/effect/turf_decal/loading_area{
+	dir = 5;
+	icon_state = "steel_decals6"
+	},
+/obj/effect/turf_decal/loading_area{
+	dir = 9;
+	icon_state = "steel_decals4"
+	},
 /turf/open/floor/plasteel,
 /area/ruin/space/has_grav)
 "Q" = (
@@ -172,21 +319,50 @@
 	dir = 1
 	},
 /obj/structure/table/wood,
-/obj/machinery/microwave,
+/obj/item/reagent_containers/food/snacks/beans,
 /turf/open/floor/wood,
+/area/ruin/space/has_grav)
+"R" = (
+/obj/structure/table,
+/obj/item/reagent_containers/food/snacks/beans,
+/obj/effect/turf_decal/loading_area{
+	dir = 9;
+	icon_state = "steel_decals10"
+	},
+/obj/effect/turf_decal/loading_area{
+	dir = 10;
+	icon_state = "steel_decals10"
+	},
+/turf/open/floor/plasteel,
+/area/ruin/space/has_grav)
+"S" = (
+/obj/structure/closet/emcloset,
+/obj/machinery/light/small{
+	dir = 1
+	},
+/turf/open/floor/catwalk_floor,
 /area/ruin/space/has_grav)
 "T" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer1{
 	dir = 6
 	},
+/obj/machinery/light/small{
+	dir = 8
+	},
 /turf/open/floor/wood,
 /area/ruin/space/has_grav)
 "U" = (
 /obj/machinery/sleeper,
-/turf/open/floor/plasteel,
+/obj/effect/turf_decal/loading_area{
+	icon_state = "steel_decals_central6"
+	},
+/turf/open/floor/plasteel/freezer,
 /area/ruin/space/has_grav)
 "V" = (
-/obj/machinery/computer/crew,
+/obj/effect/turf_decal/loading_area{
+	dir = 8;
+	icon_state = "steel_decals_central4"
+	},
 /turf/open/floor/plasteel,
 /area/ruin/space/has_grav)
 "W" = (
@@ -203,6 +379,12 @@
 	},
 /turf/open/floor/plating/asteroid/airless,
 /area/ruin/space)
+"Z" = (
+/obj/machinery/light/small{
+	dir = 8
+	},
+/turf/open/floor/plasteel/freezer,
+/area/ruin/space/has_grav)
 
 (1,1,1) = {"
 e
@@ -283,7 +465,7 @@ C
 C
 v
 v
-v
+C
 C
 C
 C
@@ -327,7 +509,7 @@ C
 C
 v
 v
-C
+v
 C
 C
 C
@@ -349,8 +531,8 @@ C
 C
 v
 v
-C
-C
+v
+v
 C
 C
 C
@@ -369,10 +551,10 @@ C
 C
 C
 C
-v
-v
-v
-C
+Y
+u
+u
+D
 C
 C
 C
@@ -386,14 +568,14 @@ v
 C
 C
 C
+a
+a
+a
+a
+a
+M
+a
 C
-C
-C
-C
-C
-v
-v
-v
 C
 C
 C
@@ -408,13 +590,13 @@ v
 C
 C
 C
-C
-C
-C
-C
-C
-Y
-D
+a
+s
+L
+a
+S
+c
+a
 C
 C
 C
@@ -430,17 +612,17 @@ C
 C
 C
 C
-C
 a
 a
+m
 a
 a
 z
 a
-C
-C
-C
-C
+a
+a
+a
+a
 C
 C
 C
@@ -452,16 +634,16 @@ C
 C
 C
 C
-C
 a
+t
 V
-O
 x
+O
 k
-a
-a
-a
-a
+h
+i
+Z
+j
 a
 C
 C
@@ -474,16 +656,16 @@ C
 C
 C
 C
-C
 a
+b
 G
-u
+O
 O
 k
 a
-l
-f
-f
+I
+K
+o
 a
 C
 C
@@ -496,16 +678,16 @@ C
 C
 C
 C
-C
 a
+R
 F
-O
+A
 P
 W
 a
-d
-n
-h
+a
+a
+a
 a
 C
 C
@@ -518,7 +700,7 @@ C
 C
 C
 C
-C
+a
 a
 a
 N
@@ -569,9 +751,9 @@ a
 a
 q
 a
-m
-o
-A
+l
+f
+d
 a
 C
 v

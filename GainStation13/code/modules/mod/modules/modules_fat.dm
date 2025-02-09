@@ -10,6 +10,10 @@
 	var/amount = -2
 	var/modifier_name = "hydraulic_mod"
 
+/obj/item/mod/module/hydraulic_movement/locked
+	name = "MOD hydraulic movement assistance module (locked)"
+	removable = FALSE
+
 /obj/item/mod/module/hydraulic_movement/on_suit_activation()
 	var/mob/living/carbon/human/wearer = mod.wearer
 	wearer.add_fat_delay_modifier(modifier_name, amount)
@@ -65,10 +69,18 @@
 	incompatible_modules = list(/obj/item/mod/module/calovoltaic)
 	var/rate = 5
 
+/obj/item/mod/module/calovoltaic/locked
+	name = "MOD calovoltaic generator module (locked)"
+	removable = FALSE
+
+/obj/item/mod/module/storage/locked
+	name = "MOD storage containment module (locked)"
+	removable = FALSE
+
 /obj/item/mod/module/calovoltaic/on_select()
 	. = ..()
 	if(active)
-		balloon_alert(mod.wearer, "activeted!")
+		balloon_alert(mod.wearer, "activated!")
 	else
 		balloon_alert(mod.wearer, "deactivated!")
 
@@ -192,10 +204,18 @@
 		)
 	)
 
+/datum/mod_theme/exoskeleton/locked
+	inbuilt_modules = list(/obj/item/mod/module/hydraulic_movement/locked, /obj/item/mod/module/calovoltaic/locked, /obj/item/mod/module/storage/locked)
+
 /obj/item/mod/control/pre_equipped/exoskeleton
 	desc = "A pre-built GATO mobility exoskeleton, designed to support high weights, favor movement and weight loss."
 	theme = /datum/mod_theme/exoskeleton
 	cell = /obj/item/stock_parts/cell/upgraded/plus
+
+/obj/item/mod/control/pre_equipped/exoskeleton/locked
+	name = "MOD control unit (locked)"
+	desc = "A pre-built GATO mobility exoskeleton, designed to support high weights, favor movement and weight loss. This model's modules cannot be removed."
+	theme = /datum/mod_theme/exoskeleton/locked
 
 /datum/design/module/exoskeleton
 	name = "MOD exoskeleton"
@@ -211,5 +231,5 @@
 /datum/gear/hands/exoskeleton
 	name = "MOD exoskeleton"
 	category = LOADOUT_CATEGORY_HANDS
-	path = /obj/item/mod/control/pre_equipped/exoskeleton
+	path = /obj/item/mod/control/pre_equipped/exoskeleton/locked
 	cost = 3

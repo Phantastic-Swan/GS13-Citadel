@@ -325,7 +325,7 @@ GLOBAL_LIST_INIT(wisdoms, world.file2list("strings/wisdoms.txt"))
 
 //LANGUAGE CHARACTER CUSTOMIZATION
 GLOBAL_LIST_INIT(speech_verbs, list("default","says","gibbers", "states", "chitters", "chimpers", "declares", "bellows", "buzzes" ,"beeps", "chirps", "clicks", "hisses" ,"poofs" , "puffs", "rattles", "mewls" ,"barks", "blorbles", "squeaks", "squawks", "flutters", "warbles", "caws", "gekkers", "clucks","mumbles","crackles"))
-GLOBAL_LIST_INIT(roundstart_tongues, list("default","human tongue" = /obj/item/organ/tongue, "lizard tongue" = /obj/item/organ/tongue/lizard, "skeleton tongue" = /obj/item/organ/tongue/bone, "fly tongue" = /obj/item/organ/tongue/fly, "ipc tongue" = /obj/item/organ/tongue/robot/ipc, "xeno tongue" = /obj/item/organ/tongue/alien/hybrid))
+GLOBAL_LIST_INIT(roundstart_tongues, list("default","human tongue" = /obj/item/organ/tongue, "lizard tongue" = /obj/item/organ/tongue/lizard, "skeleton tongue" = /obj/item/organ/tongue/bone, "fly tongue" = /obj/item/organ/tongue/fly, "ipc tongue" = /obj/item/organ/tongue/robot/ipc, "xeno tongue" = /obj/item/organ/tongue/alien/hybrid, "kitty tongue" = /obj/item/organ/tongue/kitty)) //GS13 - added kitty tongue to list of roundstart tongues
 
 /proc/get_roundstart_languages()
 	var/list/languages = subtypesof(/datum/language)
@@ -358,7 +358,7 @@ GLOBAL_LIST_INIT(prosthetic_limb_types, list("xion","bishop","cybersolutions","g
 GLOBAL_LIST_INIT(nongendered_limb_types, list("fly", "zombie" ,"synth", "shadow", "cultgolem", "agent", "plasmaman", "clockgolem", "clothgolem"))
 
 //list of eye types, corresponding to a respective left and right icon state for the set of eyes
-GLOBAL_LIST_INIT(eye_types, list("normal", "insect", "moth", "double", "double2", "double3", "cyclops"))
+GLOBAL_LIST_INIT(eye_types, list("normal", "insect", "moth", "double", "double2", "double3", "cyclops", "cyclopsbig", "carp"))//GS13 - added cyclopsbig & carp eye
 
 //list linking bodypart bitflags to their actual names
 GLOBAL_LIST_INIT(bodypart_names, list(num2text(HEAD) = "Head", num2text(CHEST) = "Chest", num2text(LEG_LEFT) = "Left Leg", num2text(LEG_RIGHT) = "Right Leg", num2text(ARM_LEFT) = "Left Arm", num2text(ARM_RIGHT) = "Right Arm"))

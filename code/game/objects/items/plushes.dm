@@ -645,7 +645,7 @@ GLOBAL_LIST_INIT(valid_plushie_paths, valid_plushie_paths())
 /obj/item/toy/plush/beeplushie
 	name = "bee plushie"
 	desc = "A cute toy that resembles an even cuter bee."
-	icon_state = "plushie_bee"
+	icon_state = "plushie_h" //GS13 - wrong sprite name
 	attack_verb = list("stung")
 	gender = FEMALE
 	squeak_override = list('modular_citadel/sound/voice/scream_moth.ogg' = 1)

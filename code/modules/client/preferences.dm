@@ -1405,6 +1405,8 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 					dat += "<b>Show that you want to be confronted:</b><a href='?_src_=prefs;preference=trouble_seeker'>[trouble_seeker == TRUE ? "Enabled" : "Disabled"]</a><BR>"
 					dat += "<b>Bot Feeding:</b><a href='?_src_=prefs;preference=bot_feeding'>[bot_feeding == TRUE ? "Enabled" : "Disabled"]</a><BR>"
 					dat += "<b>Blueberry Inflation:</b><a href='?_src_=prefs;preference=blueberry_inflation'>[blueberry_inflation == TRUE ? "Enabled" : "Disabled"]</a><BR>"
+					dat += "<b>Hear Burping Noises:</b> <a href='?_src_=prefs;preference=burping_noises'>[(cit_toggles & BURPING_NOISES) ? "Allowed" : "Disallowed"]</a><br>"
+					dat += "<b>Hear Farting Noises:</b> <a href='?_src_=prefs;preference=farting_noises'>[(cit_toggles & FARTING_NOISES) ? "Allowed" : "Disallowed"]</a><br>"
 
 					dat += "<h2>Weight Gain Types</h2>"
 					dat += "<b>Food:</b><a href='?_src_=prefs;preference=weight_gain_food'>[weight_gain_food == TRUE ? "Enabled" : "Disabled"]</a><BR>"
@@ -3505,6 +3507,11 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 
 				if("blueberry_inflation")
 					blueberry_inflation = !blueberry_inflation
+				if("burping_noises")
+					cit_toggles ^= BURPING_NOISES
+				if("farting_noises")
+					cit_toggles ^= FARTING_NOISES
+
 				if("max_fatness")
 					max_weight = chose_weight("Choose your max fatness level, your weight will not go beyond this. None will let you gain without a limit", user)
 
