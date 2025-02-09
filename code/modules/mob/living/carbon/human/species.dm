@@ -925,10 +925,12 @@ GLOBAL_LIST_EMPTY(roundstart_race_names)
 		if(A.type == /datum/action/innate/ability/coiling)
 			found_action = A
 
-	if(found_action && (!tauric || (H.dna.features["taur"] != "Naga" && H.dna.features["taur"] != "Naga (coiled)")))
+	//GS13 Edit - Adding action for other naga tails
+	if(found_action && (!tauric || ((H.dna.features["taur"] != "Naga" && H.dna.features["taur"] != "Fat Naga" && H.dna.features["taur"] != "Alt Naga") && H.dna.features["taur"] != "Naga (coiled)")))
 		found_action.Remove(H)
 
-	if(!found_action && tauric && H.dna.features["taur"] == "Naga")
+	//GS13 Edit - Adding action for other naga tails
+	if(!found_action && tauric && (H.dna.features["taur"] == "Naga" || H.dna.features["taur"] == "Fat Naga" || H.dna.features["taur"] == "Alt Naga"))
 		found_action = new /datum/action/innate/ability/coiling()
 		found_action.Grant(H)
 

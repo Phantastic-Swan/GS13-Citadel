@@ -62,6 +62,7 @@
 	dir = 8
 	},
 /obj/structure/spider/stickyweb,
+/obj/item/trash/fatoray_scrap1,
 /turf/open/floor/mineral/titanium/blue,
 /area/ruin/space/has_grav)
 "P" = (

@@ -3,6 +3,7 @@
 
 /obj/item/reagent_containers/food/snacks/gbburrito
 	name = "\improper GATO Gas Giant Burrito"
+	icon = 'Gainstation13/icons/obj/food/food.dmi'
 	icon_state = "gbburrito"
 	desc = "More than three pounds of beans, meat, and cheese wrapped in a greasy tortilla. It's piping hot."
 	trash = null

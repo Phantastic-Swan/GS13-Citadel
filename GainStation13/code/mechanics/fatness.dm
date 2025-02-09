@@ -1,4 +1,7 @@
-GLOBAL_LIST_INIT(uncapped_resize_areas, list(/area/command/bridge, /area/maintenance, /area/security/prison, /area/holodeck, /area/commons/vacant_room/office, /area/space, /area/ruin, /area/lavaland, /area/awaymission, /area/centcom, /area/fatlab))
+GLOBAL_LIST_INIT(uncapped_resize_areas, list(/area/command/bridge, /area/maintenance, /area/security/prison, /area/holodeck, /area/commons/vacant_room/office, /area/space, /area/ruin, /area/lavaland, /area/awaymission, /area/centcom, /area/fatlab, /area/xenoarch))
+
+/mob/living
+	var/burpslurring = 0 //GS13 - necessary due to "say" being defined by mob/living
 
 /mob/living/carbon
 	//Due to the changes needed to create the system to hide fatness, here's some notes:
@@ -21,7 +24,6 @@ GLOBAL_LIST_INIT(uncapped_resize_areas, list(/area/command/bridge, /area/mainten
 	var/doorstuck = 0
 
 	var/fullness = FULLNESS_LEVEL_HALF_FULL
-	var/burpslurring = 0
 	var/fullness_reduction_timer = 0 // When was the last time they emoted to reduce their fullness
 
 /**
@@ -214,9 +216,9 @@ GLOBAL_LIST_INIT(uncapped_resize_areas, list(/area/command/bridge, /area/mainten
 		var/xwg_size = sqrt(fatness/FATNESS_LEVEL_BLOB)
 		xwg_size = min(xwg_size, RESIZE_MACRO)
 		xwg_size = max(xwg_size, custom_body_size)
-		if(xwg_size > RESIZE_BIG) //check if the size needs capping otherwise don't bother searching the list
+		if(xwg_size > RESIZE_A_HUGEBIG) //check if the size needs capping otherwise don't bother searching the list
 			if(!is_type_in_list(get_area(src), GLOB.uncapped_resize_areas)) //if the area is not int the uncapped whitelist and new size is over the cap
-				xwg_size = RESIZE_BIG
+				xwg_size = RESIZE_A_HUGEBIG
 		resize(xwg_size)
 
 /proc/get_fatness_level_name(fatness_amount)
@@ -231,7 +233,7 @@ GLOBAL_LIST_INIT(uncapped_resize_areas, list(/area/command/bridge, /area/mainten
 	if(fatness_amount < FATNESS_LEVEL_MORBIDLY_OBESE)
 		return "Obese"
 	if(fatness_amount < FATNESS_LEVEL_EXTREMELY_OBESE)
-		return "Morbidly Obese"
+		return "Very Obese"
 	if(fatness_amount < FATNESS_LEVEL_BARELYMOBILE)
 		return "Extremely Obese"
 	if(fatness_amount < FATNESS_LEVEL_IMMOBILE)

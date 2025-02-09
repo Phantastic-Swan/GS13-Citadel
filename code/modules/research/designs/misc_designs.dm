@@ -742,6 +742,18 @@
 	category = list("Equipment")
 	departmental_flags = DEPARTMENTAL_FLAG_ENGINEERING
 
+//GS13 EDIT START
+/datum/design/double_emergency_oxygen_engi
+	name = "Double Engineering Emergency Oxygen Tank"
+	desc = "An double emergency oxygen tank for engineers."
+	id = "double_emergency_oxygen_engi"
+	build_type = PROTOLATHE
+	materials = list(/datum/material/iron = 1500, /datum/material/silver = 200)
+	build_path = /obj/item/tank/internals/emergency_oxygen/double/empty
+	category = list("Equipment")
+	departmental_flags = DEPARTMENTAL_FLAG_ENGINEERING
+//GS13 EDIT END
+
 /////////////////////////////////////////
 /////////////////Tape////////////////////
 /////////////////////////////////////////

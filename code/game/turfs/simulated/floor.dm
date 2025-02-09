@@ -296,6 +296,8 @@
 			return list("mode" = RCD_DECONSTRUCT, "delay" = 50, "cost" = 33)
 		if(RCD_WINDOWGRILLE)
 			return list("mode" = RCD_WINDOWGRILLE, "delay" = 10, "cost" = 4)
+		if(RCD_GIRDER)
+			return list("mode" = RCD_GIRDER, "delay" = 20, "cost" = 10) //gs13 - girder mode
 		if(RCD_MACHINE)
 			return list("mode" = RCD_MACHINE, "delay" = 20, "cost" = 25)
 		if(RCD_COMPUTER)
@@ -338,6 +340,12 @@
 			to_chat(user, "<span class='notice'>You construct the grille.</span>")
 			var/obj/structure/grille/G = new(src)
 			G.anchored = TRUE
+			return TRUE
+		if(RCD_GIRDER) //gs13 - girder mode
+			if(locate(/obj/structure/girder) in src)
+				return FALSE
+			var/obj/structure/girder/R = new(src)
+			R.anchored = TRUE
 			return TRUE
 		if(RCD_MACHINE)
 			if(locate(/obj/structure/frame/machine) in src)

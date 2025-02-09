@@ -63,6 +63,7 @@
 	icon_state = "beanbag"
 	color = "#ffffff"
 	anchored = FALSE
+	buildstacktype = /obj/item/stack/sheet/cloth
 	buildstackamount = 5
 	item_chair = null
 

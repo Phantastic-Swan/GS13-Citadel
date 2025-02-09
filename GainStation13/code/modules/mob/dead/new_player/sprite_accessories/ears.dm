@@ -39,3 +39,17 @@
 	icon_state = "fennectall"
 	color_src = MATRIXED
 	matrixed_sections = MATRIX_RED_GREEN
+
+/datum/sprite_accessory/ears/mam_ears/undergoat
+	name = "Goat"
+	icon_state = "goat"
+	icon = 'GainStation13/icons/mob/markings/mam_ears.dmi'
+	color_src = MATRIXED
+	matrixed_sections = MATRIX_RED_GREEN
+
+/datum/sprite_accessory/ears/human/undergoat
+	name = "Avali"
+	icon_state = "avali"
+	icon = 'GainStation13/icons/mob/markings/mam_ears.dmi'
+	color_src = MATRIXED
+	matrixed_sections = MATRIX_RED_GREEN

@@ -15,6 +15,10 @@
 		"mod_welding",
 		"mod_mouthhole",
 		"mod_flashlight",
+		//GS13 Edit
+		"mod_hydraulic",
+		"mod_calovoltaic",
+		"mod_exoskeleton",
 	)
 
 /datum/techweb_node/mod_advanced

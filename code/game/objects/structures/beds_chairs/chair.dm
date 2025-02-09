@@ -77,7 +77,12 @@
 	qdel(src)
 
 /obj/structure/chair/attackby(obj/item/W, mob/user, params)
-	if(W.tool_behaviour == TOOL_WRENCH && !(flags_1 & NODECONSTRUCT_1))
+	// GS13 EDIT - replaced wrench check with a check based on material and tool - chairs made from any material other
+	// than cloth will function the same as before, but chairs made from cloth will be destructible using a wirecutter
+	var/wrench_deconstruct = W.tool_behaviour == TOOL_WRENCH && buildstacktype != /obj/item/stack/sheet/cloth
+	var/wirecutter_deconstruct = W.tool_behaviour == TOOL_WIRECUTTER && buildstacktype == /obj/item/stack/sheet/cloth
+	if((wrench_deconstruct || wirecutter_deconstruct) && !(flags_1 & NODECONSTRUCT_1))
+	// GS13 END EDIT
 		W.play_tool_sound(src)
 		deconstruct()
 	else if(istype(W, /obj/item/assembly/shock_kit))

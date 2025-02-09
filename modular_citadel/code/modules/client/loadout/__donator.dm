@@ -18,7 +18,7 @@
 	name = "GATO Badge - Correspondent"
 	category = LOADOUT_CATEGORY_DONATOR
 	path = /obj/item/clothing/accessory/medal/gato_badge/middleman
-	ckeywhitelist = list("johnjimjim", "sonoida", "Sonoida", "SONOIDA", "yeeny", "Not Number", "Not_Number", "NotNumber", "PointNshoot", "pointnshoot", "POINTNSHOOT", "Plapp", "plapp", "PLAPP", "colorlessspy", "Colorlessspy", "COLORLESSSPY", "M16nPregnant", "m16npregnant", "M16NPREGNANT")
+	ckeywhitelist = list("johnjimjim", "sonoida", "Sonoida", "SONOIDA", "yeeny", "Not Number", "Not_Number", "NotNumber", "PointNshoot", "pointnshoot", "POINTNSHOOT", "Plapp", "plapp", "PLAPP", "colorlessspy", "Colorlessspy", "COLORLESSSPY", "M16nPregnant", "m16npregnant", "M16NPREGNANT", "Gabbr", "gabbr", "GABBR" )
 
 /datum/gear/donator/halsey_overcoat
 	name = "Halsey's Commander Overcoat"
@@ -39,7 +39,7 @@
 	ckeywhitelist = list("lumu", "sonoida")
 
 /datum/gear/donator/rose_plush
-	name = "Dezir Rose Plush"
+	name = "Dezir Rose Plussh"
 	category = LOADOUT_CATEGORY_DONATOR
 	path = /obj/item/toy/plush/gs13/rose
 	ckeywhitelist = list("eremitanovem", "sonoida", "Absolutely_Free", "absolutely_free", "ABSOLUTELY_FREE")
@@ -54,7 +54,13 @@
 	name = "Overcoat of the Destitute"
 	category = LOADOUT_CATEGORY_DONATOR
 	path = /obj/item/clothing/suit/storage/blueshield/grimmy
-	ckeywhitelist = list("bbgrimmy")
+	ckeywhitelist = list("bbgrimmy", "BBGrimmy", "Bbgrimmy")
+
+/datum/gear/donator/cosmic_coat
+	name = "Cosmic Coat"
+	category = LOADOUT_CATEGORY_DONATOR
+	path = /obj/item/clothing/suit/hooded/wintercoat/cosmic
+	ckeywhitelist = list("Neun", "neun", "NEUN")
 
 /datum/gear/donator/tarek_gps
 	name = "Tarek's GPS"
@@ -103,7 +109,7 @@
 /datum/gear/donator/white_eyepatch_cabal
 	name = "Cabal's Eyepatch"
 	category = LOADOUT_CATEGORY_DONATOR
-	path = /obj/item/clothing/glasses/eyepatch/cabal
+	path = /obj/item/clothing/glasses/eyepatch/white/cabal
 	ckeywhitelist = list("spess_lizurd", "SPESS LIZURD", "spess lizurd", "SPESS_LIZURD", "spesslizurd", "sonoida")
 
 /datum/gear/white_eyepatch //accessible to anyone, at donator's request
@@ -129,9 +135,19 @@
 	path = /obj/item/toy/plush/gs13/crowbars
 	ckeywhitelist = list("M16nPregnant", "m16npregnant" )
 
+/datum/gear/donator/sharky_plush
+	name = "Sharky Plush"
+	category = LOADOUT_CATEGORY_DONATOR
+	path = /obj/item/toy/plush/gs13/sharky
+	ckeywhitelist = list("drawntothicc", "Drawntothicc", "DrawnToThicc", "DRAWNTOTHICC")
+
 /datum/gear/donator/sams_welder
 	name = "Sam's Unlucky Welder"
 	category = LOADOUT_CATEGORY_DONATOR
 	path = /obj/item/weldingtool/bronze
 	ckeywhitelist = list("almaniak", "Almaniak", "AlManiak")
 
+/datum/gear/suit/labcoat
+	name = "Labcoat"
+	category = LOADOUT_CATEGORY_SUIT
+	path = /obj/item/clothing/suit/toggle/labcoat

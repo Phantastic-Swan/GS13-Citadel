@@ -9,6 +9,7 @@
 	zone = BODY_ZONE_CHEST
 	slot = ORGAN_SLOT_BREASTS
 	size = BREASTS_SIZE_DEF // "c". Refer to the breast_values static list below for the cups associated number values
+	var/max_size = 0 //GS13 Edit
 	fluid_id = /datum/reagent/consumable/milk
 	fluid_rate = MILK_RATE
 	producing = TRUE
@@ -97,10 +98,16 @@
 			size = breast_values[rounded_cached]
 		if(9 to 15) //massive
 			size = breast_values[rounded_cached]
-		if(16 to INFINITY) //rediculous
+		if(16) //rediculous
 			size = "huge"
+		if(17 to 24)
+			size = "massive"
+		if(25 to 29)
+			size = "giga"
+		if(30 to INFINITY)
+			size = "impossible"
 
-	if(rounded_cached < 16 && owner)//Because byond doesn't count from 0, I have to do this.
+	if(rounded_cached < 30 && owner)//Because byond doesn't count from 0, I have to do this.
 		var/mob/living/carbon/human/H = owner
 		var/r_prev_size = round(prev_size)
 		if (rounded_cached > r_prev_size)
@@ -115,6 +122,7 @@
 	else
 		color = "#[D.features["breasts_color"]]"
 	size = D.features["breasts_size"]
+	max_size = D.features["max_breasts_size"]
 	starting_size = D.features["breasts_size"]
 	shape = D.features["breasts_shape"]
 	if(!D.features["breasts_producing"])

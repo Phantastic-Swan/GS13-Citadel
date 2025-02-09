@@ -49,7 +49,7 @@
 		if(breath)
 			var/pressure = breath.return_pressure()
 			var/total_moles = breath.total_moles()
-			#define PP_MOLES(X) ((X / total_moles) * pressure)
+			//#define PP_MOLES(X) ((X / total_moles) * pressure)
 			#define PP(air, gas) PP_MOLES(air.get_moles(gas))
 			var/gas_breathed = PP(breath,GAS_H2O)
 			if(gas_breathed > 0)

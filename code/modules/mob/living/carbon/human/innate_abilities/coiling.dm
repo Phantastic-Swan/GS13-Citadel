@@ -9,6 +9,8 @@
 	var/currently_coiling = FALSE
 	var/mob/living/carbon/human/currently_coiled
 	var/mutable_appearance/tracked_overlay
+	//GS13 Edit
+	var/stored_tail
 
 /datum/action/innate/ability/coiling/Activate()
 	// make sure they meet the mobility/check flags
@@ -56,6 +58,8 @@
 
 	// set our overlay to new image
 	var/mob/living/carbon/human/user = owner
+	//GS13 Edit
+	stored_tail = user.dna.features["taur"]
 	user.dna.species.mutant_bodyparts["taur"] = "Naga (coiled)"
 	user.dna.features["taur"] = "Naga (coiled)"
 	user.update_mutant_bodyparts()
@@ -79,8 +83,9 @@
 	UnregisterSignal(owner, COMSIG_ATOM_DIR_CHANGE)
 
 	// change overlay back to original image
-	H.dna.species.mutant_bodyparts["taur"] = "Naga"
-	H.dna.features["taur"] = "Naga"
+	//GS13 Edit
+	H.dna.species.mutant_bodyparts["taur"] = stored_tail
+	H.dna.features["taur"] = stored_tail
 	H.update_mutant_bodyparts()
 
 	H.update_body()

@@ -7,6 +7,7 @@
 	slot 					= ORGAN_SLOT_BUTT
 	w_class 				= 3
 	size 					= 0
+	var/max_size			= 0 //GS13 Edit
 	var/size_name			= "nonexistent"
 	shape					= "Pair" //turn this into a default constant if for some inexplicable reason we get more than one butt type but I doubt it.
 	genital_flags = UPDATE_OWNER_APPEARANCE|GENITAL_UNDIES_HIDDEN
@@ -84,6 +85,7 @@
 	else
 		color = "#[D.features["butt_color"]]"
 	size = D.features["butt_size"]
+	max_size = D.features["max_butt_size"]
 	starting_size = D.features["butt_size"] // GS13 EDIT
 	prev_size = size
 	toggle_visibility(D.features["butt_visibility"], FALSE)

@@ -562,3 +562,53 @@
 /obj/item/paper/guides/jobs/engi/solar_defence
 	name = "Info on Satellite Defence"
 	info = "<h1>Welcome</h1><p>With this crate, you will be able to protect the station's solar arrays from constant barrages of space sand. The set-up is simple. Drag around all the satellites in front of solar panel arrays, preferably in direction open to space (the best spot is near the solar tracker and outside of the grilles), as that is where the space sand will come from. It's advised to set down just 1 satellite for each solar array. Once you set the satellite down, you can activate it by flicking on the switch. The crate also provides you with an OPTIONAL computer board to keep track of your defence satellites. Voila!</p>"
+
+//GS13's gateway map
+
+/obj/item/paper/fluff/ruins/gateway_fats/caloriteslime1
+	name = "Day 5 - Calorite Slime Specimen"
+	info = "We finally got the calorite slime specimen to react - it began to self-produce lipoifier wherever it went, along with making subtle traces of lipoifium every now and then. Any contact without protection results in almost immediate immobilization. Jay Cobb has been smacking it with a cattle prod for a good 5 hours now. I hope it doesn't escape."
+
+/obj/item/paper/fluff/ruins/gateway_fats/caloriteslime2
+	name = "Day 6 - Calorite Slime Specimen"
+	info = "It escaped."
+
+/obj/item/paper/fluff/ruins/gateway_fats/candyland_shack
+	name = "Dear Diary"
+	info = "So far living here has been working out quite well. I don't need to worry about food at all! The only problem: I really should've made a bigger doorway..."
+
+/obj/item/paper/fluff/ruins/gateway_fats/facility_doodle
+	name = "a doodle"
+	info = "(it's a crude drawing of a man in a suit, being hit by a car. There are stink lines coming off him, for some reason.)"
+
+/obj/item/paper/fluff/ruins/gateway_fats/facility_report1
+	name = "Personal note"
+	info = "I really don't know which executive or RD comes up with this shit. Sure, I can get building chambers for testing properties of various creatures or items on people, as illegal and immoral it might be... But building a SMALL HAZARD COURSE? Really? I wouldn't be surprised if this room's camera tapes are saved every week..."
+
+/obj/item/paper/fluff/ruins/gateway_fats/facility_report2
+	name = "Security Notice"
+	info = "We've spotted a few life signatures poking around this region near the facility. The scans don't match any of the local flora or fauna... Be on the lookout for potential threats."
+
+/obj/item/paper/fluff/ruins/gateway_fats/facility_report3
+	name = "Security Notice 2"
+	info = "We've captured an agent - turtleneck sweater, black and red gear, stechkin tucked away in his boot. Seems like a typical syndie. Before we could really squeeze out any information though, he bit through one of his teeth and succumbed to poison. Need to poke HOS about more thorough search scans in the future."
+
+/obj/item/paper/fluff/ruins/gateway_fats/facility_report4
+	name = "My Will"
+	info = "I don't think I'm gonna squeeze out of this rubble anytime soon. In case I don't make it: Please leave all that I have to-- (the rest of the page is covered in droplets of dried blood)"
+
+/obj/item/paper/fluff/ruins/gateway_fats/facility_report5
+	name = "AUTOMATIC REPORT - CODE RED EMERGENCY"
+	info = "MULTIPLE EXPLOSIONS DETECTED. STRUCTURAL INTEGRITY OF THE FACILITY HAS BEEN COMPROMISED - EMERGENCY PROTOCOLS ENGAGED. CONTACTING HQ... ... ... ... ... CONTACT FAILED. CHECK SYSTEM WIRING."
+
+/obj/item/paper/fluff/ruins/gateway_fats/facility_report6
+	name = "STOP STEALING MY FUCKING LUNCH"
+	info = "Tell that cunt Jerry from requisitions that if he ever steals my lunch again, I'm gonna lock him in a room with 10 of those creepy floating orange hands."
+
+/obj/item/paper/fluff/ruins/gateway_fats/facility_report7
+	name = "Report #383 C28 - Prolonged Exposure to Calorite and Calorite-Derived Products"
+	info = "(the entire paper is covered in some sort of grease, smudging all the ink and making it unreadable...)"
+
+/obj/item/paper/fluff/ruins/gateway_fats/facility_report8
+	name = "Report #192 A38 - Lipoifium"
+	info = "Subject 2 - Male, Anthropomorphic Fox, blue fur. Name: Sam S. At the beginning of the testing, subject was recorded to have weight of 160lbs. After a day of exposure, their weight went into quadruple digits. Testing had to be concluded due to insufficient build of the test chamber. More detailed report found in the system."

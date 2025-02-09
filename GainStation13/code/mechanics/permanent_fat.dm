@@ -4,7 +4,7 @@
 
 /mob/living/carbon/proc/perma_fat_save()
 	var/key = savekey
-	if(!key)
+	if(!key || !client)
 		return FALSE
 	var/filename = "preferences.sav"
 	var/path = "data/player_saves/[key[1]]/[key]/[filename]"

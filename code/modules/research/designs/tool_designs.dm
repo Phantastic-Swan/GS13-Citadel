@@ -33,7 +33,8 @@
 	departmental_flags =  DEPARTMENTAL_FLAG_ENGINEERING
 
 /datum/design/rpd
-	name = "Rapid Pipe Dispenser"
+        // ORIGINAL name = "Rapid Pipe Dispenser"
+	name = "Rapid Piping Device (RPD)"
 	desc = "A tool that can construct and deconstruct pipes on the fly."
 	id = "rpd"
 	build_type = PROTOLATHE

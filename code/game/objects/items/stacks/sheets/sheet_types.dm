@@ -412,6 +412,17 @@ GLOBAL_LIST_INIT(cloth_recipes, list ( \
 	new/datum/stack_recipe("19x19 canvas", /obj/item/canvas/nineteenXnineteen, 3), \
 	new/datum/stack_recipe("23x19 canvas", /obj/item/canvas/twentythreeXnineteen, 4), \
 	new/datum/stack_recipe("23x23 canvas", /obj/item/canvas/twentythreeXtwentythree, 5), \
+	null, \
+	// GS13 edit - beanbag chairs
+	new/datum/stack_recipe_list("beanbag chairs", list( \
+		new/datum/stack_recipe("red beanbag chair", /obj/structure/chair/beanbag/red, 5, one_per_turf = TRUE, on_floor = TRUE), \
+		new/datum/stack_recipe("blue beanbag chair", /obj/structure/chair/beanbag/blue, 5, one_per_turf = TRUE, on_floor = TRUE), \
+		new/datum/stack_recipe("green beanbag chair",/obj/structure/chair/beanbag/green, 5, one_per_turf = TRUE, on_floor = TRUE), \
+		new/datum/stack_recipe("purple beanbag chair", /obj/structure/chair/beanbag/purple, 5, one_per_turf = TRUE, on_floor = TRUE), \
+		new/datum/stack_recipe("black beanbag chair", /obj/structure/chair/beanbag/black, 5, one_per_turf = TRUE, on_floor = TRUE), \
+		new/datum/stack_recipe("GATO beanbag chair", /obj/structure/chair/beanbag/gato, 5, one_per_turf = TRUE, on_floor = TRUE), \
+		)), \
+	// END GS13 edit
 	))
 
 /obj/item/stack/sheet/cloth

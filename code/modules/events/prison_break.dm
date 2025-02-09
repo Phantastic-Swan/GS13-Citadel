@@ -1,7 +1,7 @@
 /datum/round_event_control/grey_tide
 	name = "Grey Tide"
 	typepath = /datum/round_event/grey_tide
-	max_occurrences = 2
+	max_occurrences = 0 //GS13 - disabling for now
 	min_players = 12
 	category = EVENT_CATEGORY_ENGINEERING
 	description = "Bolts open all doors in one or more departments."

@@ -48,21 +48,25 @@
 	name = "Demon Spade"
 	icon = 'GainStation13/icons/mob/markings/mam_tails.dmi'
 	icon_state = "spade"
+	matrixed_sections = MATRIX_RED_GREEN
 
 /datum/sprite_accessory/tails_animated/mam_tails_animated/spade
 	name = "Demon Spade"
 	icon = 'GainStation13/icons/mob/markings/mam_tails.dmi'
 	icon_state = "spade"
+	matrixed_sections = MATRIX_RED_GREEN
 
 /datum/sprite_accessory/tails/human/spade
 	name = "Demon Spade"
 	icon = 'GainStation13/icons/mob/markings/mam_tails.dmi'
 	icon_state = "spade"
+	matrixed_sections = MATRIX_RED_GREEN
 
 /datum/sprite_accessory/tails_animated/human/spade
 	name = "Demon Spade"
 	icon = 'GainStation13/icons/mob/markings/mam_tails.dmi'
 	icon_state = "spade"
+	matrixed_sections = MATRIX_RED_GREEN
 
 //deer tail
 
@@ -72,21 +76,25 @@
 	icon_state = "deer"
 	color_src = MATRIXED
 	icon = 'GainStation13/icons/mob/markings/mam_tails.dmi'
+	matrixed_sections = MATRIX_RED_GREEN
 
 /datum/sprite_accessory/tails_animated/human/deer
 	name = "Deer"
 	icon_state = "deer"
 	color_src = MATRIXED
 	icon = 'GainStation13/icons/mob/markings/mam_tails.dmi'
+	matrixed_sections = MATRIX_RED_GREEN
 
 /datum/sprite_accessory/tails/mam_tails/deer
 	name = "Deer"
 	icon_state = "deer"
 	color_src = MATRIXED
 	icon = 'GainStation13/icons/mob/markings/mam_tails.dmi'
+	matrixed_sections = MATRIX_RED_GREEN
 
 /datum/sprite_accessory/tails_animated/mam_tails_animated/deer
 	name = "Deer"
 	icon_state = "deer"
 	color_src = MATRIXED
 	icon = 'GainStation13/icons/mob/markings/mam_tails.dmi'
+	matrixed_sections = MATRIX_RED_GREEN

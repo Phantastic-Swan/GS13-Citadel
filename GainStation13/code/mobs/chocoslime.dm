@@ -38,10 +38,7 @@
 	blood_volume = 0
 	lighting_alpha = LIGHTING_PLANE_ALPHA_MOSTLY_VISIBLE
 	initial_language_holder = /datum/language_holder/slime
-//	// You are not immune to vore.
-//	devourable = 1
-//	digestable = 1
-//	feeding = 1
+	vore_flags = DEVOURABLE | DIGESTABLE | FEEDING
 
 //Creambeast - basically a bit tougher mob that has feeding ranged attacks
 /mob/living/simple_animal/hostile/feed/chocolate_slime/creambeast
@@ -93,3 +90,52 @@
 				if(HAS_TRAIT(L, TRAIT_VORACIOUS))
 					fullness_add = fullness_add * 0.67
 				L.fullness += (fullness_add)
+
+
+
+//should probably put this in elsewhere or whatever, but for now it'll do
+
+/mob/living/simple_animal/hostile/fatten/magehand
+	name = "Magehand"
+	desc = "It's a floating mage hand of strange, crackling orange energy..."
+	icon = 'GainStation13/icons/mob/fathand.dmi'
+	icon_state = "fathand"
+	icon_living = "fathand"
+	icon_dead = "fathand_dead"
+	speak_emote = list("crackles")
+	emote_hear = list("crackles")
+	speak_chance = 5
+	mob_biotypes = MOB_SPIRIT
+	pressure_resistance = 9000
+	turns_per_move = 5
+	aggro_vision_range = 10
+	see_in_dark = 10
+	maxHealth = 20
+	health = 20
+	obj_damage = 0
+	melee_damage_lower = 0.001
+	melee_damage_upper = 0.001
+	blood_volume = 0 //don't want it to bleed
+	del_on_death = TRUE //it's an apparition, shouldn't have a body
+	movement_type = FLYING
+	attack_verb_continuous = "pokes"
+	attack_verb_simple = "pokes"
+	a_intent = INTENT_HARM
+	pass_flags = PASSTABLE
+	move_to_delay = 2 //very fast
+	attack_sound = 'sound/weapons/pulse.ogg'
+	unique_name = 1
+	faction = list(ROLE_WIZARD)
+	lighting_alpha = LIGHTING_PLANE_ALPHA_MOSTLY_VISIBLE
+	atmos_requirements = list("min_oxy" = 0, "max_oxy" = 0, "min_tox" = 0, "max_tox" = 0, "min_co2" = 0, "max_co2" = 0, "min_n2" = 0, "max_n2" = 0)
+	minbodytemp = 0
+	maxbodytemp = INFINITY
+
+/mob/living/simple_animal/hostile/fatten
+	var/fat_per_hit = 30
+
+/mob/living/simple_animal/hostile/fatten/AttackingTarget()
+	. = ..()
+	var/mob/living/carbon/L = target
+	if(L.client?.prefs?.weight_gain_magic)
+		L.adjust_fatness(fat_per_hit)

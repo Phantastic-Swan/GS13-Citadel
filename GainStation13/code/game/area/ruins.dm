@@ -36,3 +36,31 @@
 /area/ruin/powered/candycaveLower/inside
 	name = "Candy Cave"
 	icon_state = "away"
+
+
+//fatventure gateway map
+/area/awaymission/fatventure
+	name = "Unknown Area"
+	icon_state = "awaycontent1"
+	requires_power = FALSE
+	dynamic_lighting = DYNAMIC_LIGHTING_DISABLED
+
+/area/awaymission/fatventure/outside
+	name = "Unknown Area - Outside"
+	icon_state = "awaycontent25"
+
+/area/awaymission/fatventure/inside
+	name = "Unknown Area - Inside"
+	icon_state = "awaycontent2"
+	// requires_power = TRUE
+	dynamic_lighting = DYNAMIC_LIGHTING_FORCED
+
+/obj/effect/light_emitter/light //made this light emitter for adventure maps where you have to naturally switch between dynamic and nondynamic light
+	set_luminosity = 4
+	set_cap = 2.5
+	light_color = LIGHT_COLOR_TUNGSTEN
+
+/turf/closed/indestructible/junglemineral
+	name = "tough rock"
+	icon = 'icons/turf/mining.dmi'
+	icon_state = "rock"

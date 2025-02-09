@@ -143,6 +143,7 @@
 	glass_name = "vanilla milkshake"
 	glass_desc = "Guess they fixed the milkshake machine after all, huh?"
 	shot_glass_icon_state = "shotglasscream"
+	use_gs_icon = TRUE
 
 /datum/reagent/consumable/milkshake_chocolate
 	name = "Chocolate Milkshake"
@@ -155,3 +156,4 @@
 	glass_name = "chocolate milkshake"
 	glass_desc = "Nothing better than cream AND cocoa!"
 	shot_glass_icon_state = "shotglassbrown"
+	use_gs_icon = TRUE

@@ -7,6 +7,7 @@
 	slot 					= ORGAN_SLOT_BELLY
 	w_class 				= 3
 	size 					= 0
+	var/max_size			= 0
 	shape 					= DEF_BELLY_SHAPE
 	var/statuscheck			= FALSE
 	genital_flags 			= UPDATE_OWNER_APPEARANCE
@@ -65,6 +66,7 @@
 	else
 		color = "#[D.features["belly_color"]]"
 	size = D.features["belly_size"]
+	max_size = D.features["max_belly_size"]
 	starting_size = D.features["belly_size"]
 	shape = D.features["belly_shape"]
 	inflatable = D.features["inflatable_belly"]

@@ -38,6 +38,21 @@
 /obj/item/reagent_containers/glass/beaker/flatulose
 	list_reagents = list(/datum/reagent/consumable/flatulose = 50)
 
+/obj/item/reagent_containers/glass/beaker/galbanic
+	list_reagents = list(/datum/reagent/fermi_fat = 50)
+
+/obj/item/reagent_containers/glass/beaker/macarenic
+	list_reagents = list(/datum/reagent/fermi_slim = 50)
+
+//evil fucking donut
+
+/obj/item/reagent_containers/food/snacks/donut/evil_superfat
+	name = "Evil Fuckin' Donut"
+	desc = "Merely looking at this thing makes you feel like you're getting fat..."
+	bitesize = 100 // Always eat it in one bite
+	list_reagents = list(/datum/reagent/fermi_fat = 120, /datum/reagent/consumable/lipoifier = 70, /datum/reagent/consumable/cornoil = 70)
+	tastes = list("imminent immobility" = 10)
+
 //blueberry gum snack
 
 /obj/item/reagent_containers/food/snacks/blueberry_gum
@@ -223,3 +238,40 @@
 	volume = 250
 	custom_materials = list(/datum/material/plastic=1000)
 	w_class = WEIGHT_CLASS_HUGE
+
+
+//weapon prefabs
+
+/obj/item/melee/curator_whip/fattening
+	name = "calorite-lined whip"
+	desc = "The whip seems to glisten with an orange gleam inbetween its threads."
+	damtype = "fat"
+	attack_verb = list("fattened")
+	force = 40
+
+/obj/item/melee/curator_whip/permafattening
+	name = "galbanic whip"
+	desc = "How can a whip even be infused galbanic? No one knows."
+	damtype = "perma_fat"
+	attack_verb = list("fattened")
+	force = 20
+
+/obj/item/gavelhammer/fattening
+	desc = "Some madman managed to create a weapon out of calorite... Luckily, it has a rubber handle for you to wield."
+	name = "Calorite Hammer"
+	icon = 'icons/obj/items_and_weapons.dmi'
+	icon_state = "toyhammer"
+	damtype = "fat"
+	throwforce = 40
+	force = 60
+	attack_verb = list("fattened")
+
+/obj/item/gavelhammer/permafattening
+	desc = "You may ask yourself - how did someone make a hammer out of a chemical? The answer is clear: no one knows."
+	name = "Permafat Hammer"
+	icon = 'icons/obj/items_and_weapons.dmi'
+	icon_state = "toyhammer"
+	damtype = "perma_fat"
+	throwforce = 10
+	force = 20
+	attack_verb = list("fattened")
