@@ -9,9 +9,20 @@
 	name = "superfatter crystal"
 	desc = "A strangely translucent and orange-ish crystal."
 	icon = 'GainStation13/icons/turf/supermatter.dmi' // GS13 EDIT 'icons/obj/supermatter.dmi'
-	icon_state = "darkmatter"
+	icon_state = "caloritematter"
+	base_icon_state = "caloritematter"
 	
 	var/ignore_prefs = TRUE
+
+/obj/machinery/power/supermatter_crystal/superfatter_crystal/shard
+	name = "superfatter shard"
+	desc = "A strangely translucent and orange-ish crystal that looks like it used to be part of a larger structure."
+	icon_state = "caloritematter_shard"
+	anchored = FALSE
+	gasefficency = 0.125
+	explosion_power = 12
+	layer = ABOVE_MOB_LAYER
+	moveable = TRUE
 
 /obj/machinery/power/supermatter_crystal/superfatter_crystal/dust_mob(mob/living/nom, vis_msg, mob_msg, cause)
 	// . = ..()
@@ -247,9 +258,10 @@
 	if(power_changes)
 		power = max((effective_temperature * temp_factor / T0C) * gasmix_power_ratio + power, 0)
 
-	if(prob(50))
+	if(prob(10))
 		//(1 + (tritRad + pluoxDampen * bzDampen * o2Rad * plasmaRad / (10 - bzrads))) * freonbonus
-		radiation_pulse(src, power * max(0, (1 + (power_transmission_bonus/(10-radioactivity_modifier)))))//freonbonus))// RadModBZ(500%)
+		var/rad_power = power * max(0, (1 + (power_transmission_bonus/(10-radioactivity_modifier)))) / 10
+		radiation_pulse(src, rad_power)//freonbonus))// RadModBZ(500%)
 	if(radioactivity_modifier >= 2 && prob(6 * radioactivity_modifier))
 		src.fire_nuclear_particle()
 
@@ -263,14 +275,14 @@
 	removed.adjust_moles(GAS_O2, max((device_energy * dynamic_heat_modifier + effective_temperature - T20C) / OXYGEN_RELEASE_MODIFIER, 0))
 
 	var/heat_released = device_energy * dynamic_heat_modifier
-	if (power > 4500)
-		heat_released = heat_released * sqrt(removed.total_moles()) * THERMAL_RELEASE_MODIFIER//**2 // OH LAWD HE COMIN
-	if (power <= 4500 && power > 2000)
-		heat_released = heat_released * sqrt(removed.total_moles()) * THERMAL_RELEASE_MODIFIER // big boy
-	if (power <= 2000 && power > 1000)
-		heat_released = heat_released * THERMAL_RELEASE_MODIFIER // normal mode
-	if (power <= 1000)
-		heat_released = heat_released // easy mode, since the crystal is effectively off
+	// if (power > 4500)
+	// 	heat_released = heat_released * sqrt(removed.total_moles()) * THERMAL_RELEASE_MODIFIER//**2 // OH LAWD HE COMIN
+	// if (power <= 4500 && power > 2000)
+	// 	heat_released = heat_released * sqrt(removed.total_moles()) * THERMAL_RELEASE_MODIFIER // big boy
+	// if (power <= 2000 && power > 1000)
+	// 	heat_released = heat_released * THERMAL_RELEASE_MODIFIER // normal mode
+	// if (power <= 1000)
+	// 	heat_released = heat_released // easy mode, since the crystal is effectively off
 	removed.adjust_heat(heat_released)
 	removed.set_temperature(max(0, min(removed.return_temperature(), 2500 * dynamic_heat_modifier)))
 
@@ -283,21 +295,32 @@
 	*********/
 
 	//Makes em go mad and accumulate rads.
-	for(var/mob/living/carbon/human/l in fov_viewers(src, HALLUCINATION_RANGE(power))) // If they can see it without mesons on.  Bad on them.
-		if(!istype(l.glasses, /obj/item/clothing/glasses/meson))
-			var/D = sqrt(1 / max(1, get_dist(l, src)))
-			if(!l.hallucination)
-				to_chat(l, "<span class='warning'>Looking at the supermatter unprotected gives you a headache...</span>")
-			l.hallucination += power * hallucination_power * D
-			l.hallucination = clamp(l.hallucination, 0, 200)
-	for(var/mob/living/l in range(src, round((power / 100) ** 0.25)))
-		var/rads = (power / 10) * sqrt( 1 / max(get_dist(l, src),1) )
-		l.rad_act(rads)
+	// for(var/mob/living/carbon/human/l in fov_viewers(src, HALLUCINATION_RANGE(power))) // If they can see it without mesons on.  Bad on them.
+	// 	if(!istype(l.glasses, /obj/item/clothing/glasses/meson))
+	// 		var/D = sqrt(1 / max(1, get_dist(l, src)))
+	// 		if(!l.hallucination)
+	// 			to_chat(l, "<span class='warning'>Looking at the supermatter unprotected gives you a headache...</span>")
+	// 		l.hallucination += power * hallucination_power * D
+	// 		l.hallucination = clamp(l.hallucination, 0, 200)
+
+	for(var/mob/living/carbon/human/person in range(src, HALLUCINATION_RANGE(power)))
+		var/rads = (power / 10) * sqrt( 1 / max(get_dist(person, src),1) )
+		// l.rad_act(rads)
+		if(!rads || (rads < RAD_MOB_SKIN_PROTECTION) || HAS_TRAIT(src, TRAIT_RADIMMUNE))
+			return
+
+		rads -= RAD_BACKGROUND_RADIATION // This will always be at least 1 because of how skin protection is calculated
+
+		var/blocked = (100 - person.getarmor(null, RAD)) / 100
+
+		// apply_effect((rads*RAD_MOB_COEFFICIENT)/max(1, (radiation**2)*RAD_OVERDOSE_REDUCTION), EFFECT_IRRADIATE, blocked)
+		var/fat_gained = (rads * RAD_MOB_COEFFICIENT) * blocked
+		person.adjust_fatness(fat_gained, FATTENING_TYPE_RADIATIONS)
 
 	//Transitions between one function and another, one we use for the fast inital startup, the other is used to prevent errors with fusion temperatures.
 	//Use of the second function improves the power gain imparted by using co2
 	if(power_changes)
-		power = max(power - min(((power/500)**3) * powerloss_inhibitor, power * 0.83 * powerloss_inhibitor),0)
+		power = max(power - min(((power/500)**3) * powerloss_inhibitor, power * 0.83 * powerloss_inhibitor) - 1, 0)
 	//After this point power is lowered
 	//This wraps around to the begining of the function
 	//Handle high power zaps/anomaly generation

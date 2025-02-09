@@ -632,25 +632,6 @@ GLOBAL_DATUM(main_supermatter_engine, /obj/machinery/power/supermatter_crystal)
 	removed.set_temperature(max(0, min(removed.return_temperature(), 2500 * dynamic_heat_modifier)))
 
 
-	// var/heat_debug = device_energy * dynamic_heat_modifier * THERMAL_RELEASE_MODIFIER
-	// var/removed_energy = removed.thermal_energy()
-	// var/removed_temp = removed.return_temperature()
-
-	// removed.adjust_heat(heat_debug)
-
-	// removed_energy = removed.thermal_energy()
-	// removed_temp = removed.return_temperature()
-
-
-
-	// var/dynamic_modifier = min(removed.return_temperature(), 2500 * dynamic_heat_modifier)
-	// removed.set_temperature(dynamic_modifier)
-
-	// removed_energy = removed.thermal_energy()
-	// removed_temp = removed.return_temperature()
-	// dynamic_modifier = min(removed.return_temperature(), 2500 * dynamic_heat_modifier)
-
-
 	if(produces_gas)
 		env.merge(removed)
 		air_update_turf()
