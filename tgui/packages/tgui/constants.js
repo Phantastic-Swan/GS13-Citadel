@@ -57,6 +57,9 @@ export const CSS_COLORS = [
   'average',
   'bad',
   'label',
+  {
+    test: '#f0f0f0',
+  }
 ];
 
 /* IF YOU CHANGE THIS KEEP IT IN SYNC WITH CHAT CSS */
@@ -246,6 +249,30 @@ const GASES = [
     'name': 'Quark Matter',
     'label': 'QGP',
     'color': 'pink',
+  },
+  {
+    'id': 'lipoifium',
+    'name': 'Lipoifium',
+    'label': 'Lipoifium',
+    'color': 'olive',
+  },
+  {
+    'id': 'galbanium',
+    'name': 'Galbanium',
+    'label': 'Galbanium',
+    'color': 'bad',
+  },
+  {
+    'id': 'lipocidium',
+    'name': 'Lipocidium',
+    'label': 'Lipocidium',
+    'color': 'label',
+  },
+  {
+    'id': 'macerinium',
+    'name': 'Macerinium',
+    'label': 'Macerinium',
+    'color': 'violet',
   },
 ];
 
