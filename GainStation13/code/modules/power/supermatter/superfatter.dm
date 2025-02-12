@@ -59,9 +59,9 @@
 		AM.visible_message("<span class='danger'>\The [AM] slams into \the [src] inducing a resonance... [AM.p_their()] body starts to wobble and swell before being engulfed by a mountain of fat!</span>",\
 		"<span class='userdanger'>You slam into \the [src] as your body starts expanding. Before long, you find yourself sitting next to the crystal, unable to move...</span>",\
 		"<span class='hear'>You hear a strange, soft noise and feel as if your belt became a little tight.</span>")
-	else if(isobj(AM) && !iseffect(AM))
-		AM.visible_message("<span class='danger'>\The [AM] smacks into \the [src] and becomes rapidly engulfed in fat.</span>", null,\
-		"<span class='hear'>You hear a strange, soft noise and feel as if your belt became a little tight.</span>")
+	// else if(isobj(AM) && !iseffect(AM)) // items fattening? :clueless:
+	// 	AM.visible_message("<span class='danger'>\The [AM] smacks into \the [src] and becomes rapidly engulfed in fat.</span>", null,\
+	// 	"<span class='hear'>You hear a strange, soft noise and feel as if your belt became a little tight.</span>")
 	else
 		return
 
