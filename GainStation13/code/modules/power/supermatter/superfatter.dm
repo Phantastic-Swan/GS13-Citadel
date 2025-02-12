@@ -37,7 +37,26 @@
 	nom.visible_message(vis_msg, mob_msg, "<span class='hear'>You hear a strange, soft noise and feel as if your belt became a little tight.</span>")
 	investigate_log("has been attacked ([cause]) by [key_name(nom)]", INVESTIGATE_SUPERMATTER)
 	playsound(get_turf(src), 'sound/effects/supermatter.ogg', 50, TRUE)
-	fatten_mob(nom)
+	if(istype(nom, mob/living/carbon/human))
+		fatten_mob(nom)
+
+/obj/machinery/power/supermatter_crystal/superfatter_crystal/blob_act(obj/structure/blob/B)
+	return
+
+/obj/machinery/power/supermatter_crystal/superfatter_crystal/attack_tk(mob/user)
+	return
+
+/obj/machinery/power/supermatter_crystal/superfatter_crystal/attack_paw(mob/user)
+	return
+
+/obj/machinery/power/supermatter_crystal/superfatter_crystal/attack_alien(mob/user)
+	return
+
+/obj/machinery/power/supermatter_crystal/superfatter_crystal/attack_animal(mob/living/simple_animal/S)
+	return
+
+/obj/machinery/power/supermatter_crystal/superfatter_crystal/attack_robot(mob/user)
+	return
 
 /obj/machinery/power/supermatter_crystal/superfatter_crystal/proc/fatten_mob(mob/living/carbon/human/fatty)
 	var/fattening_type = FATTENING_TYPE_MAGIC
@@ -66,7 +85,8 @@
 		return
 
 	playsound(get_turf(src), 'sound/effects/supermatter.ogg', 50, TRUE)
-	fatten_mob(AM)
+	if(istype(nom, mob/living/carbon/human))
+		fatten_mob(nom)
 
 /obj/machinery/power/supermatter_crystal/superfatter_crystal/process_atmos()
 	if(!processes) //Just fuck me up bro
