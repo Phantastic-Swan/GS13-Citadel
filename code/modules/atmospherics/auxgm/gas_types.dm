@@ -105,9 +105,9 @@
 	oxidation_rate = 8 // when it can oxidize, it can oxidize a LOT
 	enthalpy = -2000000 // but it reduces the heat output a great deal (plasma fires add 3000000 per mole)
 	powermix = -1
-	heat_penalty = -1
+	heat_penalty = -5
 	transmit_modifier = -5
-	powerloss_inhibition = -0.8
+	powerloss_inhibition = -1
 	heat_resistance = 3
 	price = 6
 
@@ -160,7 +160,7 @@
 /datum/gas/hypernoblium
 	id = GAS_HYPERNOB
 	specific_heat = 2000
-	transmit_modifier = 3
+	transmit_modifier = 7
 	powermix = 1
 	heat_penalty = -15
 	name = "Hyper-noblium"

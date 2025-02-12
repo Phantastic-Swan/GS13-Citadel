@@ -46,6 +46,7 @@
 #define OXYGEN_RELEASE_MODIFIER 325        //Higher == less oxygen released at high temperature/power
 
 #define REACTION_POWER_MODIFIER 0.55       //Higher == more overall power
+#define RADIATION_POWER_MODIFIER 1.20	   //Higher == stronger radiation pulses
 
 #define MATTER_POWER_CONVERSION 10         //Crystal converts 1/this value of stored matter into energy.
 
@@ -192,6 +193,8 @@ GLOBAL_DATUM(main_supermatter_engine, /obj/machinery/power/supermatter_crystal)
 	var/power_changes = TRUE
 	///Disables the sm's proccessing totally.
 	var/processes = TRUE
+
+	var/fat_power = 0
 
 /obj/machinery/power/supermatter_crystal/Initialize(mapload)
 	. = ..()
@@ -519,14 +522,14 @@ GLOBAL_DATUM(main_supermatter_engine, /obj/machinery/power/supermatter_crystal)
 	var/list/inhibition = gas_info[POWERLOSS_INHIBITION]
 
 	//We're concerned about pluoxium being too easy to abuse at low percents, so we make sure there's a substantial amount.
-	// var/pluoxiumbonus = (gas_comp[GAS_PLUOXIUM] >= 0.15) //makes pluoxium only work at 15%+
+	var/pluoxiumbonus = (gas_comp[GAS_PLUOXIUM] >= 0.15) //makes pluoxium only work at 15%+
 	var/h2obonus = 1 - (gas_comp[GAS_H2O] * 0.25)//At min this value should be 0.75
 	//		var/freonbonus = (gas_comp[/datum/gas/freon] <= 0.03) //Let's just yeet power output if this shit is high
 
-	// threshold_mod[GAS_PLUOXIUM] = pluoxiumbonus
+	threshold_mod["pluox"] = pluoxiumbonus
 
-	if(gas_comp[GAS_PLUOXIUM] < 0.15)
-		threshold_mod[GAS_PLUOXIUM] = 0
+	// if(gas_comp[GAS_PLUOXIUM] < 0.15)
+	// 	threshold_mod[GAS_PLUOXIUM] = 0
 
 	//No less then zero, and no greater then one, we use this to do explosions and heat to power transfer
 	//Be very careful with modifing this var by large amounts, and for the love of god do not push it past 1
@@ -540,7 +543,7 @@ GLOBAL_DATUM(main_supermatter_engine, /obj/machinery/power/supermatter_crystal)
 	var/powerloss_inhibition_gas = 0
 	var/radioactivity_modifier = 0
 	for(var/gasID in gas_comp)
-		var/this_comp = gas_comp[gasID] * (isnull(threshold_mod[gasID] ? 1 : threshold_mod[gasID]))
+		var/this_comp = gas_comp[gasID] * (isnull(threshold_mod[gasID]) ? 1 : threshold_mod[gasID])
 		gasmix_power_ratio += this_comp * powermix[gasID]
 		dynamic_heat_modifier += this_comp * heat[gasID]
 		dynamic_heat_resistance += this_comp * resist[gasID]
@@ -594,7 +597,8 @@ GLOBAL_DATUM(main_supermatter_engine, /obj/machinery/power/supermatter_crystal)
 
 	if(prob(50))
 		//(1 + (tritRad + pluoxDampen * bzDampen * o2Rad * plasmaRad / (10 - bzrads))) * freonbonus
-		radiation_pulse(src, power * max(0, (1 + (power_transmission_bonus/(10-radioactivity_modifier)))))//freonbonus))// RadModBZ(500%)
+		var/radiation_power = power * RADIATION_POWER_MODIFIER * max(0, (1 + (power_transmission_bonus / (10-radioactivity_modifier))))
+		radiation_pulse(src, radiation_power)//freonbonus))// RadModBZ(500%)
 	if(radioactivity_modifier >= 2 && prob(6 * radioactivity_modifier))
 		src.fire_nuclear_particle()
 
@@ -620,6 +624,8 @@ GLOBAL_DATUM(main_supermatter_engine, /obj/machinery/power/supermatter_crystal)
 	// removed.set_temperature(removed.return_temperature() + (device_energy * dynamic_heat_modifier / THERMAL_RELEASE_MODIFIER))
 
 	var/heat_released = device_energy * dynamic_heat_modifier
+	// yes I know some of those could be cut out but for now, I'll leave them in
+	// but muh performance loss from 2 if checks
 	if (power > 4500)
 		heat_released = heat_released * sqrt(removed.total_moles()) * THERMAL_RELEASE_MODIFIER//**2 // OH LAWD HE COMIN
 	if (power <= 4500 && power > 2000)
@@ -656,6 +662,7 @@ GLOBAL_DATUM(main_supermatter_engine, /obj/machinery/power/supermatter_crystal)
 	//Use of the second function improves the power gain imparted by using co2
 	if(power_changes)
 		power = max(power - min(((power/500)**3) * powerloss_inhibitor, power * 0.83 * powerloss_inhibitor),0)
+		fat_power -= 5
 	//After this point power is lowered
 	//This wraps around to the begining of the function
 	//Handle high power zaps/anomaly generation
@@ -754,6 +761,10 @@ GLOBAL_DATUM(main_supermatter_engine, /obj/machinery/power/supermatter_crystal)
 	if(Proj.flag != BULLET)
 		if(power_changes) //This needs to be here I swear
 			power += Proj.damage * bullet_energy
+			if(istype(Proj, /obj/item/projectile/beam/fattening))
+				var/obj/item/projectile/beam/fattening/test = Proj
+				power += test.fat_added / bullet_energy
+				fat_power += test.fat_added / bullet_energy
 			if(!has_been_powered)
 				investigate_log("has been powered for the first time.", INVESTIGATE_SUPERMATTER)
 				message_admins("[src] has been powered for the first time [ADMIN_JMP(src)].")
@@ -915,6 +926,10 @@ GLOBAL_DATUM(main_supermatter_engine, /obj/machinery/power/supermatter_crystal)
 	else if(isobj(AM) && !iseffect(AM))
 		AM.visible_message("<span class='danger'>\The [AM] smacks into \the [src] and rapidly flashes to ash.</span>", null,\
 		"<span class='hear'>You hear a loud crack as you are washed with a wave of heat.</span>")
+		if(istype(AM, /obj/item/stack/sheet/mineral/calorite))
+			if(fat_power >= 1000)
+				qdel(src)
+				new /obj/machinery/power/supermatter_crystal/superfatter_crystal
 	else
 		return
 

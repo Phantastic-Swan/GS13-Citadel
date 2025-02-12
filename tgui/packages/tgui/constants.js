@@ -252,7 +252,7 @@ const GASES = [
     'id': 'lipoifium',
     'name': 'Lipoifium',
     'label': 'Lipoifium',
-    'color': 'lipo',
+    'color': 'white',
   },
 ];
 
