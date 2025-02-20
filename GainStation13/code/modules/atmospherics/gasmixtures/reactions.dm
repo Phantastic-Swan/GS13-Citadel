@@ -6,8 +6,8 @@
 /datum/gas_reaction/lipoifium_formation/init_reqs()
 	min_requirements = list(
 		"MAX_TEMP" = 100,
-		GAS_BZ = 15,
-		GAS_TRITIUM = 15
+		GAS_BZ = 10,
+		GAS_TRITIUM = 10
 	)
 
 /datum/gas_reaction/lipoifium_formation/react(datum/gas_mixture/air)
@@ -32,20 +32,29 @@
 
 	return REACTING
 
-/datum/gas_reaction/galbanium_formation
+/datum/gas_reaction/lipocidium_formation
 	priority = 8
-	name = "Galbanium Formation"
-	id = "galbanium_formation"
+	name = "Lipocidium Formation"
+	id = "lipocidium_formation"
 
-/datum/gas_reaction/galbanium_formation/init_reqs()
+/datum/gas_reaction/lipocidium_formation/init_reqs()
 	min_requirements = list(
-		"TEMP" = 5000,
-		GAS_FAT = 10,
-		GAS_N2 = 10,
-		GAS_CO2 = 10
+		"TEMP" = 500,
+		GAS_BZ = 10,
+		GAS_NITRIC = 5
 	)
 
-/datum/gas_reaction/galbanium_formation/react(datum/gas_mixture/air)
-	if (air.get_moles(GAS_FAT) < 10 || air.get_moles(GAS_NITRYL) < 10 || air.get_moles(GAS_CO2) < 10 || air.return_temperature() < 5000)
+/datum/gas_reaction/lipoifium_formation/react(datum/gas_mixture/air)
+	if(air.get_moles(GAS_BZ) < 10 || air.get_moles(GAS_NITRIC) < 5)
 		return NO_REACTION
+
+	var/temperature = air.return_temperature()
+	var/reaction_efficiency = 0
+	var/energy_absorbed = 0
+	if(temperature < 1000)
+		reaction_efficiency = 0
+	else
+		reaction_efficiency = temperature / 10000
+
+
 
