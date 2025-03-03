@@ -100,6 +100,9 @@
 						if(iscarbon(prey) && prey.fatness_real)
 							var/fatness_to_add = (prey.fatness_real * 0.80)
 							gainer.adjust_fatness(fatness_to_add, FATTENING_TYPE_FOOD)
+							gainer.human_prey_digested += 1
+
+						gainer.prey_digested += 1
 					//GS13 edit end
 
 					//Send messages

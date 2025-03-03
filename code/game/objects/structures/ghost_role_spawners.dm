@@ -32,7 +32,7 @@
 	new_spawn.undershirt = "Nude" //changing underwear/shirt/socks doesn't seem to function correctly right now because of some bug elsewhere?
 	new_spawn.socks = "Nude"
 	new_spawn.update_body(TRUE)
-	new_spawn.language_holder.selected_language = /datum/language/sylvan
+	new_spawn.set_active_language(/datum/language/sylvan)
 
 //Ash walker eggs: Spawns in ash walker dens in lavaland. Ghosts become unbreathing lizards that worship the Necropolis and are advised to retrieve corpses to create more ash walkers.
 
@@ -878,7 +878,6 @@
 
 /datum/outfit/ghostcafe/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE, client/preference_source)
 	H.internal = H.get_item_for_held_index(1)
-	H.update_internals_hud_icon(1)
 
 /obj/item/storage/box/syndie_kit/chameleon/ghostcafe
 	name = "ghost cafe costuming kit"

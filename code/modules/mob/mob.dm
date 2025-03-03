@@ -461,7 +461,7 @@
 				client.prefs.chat_toggles ^= CHAT_OOC
 			if (!(client.prefs.chat_toggles & CHAT_OOC) && isdead(new_mob))
 				client.prefs.chat_toggles ^= CHAT_OOC
-	new_mob.ckey = ckey
+	new_mob.key = key
 	if(send_signal)
 		SEND_SIGNAL(src, COMSIG_MOB_KEY_CHANGE, new_mob, src)
 	return TRUE
@@ -954,12 +954,11 @@ GLOBAL_VAR_INIT(exploit_warn_spam_prevention, 0)
 	//Do not do parent's actions, as we *usually* do this differently.
 	fully_replace_character_name(real_name, new_name)
 
-/mob/verb/open_language_menu()
+/mob/verb/open_language_menu_verb()
 	set name = "Open Language Menu"
 	set category = "IC"
 
-	var/datum/language_holder/H = get_language_holder()
-	H.open_language_menu(usr)
+	get_language_holder().open_language_menu(usr)
 
 ///Adjust the nutrition of a mob
 /mob/proc/adjust_nutrition(change, max = INFINITY) //Honestly FUCK the oldcoders for putting nutrition on /mob someone else can move it up because holy hell I'd have to fix SO many typechecks

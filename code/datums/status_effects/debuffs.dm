@@ -971,17 +971,20 @@
 	desc = "A magical strand of Durathread is wrapped around your neck, preventing you from breathing! Click this icon to remove the strand."
 	icon_state = "his_grace"
 	alerttooltipstyle = "hisgrace"
+	clickable_glow = TRUE
 
 /atom/movable/screen/alert/status_effect/strandling/Click(location, control, params)
 	. = ..()
-	if(usr != owner)
+	if(!.)
 		return
 	to_chat(owner, "<span class='notice'>You attempt to remove the durathread strand from around your neck.</span>")
-	if(do_after(owner, 3.5 SECONDS, owner))
-		if(isliving(owner))
-			var/mob/living/L = owner
-			to_chat(owner, "<span class='notice'>You successfully remove the durathread strand.</span>")
-			L.remove_status_effect(STATUS_EFFECT_CHOKINGSTRAND)
+	if(!do_after(owner, 3.5 SECONDS, owner))
+		return
+	if(!isliving(owner))
+		return
+	var/mob/living/L = owner
+	to_chat(owner, "<span class='notice'>You successfully remove the durathread strand.</span>")
+	L.remove_status_effect(STATUS_EFFECT_CHOKINGSTRAND)
 
 
 /datum/status_effect/pacify

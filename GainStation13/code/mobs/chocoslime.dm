@@ -2,13 +2,24 @@
 	var/food_per_feeding = 5
 	var/food_fed = /datum/reagent/consumable/nutriment
 
+/mob/living/simple_animal/hostile/feed/CanAttack(atom/the_target)
+	var/mob/living/carbon/target = the_target
+	if(!istype(the_target)|| !check_target_prefs(target))
+		return FALSE
+
+	return ..()
+
+/// Called when seeing if a target can be attacked. See if the target has the pref on and return accordingly.
+/mob/living/simple_animal/hostile/proc/check_target_prefs(mob/living/carbon/target)
+	return target?.client?.prefs?.weight_gain_weapons
+
 /mob/living/simple_animal/hostile/feed/AttackingTarget()
 	. = ..()
 	var/mob/living/carbon/L = target
-	if(L.client?.prefs?.weight_gain_weapons)
-		if(L.reagents)
-			if(!L.is_mouth_covered(head_only = 1))
-				L.reagents.add_reagent(food_fed, food_per_feeding)
+	if(!istype(L) || !L.reagents || !L.is_mouth_covered(head_only = 1))
+		return FALSE
+
+	L.reagents.add_reagent(food_fed, food_per_feeding)
 
 /mob/living/simple_animal/hostile/feed/chocolate_slime
 	name = "Chocolate slime"
@@ -83,13 +94,13 @@
 /obj/item/projectile/beam/fattening/icecream/on_hit(atom/target, blocked)
 	. = ..()
 	var/mob/living/carbon/L = target
-	if(L.client?.prefs?.weight_gain_weapons)
-		if(L.reagents)
-			if(!L.is_mouth_covered(head_only = 1))
-				L.reagents.add_reagent(food_fed, food_per_feeding)
-				if(HAS_TRAIT(L, TRAIT_VORACIOUS))
-					fullness_add = fullness_add * 0.67
-				L.fullness += (fullness_add)
+	if(!istype(L) || !L.reagents || L.is_mouth_covered(head_only = 1))
+		return FALSE
+
+	L.reagents.add_reagent(food_fed, food_per_feeding)
+	if(HAS_TRAIT(L, TRAIT_VORACIOUS))
+		fullness_add = fullness_add * 0.67
+	L.fullness += (fullness_add)
 
 
 
@@ -137,5 +148,17 @@
 /mob/living/simple_animal/hostile/fatten/AttackingTarget()
 	. = ..()
 	var/mob/living/carbon/L = target
-	if(L.client?.prefs?.weight_gain_magic)
-		L.adjust_fatness(fat_per_hit)
+	if(!istype(L))
+		return FALSE
+
+	L.adjust_fatness(fat_per_hit, FATTENING_TYPE_MAGIC)
+
+/mob/living/simple_animal/hostile/fatten/CanAttack(atom/the_target)
+	var/mob/living/carbon/target = the_target
+	if(!istype(the_target)|| !check_target_prefs(target))
+		return FALSE
+
+	return ..()
+
+/mob/living/simple_animal/hostile/fatten/check_target_prefs(mob/living/carbon/target)
+	return target?.client?.prefs?.weight_gain_magic

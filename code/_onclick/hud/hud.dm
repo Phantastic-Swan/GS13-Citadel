@@ -57,7 +57,8 @@ GLOBAL_LIST_INIT(available_ui_styles, list(
 	var/list/inv_slots[SLOTS_AMT] // /atom/movable/screen/inventory objects, ordered by their slot ID.
 	var/list/hand_slots // /atom/movable/screen/inventory/hand objects, assoc list of "[held_index]" = object
 	var/list/atom/movable/screen/plane_master/plane_masters = list() // see "appearance_flags" in the ref, assoc list of "[plane]" = object
-
+	///Assoc list of controller groups, associated with key string group name with value of the plane master controller ref
+	var/list/atom/movable/plane_master_controller/plane_master_controllers = list()
 
 	///UI for screentips that appear when you mouse over things
 	var/atom/movable/screen/screentip/screentip_text
@@ -86,7 +87,6 @@ GLOBAL_LIST_INIT(available_ui_styles, list(
 
 	var/atom/movable/screen/healths
 	var/atom/movable/screen/healthdoll
-	var/atom/movable/screen/internals
 
 	//GS13 Port - Add back Arousal
 	var/atom/movable/screen/arousal
@@ -112,9 +112,13 @@ GLOBAL_LIST_INIT(available_ui_styles, list(
 	hand_slots = list()
 
 	for(var/mytype in subtypesof(/atom/movable/screen/plane_master))
-		var/atom/movable/screen/plane_master/instance = new mytype()
+		var/atom/movable/screen/plane_master/instance = new mytype(null, src)
 		plane_masters["[instance.plane]"] = instance
 		instance.backdrop(mymob)
+
+	for(var/mytype in subtypesof(/atom/movable/plane_master_controller))
+		var/atom/movable/plane_master_controller/controller_instance = new mytype(null, src)
+		plane_master_controllers[controller_instance.name] = controller_instance
 
 	screentip_text = new(null, src)
 	static_inventory += screentip_text
@@ -146,8 +150,8 @@ GLOBAL_LIST_INIT(available_ui_styles, list(
 	healths = null
 	healthdoll = null
 	wanted_lvl = null
-	internals = null
 	arousal = null
+
 	lingchemdisplay = null
 	devilsouldisplay = null
 	lingstingdisplay = null
@@ -157,6 +161,7 @@ GLOBAL_LIST_INIT(available_ui_styles, list(
 	combo_display = null
 
 	QDEL_LIST_ASSOC_VAL(plane_masters)
+	QDEL_LIST_ASSOC_VAL(plane_master_controllers)
 	QDEL_LIST(screenoverlays)
 	mymob = null
 
@@ -322,14 +327,13 @@ GLOBAL_LIST_INIT(available_ui_styles, list(
 	hand_slots = list()
 	var/atom/movable/screen/inventory/hand/hand_box
 	for(var/i in 1 to mymob.held_items.len)
-		hand_box = new /atom/movable/screen/inventory/hand()
+		hand_box = new /atom/movable/screen/inventory/hand(null, src)
 		hand_box.name = mymob.get_held_index_name(i)
 		hand_box.icon = ui_style
 		hand_box.icon_state = "hand_[mymob.held_index_to_dir(i)]"
 		hand_box.screen_loc = ui_hand_position(i)
 		hand_box.held_index = i
 		hand_slots["[i]"] = hand_box
-		hand_box.hud = src
 		static_inventory += hand_box
 		hand_box.update_icon()
 
@@ -363,6 +367,9 @@ GLOBAL_LIST_INIT(available_ui_styles, list(
 			listed_actions.insert_action(button)
 		if(SCRN_OBJ_IN_PALETTE)
 			palette_actions.insert_action(button)
+		if(SCRN_OBJ_INSERT_FIRST)
+			listed_actions.insert_action(button, index = 1)
+			position = SCRN_OBJ_IN_LIST
 		else // If we don't have it as a define, this is a screen_loc, and we should be floating
 			floating_actions += button
 			button.screen_loc = position

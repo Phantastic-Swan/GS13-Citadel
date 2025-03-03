@@ -3,6 +3,7 @@
 /obj/item/grenade/chem_grenade/lipoifier_strong
 	name = "lipoifier grenade"
 	desc = "For when you want everyone in the room to gain a couple hundred pounds."
+	stage = 3
 
 /obj/item/grenade/chem_grenade/lipoifier_strong/Initialize(mapload)
 	. = ..()
@@ -21,6 +22,7 @@
 /obj/item/grenade/chem_grenade/lipoifier_weak
 	name = "lipoifier grenade"
 	desc = "For when you want everyone in the room to gain a couple dozen pounds."
+	stage = 3
 
 /obj/item/grenade/chem_grenade/lipoifier_weak/Initialize(mapload)
 	. = ..()

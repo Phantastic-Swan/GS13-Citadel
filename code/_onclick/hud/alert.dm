@@ -91,6 +91,8 @@
 	name = "Alert"
 	desc = "Something seems to have gone wrong with this alert, so report this bug please"
 	mouse_opacity = MOUSE_OPACITY_ICON
+	/// do we glow to represent we do stuff when clicked
+	var/clickable_glow = FALSE
 	var/timeout = 0 //If set to a number, this alert will clear itself after that many deciseconds
 	var/severity = 0
 	var/alerttooltipstyle = ""
@@ -99,6 +101,12 @@
 
 	/// Boolean. If TRUE, the Click() proc will attempt to Click() on the master first if there is a master.
 	var/click_master = TRUE
+
+/atom/movable/screen/alert/Initialize(mapload, datum/hud/hud_owner)
+	. = ..()
+	if(clickable_glow)
+		add_filter("clickglow", 2, outline_filter(color = COLOR_GOLD, size = 1))
+		mouse_over_pointer = MOUSE_HAND_POINTER
 
 /atom/movable/screen/alert/MouseEntered(location,control,params)
 	if(!QDELETED(src))
@@ -247,13 +255,14 @@ or something covering your eyes."
 	name = "Mind Control"
 	desc = "Your mind has been hijacked! Click to view the mind control command."
 	icon_state = "mind_control"
+	clickable_glow = TRUE
 	var/command
 
 /atom/movable/screen/alert/mind_control/Click()
-	var/mob/living/L = usr
-	if(L != owner)
+	. = ..()
+	if(!.)
 		return
-	to_chat(L, "<span class='mind_control'>[command]</span>")
+	to_chat(usr, "<span class='mind_control'>[command]</span>")
 
 /atom/movable/screen/alert/hypnosis
 	name = "Hypnosis"
@@ -271,11 +280,16 @@ or something covering your eyes."
 	desc = "Something got lodged into your flesh and is causing major bleeding. It might fall out with time, but surgery is the safest way. \
 If you're feeling frisky, examine yourself and click the underlined item to pull the object out."
 	icon_state = "embeddedobject"
+	clickable_glow = TRUE
 
 /atom/movable/screen/alert/embeddedobject/Click()
-	if(isliving(usr) && usr == owner)
-		var/mob/living/carbon/M = usr
-		return M.help_shake_act(M)
+	. = ..()
+	if(!.)
+		return
+	if(!isliving(usr))
+		return
+	var/mob/living/carbon/M = usr
+	return M.help_shake_act(M)
 
 /atom/movable/screen/alert/weightless
 	name = "Weightless"
@@ -299,10 +313,14 @@ or shoot a gun to move around via Newton's 3rd Law of Motion."
 	name = "On Fire"
 	desc = "You're on fire. Stop, drop and roll to put the fire out or move to a vacuum area."
 	icon_state = "fire"
+	clickable_glow = TRUE
 
 /atom/movable/screen/alert/fire/Click()
+	. = ..()
+	if(!.)
+		return
 	var/mob/living/L = usr
-	if(!istype(L) || !L.can_resist() || L != owner)
+	if(!istype(L) || !L.can_resist())
 		return
 	L.MarkResistTime()
 	if(CHECK_MOBILITY(L, MOBILITY_MOVE))
@@ -310,8 +328,29 @@ or shoot a gun to move around via Newton's 3rd Law of Motion."
 
 /atom/movable/screen/alert/give // information set when the give alert is made
 	icon_state = "default"
+	clickable_glow = TRUE
 	var/mob/living/carbon/offerer
 	var/obj/item/receiving
+	/// Additional text displayed in the description of the alert.
+	var/additional_desc_text = "Click this alert to take it, or shift click it to examine it."
+	/// Text to override what appears in screentips for the alert
+	var/screentip_override_text
+	/// Whether the offered item can be examined by shift-clicking the alert
+	var/examinable = TRUE
+
+/atom/movable/screen/alert/give/Initialize(mapload, datum/hud/hud_owner)
+	. = ..()
+	register_context()
+
+/atom/movable/screen/alert/give/Destroy()
+	offerer = null
+	receiving = null
+	return ..()
+
+/atom/movable/screen/alert/give/add_context(atom/source, list/context, obj/item/held_item, mob/user)
+	LAZYSET(context[SCREENTIP_CONTEXT_LMB], INTENT_ANY, screentip_override_text || "Take [receiving.name]")
+	LAZYSET(context[SCREENTIP_CONTEXT_SHIFT_LMB], INTENT_ANY, "Examine")
+	return CONTEXTUAL_SCREENTIP_SET
 
 /**
  * Handles assigning most of the variables for the alert that pops up when an item is offered
@@ -341,6 +380,16 @@ or shoot a gun to move around via Newton's 3rd Law of Motion."
 		CRASH("User for [src] is of type \[[usr.type]\]. This should never happen.")
 	handle_transfer()
 
+/atom/movable/screen/alert/give/examine(mob/user)
+	if(!examinable)
+		return ..()
+
+	return list(
+		span_boldnotice(name),
+		span_info("[offerer] is offering you the following item (click the alert to take it!):"),
+		"<hr>[jointext(receiving.examine(user), "\n")]",
+	)
+
 /// An overrideable proc used simply to hand over the item when claimed, this is a proc so that high-fives can override them since nothing is actually transferred
 /atom/movable/screen/alert/give/proc/handle_transfer()
 	var/mob/living/carbon/taker = owner
@@ -353,6 +402,11 @@ or shoot a gun to move around via Newton's 3rd Law of Motion."
 	if(!offerer.CanReach(taker))
 		to_chat(owner, span_warning("You moved out of range of [offerer]!"))
 		owner.clear_alert("[offerer]")
+
+/atom/movable/screen/alert/give/highfive
+	additional_desc_text = "Click this alert to slap it."
+	screentip_override_text = "High Five"
+	examinable = FALSE
 
 /atom/movable/screen/alert/give/highfive/setup(mob/living/carbon/taker, mob/living/carbon/offerer, obj/item/receiving)
 	. = ..()
@@ -404,6 +458,9 @@ or shoot a gun to move around via Newton's 3rd Law of Motion."
 /// Families handshakes
 /atom/movable/screen/alert/give/secret_handshake
 	icon_state = "default"
+	additional_desc_text = "Click this alert to accept."
+	screentip_override_text = "Handshake"
+	examinable = FALSE
 
 /atom/movable/screen/alert/give/secret_handshake/setup(mob/living/carbon/taker, mob/living/carbon/offerer, obj/item/receiving)
 	name = "[offerer] is offering a Handshake"
@@ -666,18 +723,21 @@ so as to remain in compliance with the most up-to-date laws."
 		complete, you will have exclusive control of it, and you will gain \
 		additional processing time to unlock more malfunction abilities."
 	icon_state = "hackingapc"
-	timeout = 600
+	timeout = 60 SECONDS
+	clickable_glow = TRUE
 	var/atom/target = null
 
 /atom/movable/screen/alert/hackingapc/Click()
-	if(!usr || !usr.client || usr != owner)
+	. = ..()
+	if(!.)
 		return
 	if(!target)
 		return
 	var/mob/living/silicon/ai/AI = usr
 	var/turf/T = get_turf(target)
-	if(T)
-		AI.eyeobj.setLoc(T)
+	if(!T)
+		return
+	AI.eyeobj.setLoc(T)
 
 //MECHS
 
@@ -693,25 +753,30 @@ so as to remain in compliance with the most up-to-date laws."
 	name = "Revival"
 	desc = "Someone is trying to revive you. Re-enter your corpse if you want to be revived!"
 	icon_state = "template"
-	timeout = 300
+	timeout = 30 SECONDS
+	clickable_glow = TRUE
 
 /atom/movable/screen/alert/notify_cloning/Click()
-	if(!usr || !usr.client || usr != owner)
+	. = ..()
+	if(!.)
 		return
-	var/mob/dead/observer/G = usr
-	G.reenter_corpse()
+	var/mob/dead/observer/dead_owner = usr
+	dead_owner.reenter_corpse()
 
 /atom/movable/screen/alert/notify_action
 	name = "Body created"
 	desc = "A body was created. You can enter it."
 	icon_state = "template"
-	timeout = 300
+	timeout = 30 SECONDS
+	clickable_glow = TRUE
 	var/atom/target = null
 	var/action = NOTIFY_JUMP
 
 /atom/movable/screen/alert/notify_action/Click()
-	if(!usr || !usr.client || usr != owner)
+	. = ..()
+	if(!.)
 		return
+
 	if(!target)
 		return
 	var/mob/dead/observer/G = usr
@@ -729,29 +794,43 @@ so as to remain in compliance with the most up-to-date laws."
 
 //OBJECT-BASED
 
-/atom/movable/screen/alert/restrained/buckled
+/atom/movable/screen/alert/buckled
 	name = "Buckled"
 	desc = "You've been buckled to something. Click the alert to unbuckle unless you're handcuffed."
 	icon_state = "buckled"
+	clickable_glow = TRUE
+
+/atom/movable/screen/alert/restrained
+	clickable_glow = TRUE
 
 /atom/movable/screen/alert/restrained/handcuffed
 	name = "Handcuffed"
 	desc = "You're handcuffed and can't act. If anyone drags you, you won't be able to move. Click the alert to free yourself."
+	click_master = FALSE
 
 /atom/movable/screen/alert/restrained/legcuffed
 	name = "Legcuffed"
 	desc = "You're legcuffed, which slows you down considerably. Click the alert to free yourself."
+	click_master = FALSE
 
 /atom/movable/screen/alert/restrained/Click()
+	. = ..()
+	if(!.)
+		return
+
 	var/mob/living/L = usr
-	if(!istype(L) || !L.can_resist() || L != owner)
+	if(!istype(L) || !L.can_resist())
 		return
 	L.MarkResistTime()
 	return L.resist_restraints()
 
-/atom/movable/screen/alert/restrained/buckled/Click()
+/atom/movable/screen/alert/buckled/Click()
+	. = ..()
+	if(!.)
+		return
+
 	var/mob/living/L = usr
-	if(!istype(L) || !L.can_resist() || L != owner)
+	if(!istype(L) || !L.can_resist())
 		return
 	L.MarkResistTime()
 	return L.resist_buckle()
@@ -765,10 +844,14 @@ so as to remain in compliance with the most up-to-date laws."
 	name = "Knotted Shoes"
 	desc = "Someone tied your shoelaces together! Click the alert or your shoes to undo the knot."
 	icon_state = "shoealert"
+	clickable_glow = TRUE
 
 /atom/movable/screen/alert/shoes/Click()
+	. = ..()
+	if(!.)
+		return
 	var/mob/living/carbon/C = usr
-	if(!istype(C) || !C.can_resist() || C != owner || !C.shoes)
+	if(!istype(C) || !C.can_resist() || !C.shoes)
 		return
 	C.MarkResistTime()
 	C.shoes.handle_tying(C)
@@ -814,9 +897,9 @@ so as to remain in compliance with the most up-to-date laws."
 		return FALSE
 	if(usr != owner)
 		return FALSE
-	var/paramslist = params2list(params)
-	if(paramslist["shift"]) // screen objects don't do the normal Click() stuff so we'll cheat
-		to_chat(usr, "<span class='boldnotice'>[name]</span> - <span class='info'>[desc]</span>")
+	var/modifiers = params2list(params)
+	if(LAZYACCESS(modifiers, SHIFT_CLICK)) // screen objects don't do the normal Click() stuff so we'll cheat
+		to_chat(usr, "<blockquote class='info'>[jointext(examine(usr), "\n")]</blockquote>")
 		return FALSE
 	if(master && click_master)
 		return usr.client.Click(master, location, control, params)
@@ -829,3 +912,9 @@ so as to remain in compliance with the most up-to-date laws."
 	master = null
 	owner = null
 	screen_loc = ""
+
+/atom/movable/screen/alert/examine(mob/user)
+	return list(
+		span_boldnotice(name),
+		span_info(desc),
+	)

@@ -26,7 +26,7 @@
 	var/require_comms_key = FALSE
 
 /datum/world_topic/proc/TryRun(list/input, addr)
-	key_valid = config && (CONFIG_GET(string/comms_key) == input["key"])
+	key_valid = (CONFIG_GET(string/comms_key) == input["key"]) && CONFIG_GET(string/comms_key) && input["key"]
 	if(require_comms_key && !key_valid)
 		return "Bad Key"
 	input -= "key"
@@ -124,7 +124,7 @@
 	for(var/mob/dead/observer/O in GLOB.player_list)
 		if(O.key == expected_key)
 			if(O.client?.address == addr)
-				new /atom/movable/screen/splash(O.client, TRUE)
+				new /atom/movable/screen/splash(null, O.client, TRUE)
 			break
 
 /datum/world_topic/adminmsg

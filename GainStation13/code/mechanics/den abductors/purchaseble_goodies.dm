@@ -1,10 +1,10 @@
 /datum/feeders_den_goodie
 	/// What is the name of the goodie we want to buy?
-	var/name 
+	var/name
 	/// How much credits does this cost to buy?
 	var/credit_cost = 0
 	/// How much stock of this can be bought? If this is null, infinite can be bought
-	var/initial_stock 
+	var/initial_stock
 	/// What is the path of the item to dispense?
 	var/item_to_dispense
 
@@ -12,11 +12,6 @@
 	name = "Food Vendor Refill"
 	credit_cost = 100
 	item_to_dispense = /obj/item/vending_refill/mealdor
-
-/datum/feeders_den_goodie/gizmo
-	name = "Science Tool"
-	credit_cost = 120
-	item_to_dispense = /obj/item/abductor/gizmo/feeder
 
 /datum/feeders_den_goodie/nutripump_turbo
 	name = "Nutri-Pump TURBO Autosurgeon"
@@ -85,4 +80,9 @@
 	name = "Livestock Implant"
 	credit_cost = 250
 	item_to_dispense = /obj/item/implantcase/docile/livestock
-	initial_stock = 5
+
+/datum/feeders_den_goodie/space_suit
+	name = "Boxed Space Suit and Helmet"
+	credit_cost = 300
+	item_to_dispense = /obj/item/storage/box/syndie_kit/space
+	initial_stock = 2

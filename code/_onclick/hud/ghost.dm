@@ -1,5 +1,6 @@
 /atom/movable/screen/ghost
 	icon = 'icons/mob/screen_ghost.dmi'
+	mouse_over_pointer = MOUSE_HAND_POINTER
 
 /atom/movable/screen/ghost/MouseEntered()
 	flick(icon_state + "_anim", src)
@@ -48,34 +49,28 @@
 	..()
 	var/atom/movable/screen/using
 
-	using = new /atom/movable/screen/ghost/jumptomob()
+	using = new /atom/movable/screen/ghost/jumptomob(null, src)
 	using.screen_loc = ui_ghost_jumptomob
-	using.hud = src
 	static_inventory += using
 
-	using = new /atom/movable/screen/ghost/orbit()
+	using = new /atom/movable/screen/ghost/orbit(null, src)
 	using.screen_loc = ui_ghost_orbit
-	using.hud = src
 	static_inventory += using
 
-	using = new /atom/movable/screen/ghost/reenter_corpse()
+	using = new /atom/movable/screen/ghost/reenter_corpse(null, src)
 	using.screen_loc = ui_ghost_reenter_corpse
-	using.hud = src
 	static_inventory += using
 
-	using = new /atom/movable/screen/ghost/teleport()
+	using = new /atom/movable/screen/ghost/teleport(null, src)
 	using.screen_loc = ui_ghost_teleport
-	using.hud = src
 	static_inventory += using
 
-	using = new /atom/movable/screen/ghost/spawners()
+	using = new /atom/movable/screen/ghost/spawners(null, src)
 	using.screen_loc = ui_ghost_spawners
-	using.hud = src
 	static_inventory += using
 
-	using = new /atom/movable/screen/language_menu
+	using = new /atom/movable/screen/language_menu(null, src)
 	using.icon = ui_style
-	using.hud = src
 	static_inventory += using
 
 /datum/hud/ghost/show_hud(version = 0, mob/viewmob)

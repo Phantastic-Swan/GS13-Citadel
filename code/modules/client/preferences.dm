@@ -328,6 +328,8 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 		wl_rate = 0.5
 	if(isnull(stuckage))
 		stuckage = 0
+	if (stuckage_chance == null)
+		stuckage_chance = 0
 	if(isnull(max_weight))
 		max_weight = 0
 	if(isnull(chair_breakage))
@@ -1422,6 +1424,8 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 					dat +="<td width='300px' height='300px' valign='top'>"
 					dat += "<h2>GS13 Gameplay Preferences</h2>"
 					dat += "<b>Stuckage (at what weight will you get stuck in doors?):</b><a href='?_src_=prefs;preference=stuckage'>[stuckage == FALSE ? "Disabled" : stuckage]</a><BR>"
+					if(stuckage)
+						dat += "<b>Stuckage Chance :</b> <a href='?_src_=prefs;preference=stuckage_chance;task=input'>[stuckage_chance]</a><br>"
 					dat += "<b>Chair Breakage (at what weight will you break chairs?):</b><a href='?_src_=prefs;preference=chair_breakage'>[chair_breakage == FALSE ? "Disabled" : chair_breakage]</a><BR>"
 					dat += "<br></br>"
 					dat += "This preference will allow items that work based on weight to work to you, <b>usually to your detriment.</b> <BR>"
@@ -3021,6 +3025,13 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 					var/new_wl_rate = input(user, "Choose your weight loss rate from 0.1 (10%) to 2 (200%).\n Decimals such as 0.2 indicate 20% rate.\nDefault recommended rate is 0.5 (50%)", "Character Preference", wl_rate) as num|null
 					if (new_wl_rate)
 						wl_rate = max(min(round(text2num(new_wl_rate),0.01),2),0)
+				
+				if("stuckage_chance")
+					var/new_stuckage_chance = input(user, "Choose your chance to get stuck in doors from 0.1 (10%) to 1 (100%).\nDecimals such as 0.2 indicate 20% chance.\nSetting this to 0 restores default values.", "Character Preference", stuckage_chance) as num|null
+					if(new_stuckage_chance)
+						stuckage_chance = clamp(new_stuckage_chance, 0.1, 1)
+					else
+						stuckage_chance = 0
 
 				if("marking_down")
 					// move the specified marking down
@@ -3837,7 +3848,7 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 		var/language_entry = GLOB.roundstart_languages[additional_language]
 		if(language_entry)
 			character.additional_language = language_entry
-			character.grant_language(language_entry, TRUE, TRUE)
+			character.grant_language(language_entry)
 
 	character.set_bark(bark_id)
 	character.vocal_speed = bark_speed

@@ -7,6 +7,17 @@
 	if(isnull(stuckage_weight) || (stuckage_weight < 10))
 		return ..() // They aren't able to get stuck
 
+	var/chance_to_get_stuck = L?.client?.prefs?.stuckage_chance * 100
+	if(chance_to_get_stuck && L.fatness > stuckage_weight)
+		if(prob(chance_to_get_stuck))
+			L.doorstuck = 1
+			L.visible_message("<span class'danger'>[L] gets stuck in the doorway!</span>")
+			to_chat(L, "<span class='danger'>As you attempt to pass through  \the [src], your ample curves get wedged in the narrow opening. You find yourself stuck in the [src] frame, struggling to free yourself from the tight squeeze.</span>")
+			L.Stun(55, updating = TRUE, ignore_canstun = TRUE)
+			addtimer(CALLBACK(src, TYPE_PROC_REF(/obj/machinery/door/airlock/, AsyncDoorstuckCall), L), 55)
+		return ..()
+
+
 	if(L.fatness > (stuckage_weight * 2))
 		if(rand(1, 3) == 1)
 			L.doorstuck = 1

@@ -152,9 +152,7 @@
 	. = ..()
 	//All bots that exist round start have their set language randomized.
 	for(var/mob/living/simple_animal/bot/found_bot in GLOB.alive_mob_list)
-		/// The bot's language holder - so we can randomize and change their language
-		var/datum/language_holder/bot_languages = found_bot.get_language_holder()
-		bot_languages.selected_language = bot_languages.get_random_spoken_language()
+		found_bot.set_active_language(found_bot.get_random_spoken_language())
 
 /datum/station_trait/revenge_of_pun_pun
 	name = "Revenge of Pun Pun"
@@ -281,7 +279,7 @@
 	report_message = "A radioactive stormfront is passing through your station's system. Expect an increased likelihood of radiation storms passing over your station, as well the potential for multiple radiation storms to occur during your shift."
 	trait_type = STATION_TRAIT_NEGATIVE
 	trait_flags = NONE
-	weight = 2
+	weight = 0 //GS13 - radstorm bad
 	event_control_path = /datum/round_event_control/radiation_storm
-	weight_multiplier = 1.5
+	weight_multiplier = 0 //GS13 radstorm bad
 	max_occurrences_modifier = 0 //GS13 - radstorm bad

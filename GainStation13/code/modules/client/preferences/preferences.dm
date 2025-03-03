@@ -27,6 +27,8 @@
 	var/weight_gain_permanent = FALSE
 	/// At what weight will you start to get stuck in airlocks?
 	var/stuckage = FALSE
+	// Percentage chance to get stuck in doors. Setting this to 0 will make the chance depend on the person's weight
+	var/stuckage_chance = 0
 	/// At what weight will you start to break chairs?
 	var/chair_breakage = FALSE
 	/// Are items that only affect those at high weights able to affect the player?
