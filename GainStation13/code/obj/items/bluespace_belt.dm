@@ -103,13 +103,13 @@
 	STOP_PROCESSING(SSprocessing, src)
 	icon_state = "primitive_belt_off"
 
-/obj/item/bluespace_belt/primitive/fat_hide(var/mob/living/carbon/user)
+/obj/item/bluespace_belt/primitive/fat_hide(var/mob/living/carbon/person)
 	var/weight_to_hide = 0
-	if (user?.client?.prefs.helplessness_belts)
-		var/belts_pref = user?.client?.prefs.helplessness_belts
-		weight_to_hide = min(belts_pref, user.fatness_real - 1)
+	if (person?.client?.prefs.helplessness_belts)
+		var/belts_pref = person?.client?.prefs.helplessness_belts
+		weight_to_hide = min(belts_pref, person.fatness_real - 1)
 	else
-		weight_to_hide = min(FATNESS_LEVEL_BLOB*2, user.fatness_real - 1)
+		weight_to_hide = min(FATNESS_LEVEL_BLOB*2, person.fatness_real - 1)
 	return -(weight_to_hide)
 
 
@@ -208,6 +208,7 @@
 /obj/item/bluespace_belt/primitive/dropped(mob/person)
 	..()
 	user = null
+	equipped = FALSE
 
 /obj/item/bluespace_belt/primitive/process()
 	if(isnull(user))
