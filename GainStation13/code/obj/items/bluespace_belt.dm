@@ -45,8 +45,8 @@
 
 	var/cell_type = /obj/item/stock_parts/cell/high
 	var/obj/item/stock_parts/cell/cell
-	var/maximum_power_drain = 50
-	var/fatness_to_power_coefficient = 136 // FATNESS_LEVEL_BLOB*2 BFI divided by this equals 50, our maximum power drain
+	var/maximum_power_drain = 10
+	var/fatness_to_power_coefficient = 27.2 // FATNESS_LEVEL_BLOB BFI divided by this equals 10, our maximum power drain
 	var/mob/living/carbon/user		// the fatass who's weight we must track for power drain calcs
 	var/overloaded = FALSE		// is it EMP'ed?
 
@@ -109,7 +109,7 @@
 		var/belts_pref = person?.client?.prefs.helplessness_belts
 		weight_to_hide = min(belts_pref, person.fatness_real - 1)
 	else
-		weight_to_hide = min(FATNESS_LEVEL_BLOB*2, person.fatness_real - 1)
+		weight_to_hide = min(FATNESS_LEVEL_BLOB, person.fatness_real - 1)
 	return -(weight_to_hide)
 
 
