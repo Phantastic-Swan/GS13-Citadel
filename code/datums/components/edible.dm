@@ -165,7 +165,7 @@ Behavior that's still missing from this component that original food items had t
 		return FALSE
 	if(eater.satiety > -200)
 		eater.satiety -= junkiness
-	playsound(eater.loc,'sound/items/eatfood.ogg', rand(10,50), TRUE)
+	playsound_prefed(eater.loc,'sound/items/eatfood.ogg', EATING_NOISES, rand(10,50), TRUE)
 	var/mob/living/carbon/human/human_eater = eater
 	if(istype(human_eater))
 		var/bitevolume = 1
