@@ -173,8 +173,9 @@
 	icon_living = "creamdemon"
 	move_to_delay = 7
 	projectiletype = /obj/item/projectile/beam/fattening/icecream/strong
-	ranged_cooldown_time = 20
-	speed = 2.5
+	speak_emote = list()
+	ranged_cooldown_time = 40
+	speed = 3
 	maxHealth = 250
 	health = 250
 	vision_range = 7
@@ -197,10 +198,10 @@
 		if(L.fatness_real > 10)
 			L.fatness_real = L.fatness_real - 10
 			L.fatness_perma += 1
-			to_chat(target, "<span class='notice'>You feel yourself getting.. smaller?</span>")
+			to_chat(target, "<span class='notice'>You feel your fat shrinking.</span>")
 		else
 			L.adjustToxLoss(5, 0)
-			to_chat(target, "<span class='userdanger'>You've run out of fat to burn! Your organs feel on fire!</span>")
+			to_chat(target, "<span class='userdanger'>You've run out of fat to shrink! Your organs feel on fire!</span>")
 
 /mob/living/simple_animal/hostile/feed/chocolate_slime/creambeast/cream_demon/attack_hand(mob/living/user, act_intent = user.a_intent)
 	. = ..()
