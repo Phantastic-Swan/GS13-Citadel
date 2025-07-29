@@ -88,6 +88,9 @@
 #define REACTION_CLEAR_IMPURE       (1<<0)  //Convert into impure/pure on reaction completion
 #define REACTION_CLEAR_INVERSE      (1<<1)  //Convert into inverse on reaction completion when purity is low enough
 
+///The minimum volume of reagents than can be operated on.
+#define CHEMICAL_QUANTISATION_LEVEL 0.0001
+
 //Chemical blacklists for smartdarts
 GLOBAL_LIST_INIT(blacklisted_medchems, list(
 	/datum/reagent/medicine/morphine, /datum/reagent/medicine/haloperidol,	//harmful chemicals in medicine

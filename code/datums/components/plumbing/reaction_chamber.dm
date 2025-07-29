@@ -23,7 +23,7 @@
 			var/datum/reagent/RD = A
 			if(RT == RD.type)
 				has_reagent = TRUE
-				if(RD.volume < RC.required_reagents[RT])
+				if(RD.volume + CHEMICAL_QUANTISATION_LEVEL < RC.required_reagents[RT]) // Allow the chamber to exit filling mode when it feels it has enough even if short by a tiny fraction
 					process_request(min(RC.required_reagents[RT] - RD.volume, MACHINE_REAGENT_TRANSFER) , RT, dir)
 					return
 		if(!has_reagent)
