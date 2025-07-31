@@ -71,6 +71,7 @@
 	var/suppliersLeft = valid_suppliers.len
 	for(var/A in valid_suppliers)
 		var/datum/component/plumbing/give = A
+		//GS13 Edit: See above comment
 		var/currentRequest = (targetVolume - reagents.total_volume) / suppliersLeft
 		give.transfer_to(src, currentRequest, reagent, net)
 		suppliersLeft--
