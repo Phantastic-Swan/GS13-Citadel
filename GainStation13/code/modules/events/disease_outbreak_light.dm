@@ -4,7 +4,6 @@
 	max_occurrences = 5
 	min_players = 5
 	weight = 10
-	category = EVENT_CATEGORY_HEALTH
 	description = "A simple disease will infect some crewmembers."
 
 /datum/round_event/disease_outbreak/light
