@@ -66,7 +66,7 @@
 		var/datum/component/plumbing/supplier = A
 		if(supplier.can_give(amount, reagent, net))
 			valid_suppliers += supplier
-	// Need to ask for each in turn very carefully, making sure we get the total volume. This is to avoid a division that would always round down and become 0
+	///GS13 Edit: Need to ask for each in turn very carefully, making sure we get the total volume. This is to avoid a division that would always round down and become 0
 	var/targetVolume = reagents.total_volume = amount
 	var/suppliersLeft = valid_suppliers.len
 	for(var/A in valid_suppliers)
