@@ -5,6 +5,9 @@
 	max_occurrences = 4
 	min_players = 8
 
+/datum/round_event/spider_infestation/light
+	announce_when	= 400
+
 /datum/round_event/spider_infestation/light/setup()
 	announce_when = rand(announce_when, announce_when + 50)
 	spawncount = rand(3, 5)
