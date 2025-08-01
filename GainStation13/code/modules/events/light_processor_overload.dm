@@ -1,16 +1,10 @@
-/datum/round_event_control/processor_overload
-	name = "Processor Overload"
-	typepath = /datum/round_event/processor_overload
-	// GS13 EDIT
-	weight = 10					// from 15 to 10, because of the change below
-	min_players = 10			// from 20 to 10, we want to have a chance of this spawning but not to shaft REALLY low pop
-	max_occurrences = 3			// from INF to 3, let's not have them blow up constantly
-	// GS13 END EDIT
-	category = EVENT_CATEGORY_ENGINEERING
-	description = "Emps the telecomm processors, scrambling radio speech. Might blow up a few."
-
-/datum/round_event/processor_overload
-	announce_when	= 1
+/datum/round_event_control/processor_overload/light
+	name = "Light Processor Overload"
+	typepath = /datum/round_event/processor_overload/light
+	weight = 20					// more likely than the base one
+	min_players = 0				// doesn't break shit so we don't care if there is nobody around to fix it
+	max_occurrences = 15		// 15, since comms going down goes BRRRRRRRT
+	description = "Emps the telecomm processors, scrambling radio speech. Doesn't blow them up."
 
 /datum/round_event/processor_overload/announce(fake)
 	var/alert = pick(	"Exospheric bubble inbound. Processor overload is likely. Please contact you*%xp25)`6cq-BZZT", \
@@ -34,11 +28,6 @@
 /datum/round_event/processor_overload/start()
 	for(var/obj/machinery/telecomms/processor/P in GLOB.telecomms_list)
 		if(prob(10))
-			announce_to_ghosts(P)
-			// Damage the surrounding area to indicate that it popped
-			explosion(get_turf(P), 0, 0, 2)
-			// Only a level 1 explosion actually damages the machine
-			// at all
-			P.ex_act(EXPLODE_DEVASTATE)
+			continue // 10% chance it spares a processor from getting scrambled like an egg
 		else
 			P.emp_act(80)

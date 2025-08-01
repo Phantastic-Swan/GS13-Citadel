@@ -5,19 +5,9 @@
 	max_occurrences = 4
 	min_players = 8
 
-// /datum/round_event/spider_infestation
-// 	announce_when	= 400
-
-// 	var/spawncount = 1
-
-
 /datum/round_event/spider_infestation/light/setup()
 	announce_when = rand(announce_when, announce_when + 50)
 	spawncount = rand(3, 5)
-
-// /datum/round_event/spider_infestation/announce(fake)
-// 	priority_announce("Unidentified lifesigns detected coming aboard [station_name()]. Secure any exterior access, including ducting and ventilation.", "Lifesign Alert", "aliens")
-
 
 /datum/round_event/spider_infestation/light/start()
 	var/list/vents = list()
