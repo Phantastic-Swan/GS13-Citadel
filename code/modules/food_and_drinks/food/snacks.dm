@@ -172,7 +172,9 @@ All foods are distributed among various categories. Use common sense.
 			if(reagents)								//Handle ingestion of the reagent.
 				if(M.satiety > -200)
 					M.satiety -= junkiness
+				//GS13 Edit - Eating sound prefs
 				playsound_prefed(M.loc,'sound/items/eatfood.ogg', EATING_NOISES, rand(10,50), 1)
+				//GS13 Edit end
 				var/bitevolume = 1
 				if(HAS_TRAIT(M, TRAIT_VORACIOUS))
 					bitevolume = bitevolume * 0.67
