@@ -5406,11 +5406,15 @@
 /obj/machinery/computer/shuttle/snow_taxi,
 /obj/structure/sign/directions/supply{
 	dir = 4;
-	pixel_y = 36
+	pixel_y = 40
 	},
 /obj/structure/sign/directions/engineering{
 	dir = 4;
-	pixel_y = 28
+	pixel_y = 32
+	},
+/obj/structure/sign/directions/bar{
+	pixel_y = 24;
+	dir = 4
 	},
 /turf/open/floor/plasteel,
 /area/hallway/primary/central)
@@ -10314,11 +10318,11 @@
 "eed" = (
 /obj/structure/sign/directions/engineering{
 	dir = 4;
-	pixel_y = 36
+	pixel_y = 40
 	},
 /obj/structure/sign/directions/supply{
 	dir = 4;
-	pixel_y = 28
+	pixel_y = 32
 	},
 /obj/effect/turf_decal/tile/neutral,
 /obj/effect/turf_decal/tile/neutral,
@@ -10339,6 +10343,10 @@
 	},
 /obj/effect/turf_decal/tile/neutral{
 	dir = 8
+	},
+/obj/structure/sign/directions/bar{
+	pixel_y = 24;
+	dir = 4
 	},
 /turf/open/floor/plasteel,
 /area/hallway/primary/port)
