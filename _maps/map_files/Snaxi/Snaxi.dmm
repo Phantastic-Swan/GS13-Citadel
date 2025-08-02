@@ -137,7 +137,7 @@
 	},
 /obj/item/toy/foamblade,
 /turf/open/floor/mineral/sandstone_floor,
-/area/commons/fitness/recreation)
+/area/commons/fitness/pool)
 "ace" = (
 /turf/open/floor/mineral/calorite,
 /area/icemoon/underground/explored)
@@ -360,6 +360,9 @@
 	},
 /turf/open/floor/plasteel/dark,
 /area/command/bridge)
+"ahi" = (
+/turf/closed/wall,
+/area/commons/fitness/pool)
 "ahk" = (
 /obj/machinery/vending/wallmed{
 	pixel_y = -28
@@ -743,7 +746,7 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1,
 /turf/open/floor/mineral/sandstone_floor,
-/area/commons/fitness/recreation)
+/area/commons/fitness/pool)
 "aop" = (
 /obj/machinery/navbeacon{
 	codes_txt = "patrol;next_patrol=CHW";
@@ -1163,7 +1166,7 @@
 "avz" = (
 /obj/machinery/vending/boozeomat,
 /turf/open/floor/mineral/sandstone_floor,
-/area/commons/fitness/recreation)
+/area/commons/fitness/pool)
 "avL" = (
 /obj/machinery/door/poddoor/shutters/window{
 	id = "armory2"
@@ -1177,7 +1180,7 @@
 "avM" = (
 /obj/structure/scale,
 /turf/open/floor/plasteel/dark,
-/area/commons/fitness/recreation)
+/area/commons/fitness/pool)
 "avT" = (
 /obj/structure/cable/yellow{
 	icon_state = "1-2"
@@ -1454,7 +1457,7 @@
 "aAP" = (
 /obj/structure/reagent_dispensers/water_cooler,
 /turf/open/floor/plasteel/dark,
-/area/commons/fitness/recreation)
+/area/commons/fitness/pool)
 "aBh" = (
 /obj/machinery/light,
 /turf/open/floor/plating/asteroid/snow/icemoon,
@@ -1610,7 +1613,7 @@
 	dir = 8
 	},
 /turf/open/floor/mineral/sandstone_floor,
-/area/commons/fitness/recreation)
+/area/commons/fitness/pool)
 "aDV" = (
 /obj/machinery/atmospherics/pipe/manifold/yellow/visible{
 	dir = 1
@@ -1679,7 +1682,7 @@
 	pixel_x = 0
 	},
 /turf/open/floor/plaswood,
-/area/commons/fitness/recreation)
+/area/commons/fitness/pool)
 "aFl" = (
 /obj/effect/landmark/start/atmospheric_technician,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/visible,
@@ -1963,7 +1966,7 @@
 	dir = 4
 	},
 /turf/open/floor/mineral/basaltstone_floor,
-/area/commons/fitness/recreation)
+/area/commons/fitness/pool)
 "aMY" = (
 /obj/structure/cable{
 	icon_state = "4-8"
@@ -2655,7 +2658,7 @@
 	},
 /obj/item/wrench,
 /turf/open/floor/plating,
-/area/commons/fitness/recreation)
+/area/commons/fitness/pool)
 "bch" = (
 /obj/machinery/light{
 	dir = 4
@@ -2665,7 +2668,7 @@
 	pixel_y = 1
 	},
 /turf/open/floor/wood,
-/area/commons/fitness/recreation)
+/area/commons/fitness/pool)
 "bcj" = (
 /obj/machinery/door/airlock/public{
 	name = "Sauna 2";
@@ -2684,7 +2687,7 @@
 	},
 /obj/machinery/door/firedoor,
 /turf/open/floor/wood,
-/area/commons/fitness/recreation)
+/area/commons/fitness/pool)
 "bcp" = (
 /obj/structure/cable{
 	icon_state = "1-2"
@@ -3202,7 +3205,7 @@
 	dir = 5
 	},
 /turf/open/floor/mineral/sandstone_floor,
-/area/commons/fitness/recreation)
+/area/commons/fitness/pool)
 "bpd" = (
 /obj/machinery/atmospherics/components/unary/vent_pump/on{
 	dir = 8
@@ -3443,11 +3446,10 @@
 /area/service/kitchen)
 "bug" = (
 /obj/machinery/power/apc{
-	areastring = "/area/crew_quarters/fitness/pool";
-	dir = 1;
 	name = "Recreation Area APC";
 	pixel_y = -24;
-	pixel_x = -1
+	pixel_x = -1;
+	auto_name = 1
 	},
 /obj/structure/cable{
 	icon_state = "4-8"
@@ -3459,7 +3461,7 @@
 	icon_state = "0-4"
 	},
 /turf/open/floor/catwalk_floor,
-/area/commons/fitness/recreation)
+/area/commons/fitness/pool)
 "bur" = (
 /obj/structure/cable{
 	icon_state = "1-2"
@@ -3884,7 +3886,7 @@
 	color = "#ffa570"
 	},
 /turf/open/floor/grass,
-/area/commons/fitness/recreation)
+/area/commons/fitness/pool)
 "bEy" = (
 /obj/structure/cable{
 	icon_state = "4-8"
@@ -4049,7 +4051,7 @@
 	name = "drain"
 	},
 /turf/open/floor/plasteel/dark,
-/area/commons/fitness/recreation)
+/area/commons/fitness/pool)
 "bJg" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/visible,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1{
@@ -4875,7 +4877,7 @@
 	pixel_y = 0
 	},
 /turf/open/floor/wood,
-/area/commons/fitness/recreation)
+/area/commons/fitness/pool)
 "bZf" = (
 /obj/structure/cable{
 	icon_state = "0-4"
@@ -4978,7 +4980,7 @@
 	},
 /obj/machinery/atmospherics/pipe/manifold4w/supply/hidden/layer1,
 /turf/open/floor/mineral/sandstone_floor,
-/area/commons/fitness/recreation)
+/area/commons/fitness/pool)
 "caE" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 4
@@ -5352,7 +5354,7 @@
 /area/maintenance/department/bridge)
 "cgh" = (
 /turf/open/floor/plasteel/dark,
-/area/commons/fitness/recreation)
+/area/commons/fitness/pool)
 "cgj" = (
 /obj/structure/fence/cut/large{
 	dir = 4
@@ -5417,7 +5419,7 @@
 	icon_state = "2-4"
 	},
 /turf/open/floor/catwalk_floor,
-/area/commons/fitness/recreation)
+/area/commons/fitness/pool)
 "chQ" = (
 /obj/effect/turf_decal/tile/blue{
 	dir = 8
@@ -5604,7 +5606,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1,
 /turf/open/floor/mineral/sandstone_floor,
-/area/commons/fitness/recreation)
+/area/commons/fitness/pool)
 "ckp" = (
 /turf/closed/wall/r_wall,
 /area/science/xenobiology)
@@ -5695,7 +5697,7 @@
 	},
 /obj/effect/turf_decal/tile/yellow,
 /turf/open/floor/mineral/sandstone_floor,
-/area/commons/fitness/recreation)
+/area/commons/fitness/pool)
 "clI" = (
 /obj/structure/cable{
 	icon_state = "1-2"
@@ -5877,7 +5879,7 @@
 	dir = 8
 	},
 /turf/open/floor/mineral/sandstone_floor,
-/area/commons/fitness/recreation)
+/area/commons/fitness/pool)
 "cpq" = (
 /obj/effect/turf_decal/tile/red{
 	dir = 1
@@ -6070,7 +6072,7 @@
 /obj/machinery/door/airlock/maintenance_hatch,
 /obj/machinery/door/firedoor,
 /turf/open/floor/plating,
-/area/commons/fitness/recreation)
+/area/commons/fitness/pool)
 "ctI" = (
 /obj/structure/cable{
 	icon_state = "2-4"
@@ -6183,7 +6185,7 @@
 "cxe" = (
 /obj/machinery/vending/gato,
 /turf/open/floor/plasteel/dark,
-/area/commons/fitness/recreation)
+/area/commons/fitness/pool)
 "cxk" = (
 /obj/effect/turf_decal/loading_area{
 	dir = 4;
@@ -6904,7 +6906,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1,
 /turf/open/floor/mineral/sandstone_floor,
-/area/commons/fitness/recreation)
+/area/commons/fitness/pool)
 "cOM" = (
 /obj/structure/sign/warning/gato/docking,
 /turf/closed/wall/r_wall,
@@ -6960,7 +6962,7 @@
 	dir = 4
 	},
 /turf/open/floor/plasteel,
-/area/commons/fitness/recreation)
+/area/commons/fitness/pool)
 "cQA" = (
 /turf/closed/wall/r_wall,
 /area/security/brig)
@@ -7128,7 +7130,7 @@
 	pixel_x = -31
 	},
 /turf/open/floor/mineral/sandstone_floor,
-/area/commons/fitness/recreation)
+/area/commons/fitness/pool)
 "cTh" = (
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on,
 /obj/effect/turf_decal/tile/blue{
@@ -7322,7 +7324,7 @@
 "cXC" = (
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer3,
 /turf/open/floor/plating,
-/area/commons/fitness/recreation)
+/area/commons/fitness/pool)
 "cXE" = (
 /obj/structure/cable{
 	icon_state = "1-2"
@@ -7664,7 +7666,7 @@
 	pixel_y = -31
 	},
 /turf/open/floor/wood,
-/area/commons/fitness/recreation)
+/area/commons/fitness/pool)
 "dft" = (
 /obj/machinery/atmospherics/pipe/manifold/supply/hidden/layer1,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3{
@@ -7917,7 +7919,7 @@
 	dir = 4
 	},
 /turf/open/floor/mineral/sandstone_floor,
-/area/commons/fitness/recreation)
+/area/commons/fitness/pool)
 "djE" = (
 /turf/open/floor/engine/airless,
 /area/engineering/atmos)
@@ -8300,7 +8302,7 @@
 	dir = 4
 	},
 /turf/open/floor/mineral/sandstone_floor,
-/area/commons/fitness/recreation)
+/area/commons/fitness/pool)
 "dsc" = (
 /obj/effect/spawner/structure/window/reinforced,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
@@ -8625,7 +8627,7 @@
 	dir = 4
 	},
 /turf/open/floor/plating,
-/area/commons/fitness/recreation)
+/area/commons/fitness/pool)
 "dwq" = (
 /obj/effect/turf_decal/tile/red,
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer3{
@@ -8644,7 +8646,7 @@
 	name = "Steam Vapor Storage"
 	},
 /turf/open/floor/plating,
-/area/commons/fitness/recreation)
+/area/commons/fitness/pool)
 "dwB" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
 	dir = 4
@@ -8699,7 +8701,7 @@
 	},
 /obj/machinery/space_heater,
 /turf/open/floor/plating,
-/area/commons/fitness/recreation)
+/area/commons/fitness/pool)
 "dwN" = (
 /turf/open/floor/plasteel,
 /area/security/checkpoint/supply)
@@ -8921,7 +8923,7 @@
 	dir = 1
 	},
 /turf/open/floor/mineral/sandstone_floor,
-/area/commons/fitness/recreation)
+/area/commons/fitness/pool)
 "dAt" = (
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer1{
 	dir = 4
@@ -9010,7 +9012,7 @@
 	dir = 4
 	},
 /turf/open/floor/plating,
-/area/commons/fitness/recreation)
+/area/commons/fitness/pool)
 "dCh" = (
 /obj/machinery/firealarm{
 	dir = 1;
@@ -9368,7 +9370,7 @@
 	dir = 4
 	},
 /turf/open/floor/mineral/sandstone_floor,
-/area/commons/fitness/recreation)
+/area/commons/fitness/pool)
 "dLb" = (
 /obj/structure/cable{
 	icon_state = "4-8"
@@ -9421,7 +9423,7 @@
 /obj/structure/flora/junglebush,
 /obj/structure/flora/ausbushes/brflowers,
 /turf/open/floor/grass,
-/area/commons/fitness/recreation)
+/area/commons/fitness/pool)
 "dMI" = (
 /obj/effect/turf_decal/tile/yellow{
 	dir = 1
@@ -9838,7 +9840,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1,
 /turf/open/floor/wood,
-/area/commons/fitness/recreation)
+/area/commons/fitness/pool)
 "dVv" = (
 /obj/structure/disposalpipe/segment,
 /obj/machinery/atmospherics/pipe/simple/supply/visible,
@@ -10106,7 +10108,7 @@
 	icon_state = "1-2"
 	},
 /turf/open/floor/catwalk_floor,
-/area/commons/fitness/recreation)
+/area/commons/fitness/pool)
 "dZo" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
 /turf/closed/wall/r_wall,
@@ -10241,7 +10243,7 @@
 	},
 /obj/machinery/light/small,
 /turf/open/floor/mineral/basaltstone_floor,
-/area/commons/fitness/recreation)
+/area/commons/fitness/pool)
 "ecb" = (
 /obj/effect/turf_decal/loading_area{
 	icon_state = "steel_decals10"
@@ -10266,7 +10268,7 @@
 	dir = 8
 	},
 /turf/open/floor/mineral/sandstone_floor,
-/area/commons/fitness/recreation)
+/area/commons/fitness/pool)
 "ecK" = (
 /obj/machinery/atmospherics/pipe/manifold4w/supply/visible,
 /obj/structure/disposalpipe/segment{
@@ -10361,7 +10363,7 @@
 "eew" = (
 /obj/machinery/light/small,
 /turf/open/pool,
-/area/commons/fitness/recreation)
+/area/commons/fitness/pool)
 "eeB" = (
 /obj/structure/sign/poster/contraband/random{
 	pixel_y = -32
@@ -10725,7 +10727,7 @@
 	dir = 5
 	},
 /turf/open/floor/plasteel/dark,
-/area/commons/fitness/recreation)
+/area/commons/fitness/pool)
 "elH" = (
 /obj/structure/cable{
 	icon_state = "2-8"
@@ -10994,7 +10996,7 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1,
 /turf/open/floor/mineral/sandstone_floor,
-/area/commons/fitness/recreation)
+/area/commons/fitness/pool)
 "eqG" = (
 /obj/machinery/door/airlock/engineering/glass{
 	name = "Engineering Storage";
@@ -12798,7 +12800,7 @@
 	pixel_y = 13
 	},
 /turf/open/floor/plating,
-/area/commons/fitness/recreation)
+/area/commons/fitness/pool)
 "ffM" = (
 /obj/machinery/vending/mealdor,
 /turf/open/floor/plasteel,
@@ -13338,7 +13340,7 @@
 	dir = 1
 	},
 /turf/open/floor/wood,
-/area/commons/fitness/recreation)
+/area/commons/fitness/pool)
 "fpw" = (
 /obj/machinery/light{
 	dir = 4
@@ -13355,7 +13357,7 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1,
 /obj/structure/disposalpipe/segment,
 /turf/open/floor/mineral/sandstone_floor,
-/area/commons/fitness/recreation)
+/area/commons/fitness/pool)
 "fqn" = (
 /obj/machinery/atmospherics/pipe/manifold/scrubbers/hidden,
 /obj/structure/table/wood,
@@ -13607,7 +13609,7 @@
 	name = "drain"
 	},
 /turf/open/floor/wood,
-/area/commons/fitness/recreation)
+/area/commons/fitness/pool)
 "fuQ" = (
 /obj/machinery/atmospherics/pipe/manifold4w/scrubbers/hidden,
 /obj/structure/showcase/mecha/ripley,
@@ -14113,7 +14115,7 @@
 	dir = 1
 	},
 /turf/open/floor/mineral/sandstone_floor,
-/area/commons/fitness/recreation)
+/area/commons/fitness/pool)
 "fGD" = (
 /obj/machinery/atmospherics/pipe/simple/green/visible{
 	dir = 4
@@ -14179,7 +14181,7 @@
 	icon_state = "4-8"
 	},
 /turf/open/floor/plating,
-/area/commons/fitness/recreation)
+/area/commons/fitness/pool)
 "fIp" = (
 /obj/structure/cable{
 	icon_state = "1-2"
@@ -14380,7 +14382,7 @@
 /obj/machinery/portable_atmospherics/canister/water_vapor,
 /obj/item/paper/fluff/snaxi_bathhouse,
 /turf/open/floor/plating,
-/area/commons/fitness/recreation)
+/area/commons/fitness/pool)
 "fLX" = (
 /obj/structure/cable{
 	icon_state = "0-8"
@@ -14635,7 +14637,7 @@
 "fQU" = (
 /obj/machinery/atmospherics/pipe/manifold/orange/hidden,
 /turf/open/floor/plating,
-/area/commons/fitness/recreation)
+/area/commons/fitness/pool)
 "fQV" = (
 /obj/structure/bed/double,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3{
@@ -14650,7 +14652,7 @@
 	pixel_x = 23
 	},
 /turf/open/floor/mineral/basaltstone_floor,
-/area/commons/fitness/recreation)
+/area/commons/fitness/pool)
 "fQY" = (
 /obj/effect/turf_decal/tile/yellow,
 /obj/effect/turf_decal/tile/yellow{
@@ -14734,7 +14736,7 @@
 	dir = 4
 	},
 /turf/open/floor/plating,
-/area/commons/fitness/recreation)
+/area/commons/fitness/pool)
 "fSf" = (
 /obj/machinery/door/airlock/medical/glass{
 	name = "Infirmary"
@@ -15049,7 +15051,7 @@
 	},
 /obj/machinery/portable_atmospherics/scrubber,
 /turf/open/floor/plating,
-/area/commons/fitness/recreation)
+/area/commons/fitness/pool)
 "fYr" = (
 /obj/machinery/computer/bank_machine,
 /turf/open/floor/plasteel,
@@ -15207,7 +15209,7 @@
 	dir = 8
 	},
 /turf/open/floor/mineral/sandstone_floor,
-/area/commons/fitness/recreation)
+/area/commons/fitness/pool)
 "gbv" = (
 /obj/structure/dresser,
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer3{
@@ -15320,7 +15322,7 @@
 /obj/structure/table/reinforced,
 /obj/machinery/chem_dispenser/drinks/beer,
 /turf/open/floor/mineral/sandstone_floor,
-/area/commons/fitness/recreation)
+/area/commons/fitness/pool)
 "gdX" = (
 /obj/effect/turf_decal/bot_white,
 /obj/structure/cable{
@@ -15890,7 +15892,7 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3,
 /turf/open/floor/plating,
-/area/commons/fitness/recreation)
+/area/commons/fitness/pool)
 "gph" = (
 /obj/machinery/firealarm{
 	dir = 8;
@@ -16049,7 +16051,7 @@
 	pixel_y = 6
 	},
 /turf/open/floor/plating,
-/area/commons/fitness/recreation)
+/area/commons/fitness/pool)
 "grw" = (
 /obj/machinery/door/airlock/public/glass{
 	name = "Snow Airlock"
@@ -16958,7 +16960,7 @@
 	dir = 4
 	},
 /turf/open/floor/mineral/sandstone_floor,
-/area/commons/fitness/recreation)
+/area/commons/fitness/pool)
 "gKj" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
 /turf/closed/wall,
@@ -17344,7 +17346,7 @@
 	pixel_y = -31
 	},
 /turf/open/floor/wood,
-/area/commons/fitness/recreation)
+/area/commons/fitness/pool)
 "gRP" = (
 /obj/machinery/camera{
 	c_tag = "Hydroponics South";
@@ -17532,7 +17534,7 @@
 	dir = 6
 	},
 /turf/open/floor/mineral/basaltstone_floor,
-/area/commons/fitness/recreation)
+/area/commons/fitness/pool)
 "gUY" = (
 /turf/closed/wall,
 /area/medical/medbay/zone2)
@@ -17826,7 +17828,7 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1,
 /obj/structure/disposalpipe/segment,
 /turf/open/floor/mineral/sandstone_floor,
-/area/commons/fitness/recreation)
+/area/commons/fitness/pool)
 "has" = (
 /obj/structure/chair/sofa{
 	dir = 4
@@ -17865,7 +17867,7 @@
 	},
 /obj/structure/flora/junglebush,
 /turf/open/floor/grass,
-/area/commons/fitness/recreation)
+/area/commons/fitness/pool)
 "haK" = (
 /obj/effect/landmark/blobstart,
 /turf/open/floor/plating,
@@ -18247,7 +18249,7 @@
 	pixel_y = -31
 	},
 /turf/open/floor/wood,
-/area/commons/fitness/recreation)
+/area/commons/fitness/pool)
 "hiQ" = (
 /obj/structure/sign/departments/cargo,
 /turf/closed/wall,
@@ -18360,7 +18362,7 @@
 	},
 /obj/effect/turf_decal/stripes/line,
 /turf/open/floor/plating,
-/area/commons/fitness/recreation)
+/area/commons/fitness/pool)
 "hmJ" = (
 /obj/structure/chair,
 /turf/open/floor/wood/wood_large,
@@ -18781,7 +18783,7 @@
 	dir = 8
 	},
 /turf/open/floor/plaswood,
-/area/commons/fitness/recreation)
+/area/commons/fitness/pool)
 "hvW" = (
 /obj/effect/turf_decal/tile/neutral{
 	dir = 4
@@ -19145,7 +19147,7 @@
 	dir = 4
 	},
 /turf/open/floor/mineral/basaltstone_floor,
-/area/commons/fitness/recreation)
+/area/commons/fitness/pool)
 "hFP" = (
 /obj/effect/turf_decal/bot,
 /turf/open/floor/plasteel{
@@ -19853,7 +19855,7 @@
 	dir = 4
 	},
 /turf/open/floor/mineral/sandstone_floor,
-/area/commons/fitness/recreation)
+/area/commons/fitness/pool)
 "hVh" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
 /obj/machinery/door/airlock/public/glass{
@@ -20145,7 +20147,7 @@
 	dir = 4
 	},
 /turf/open/floor/mineral/sandstone_floor,
-/area/commons/fitness/recreation)
+/area/commons/fitness/pool)
 "iaC" = (
 /obj/effect/landmark/start/clown,
 /turf/open/floor/wood,
@@ -20306,7 +20308,7 @@
 	name = "drain"
 	},
 /turf/open/floor/plaswood,
-/area/commons/fitness/recreation)
+/area/commons/fitness/pool)
 "ieJ" = (
 /obj/structure/window/reinforced{
 	dir = 4
@@ -21655,7 +21657,7 @@
 	dir = 4
 	},
 /turf/open/floor/mineral/sandstone_floor,
-/area/commons/fitness/recreation)
+/area/commons/fitness/pool)
 "iIc" = (
 /obj/machinery/computer/aifixer{
 	dir = 8
@@ -21757,7 +21759,7 @@
 	pixel_x = 23
 	},
 /turf/open/floor/mineral/sandstone_floor,
-/area/commons/fitness/recreation)
+/area/commons/fitness/pool)
 "iJx" = (
 /obj/structure/sign/directions/evac{
 	pixel_x = -32;
@@ -21830,7 +21832,7 @@
 	dir = 1
 	},
 /turf/open/floor/wood,
-/area/commons/fitness/recreation)
+/area/commons/fitness/pool)
 "iKm" = (
 /obj/structure/cable{
 	icon_state = "1-2"
@@ -21907,7 +21909,7 @@
 	},
 /obj/machinery/door/firedoor,
 /turf/open/floor/mineral/basaltstone_floor,
-/area/commons/fitness/recreation)
+/area/commons/fitness/pool)
 "iMm" = (
 /obj/effect/turf_decal/tile/blue,
 /obj/effect/turf_decal/tile/blue{
@@ -22073,7 +22075,7 @@
 	dir = 4
 	},
 /turf/open/floor/plating,
-/area/commons/fitness/recreation)
+/area/commons/fitness/pool)
 "iPR" = (
 /obj/structure/cable{
 	icon_state = "1-2"
@@ -22515,7 +22517,7 @@
 	name = "drain"
 	},
 /turf/open/floor/wood,
-/area/commons/fitness/recreation)
+/area/commons/fitness/pool)
 "jaG" = (
 /obj/machinery/atmospherics/pipe/manifold/supply/hidden/layer1,
 /obj/machinery/atmospherics/pipe/manifold/scrubbers/hidden/layer3,
@@ -22631,7 +22633,7 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1,
 /turf/open/floor/plasteel/dark,
-/area/commons/fitness/recreation)
+/area/commons/fitness/pool)
 "jeO" = (
 /obj/structure/chair{
 	dir = 1
@@ -22646,7 +22648,7 @@
 	dir = 1
 	},
 /turf/open/pool,
-/area/commons/fitness/recreation)
+/area/commons/fitness/pool)
 "jeS" = (
 /obj/structure/cable{
 	icon_state = "1-2"
@@ -22693,7 +22695,7 @@
 /obj/machinery/portable_atmospherics/canister/water_vapor,
 /obj/effect/turf_decal/bot,
 /turf/open/floor/plating,
-/area/commons/fitness/recreation)
+/area/commons/fitness/pool)
 "jfY" = (
 /obj/machinery/light{
 	dir = 8
@@ -22776,7 +22778,7 @@
 /obj/structure/flora/junglebush,
 /obj/structure/flora/ausbushes/ppflowers,
 /turf/open/floor/grass,
-/area/commons/fitness/recreation)
+/area/commons/fitness/pool)
 "jhM" = (
 /obj/structure/cable{
 	icon_state = "4-8"
@@ -22922,11 +22924,11 @@
 	dir = 9
 	},
 /turf/open/floor/mineral/basaltstone_floor,
-/area/commons/fitness/recreation)
+/area/commons/fitness/pool)
 "jjZ" = (
 /obj/machinery/treadmill,
 /turf/open/floor/wood,
-/area/commons/fitness/recreation)
+/area/commons/fitness/pool)
 "jkl" = (
 /obj/structure/bodycontainer/morgue,
 /obj/effect/turf_decal/tile/blue{
@@ -23176,7 +23178,7 @@
 	},
 /obj/effect/turf_decal/tile/yellow,
 /turf/open/floor/mineral/sandstone_floor,
-/area/commons/fitness/recreation)
+/area/commons/fitness/pool)
 "jnT" = (
 /obj/machinery/light{
 	dir = 4
@@ -23266,7 +23268,7 @@
 	dir = 10
 	},
 /turf/open/floor/mineral/sandstone_floor,
-/area/commons/fitness/recreation)
+/area/commons/fitness/pool)
 "jpn" = (
 /obj/machinery/computer/arcade/orion_trail,
 /turf/open/floor/carpet/arcade,
@@ -23626,7 +23628,7 @@
 	icon_state = "inje_map-2"
 	},
 /turf/open/floor/mineral/sandstone_floor,
-/area/commons/fitness/recreation)
+/area/commons/fitness/pool)
 "jwR" = (
 /obj/effect/turf_decal/stripes/line,
 /obj/structure/closet/bombcloset{
@@ -24001,7 +24003,7 @@
 	pixel_y = 8
 	},
 /turf/open/floor/plasteel/dark,
-/area/commons/fitness/recreation)
+/area/commons/fitness/pool)
 "jCO" = (
 /obj/machinery/button/door{
 	id = "Bath2";
@@ -25231,7 +25233,7 @@
 	pixel_y = 1
 	},
 /turf/open/floor/wood,
-/area/commons/fitness/recreation)
+/area/commons/fitness/pool)
 "kcc" = (
 /obj/machinery/light{
 	dir = 4
@@ -25457,7 +25459,7 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1,
 /obj/machinery/door/firedoor,
 /turf/open/floor/plasteel/dark,
-/area/commons/fitness/recreation)
+/area/commons/fitness/pool)
 "kgd" = (
 /obj/structure/cable{
 	icon_state = "1-2"
@@ -25860,7 +25862,7 @@
 	dir = 1
 	},
 /turf/open/floor/plating,
-/area/commons/fitness/recreation)
+/area/commons/fitness/pool)
 "koS" = (
 /obj/structure/cable{
 	icon_state = "0-8"
@@ -26508,7 +26510,7 @@
 	},
 /obj/structure/disposalpipe/segment,
 /turf/open/floor/mineral/sandstone_floor,
-/area/commons/fitness/recreation)
+/area/commons/fitness/pool)
 "kBr" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
 /obj/machinery/door_timer{
@@ -26666,7 +26668,7 @@
 	dir = 1
 	},
 /turf/open/floor/plating,
-/area/commons/fitness/recreation)
+/area/commons/fitness/pool)
 "kEj" = (
 /obj/effect/turf_decal/tile/brown,
 /turf/open/floor/plasteel/dark,
@@ -26762,7 +26764,7 @@
 /area/hallway/primary/fore)
 "kGJ" = (
 /turf/open/floor/plating,
-/area/commons/fitness/recreation)
+/area/commons/fitness/pool)
 "kGK" = (
 /obj/structure/extinguisher_cabinet{
 	pixel_x = -27
@@ -26797,7 +26799,7 @@
 	pixel_y = 10
 	},
 /turf/open/floor/plasteel/dark,
-/area/commons/fitness/recreation)
+/area/commons/fitness/pool)
 "kHq" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 4
@@ -27227,7 +27229,7 @@
 	dir = 4
 	},
 /turf/open/floor/plasteel/dark,
-/area/commons/fitness/recreation)
+/area/commons/fitness/pool)
 "kSo" = (
 /obj/effect/turf_decal/tile/neutral{
 	dir = 1
@@ -28433,7 +28435,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1,
 /turf/open/floor/mineral/sandstone_floor,
-/area/commons/fitness/recreation)
+/area/commons/fitness/pool)
 "lqc" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 4
@@ -28637,7 +28639,7 @@
 	color = "#ffa570"
 	},
 /turf/open/floor/grass,
-/area/commons/fitness/recreation)
+/area/commons/fitness/pool)
 "lvb" = (
 /obj/effect/turf_decal/tile/red{
 	dir = 1
@@ -28888,7 +28890,7 @@
 "lzV" = (
 /obj/machinery/pool/drain,
 /turf/open/pool,
-/area/commons/fitness/recreation)
+/area/commons/fitness/pool)
 "lzW" = (
 /obj/structure/window/reinforced{
 	dir = 8
@@ -29402,7 +29404,7 @@
 	pixel_y = 6
 	},
 /turf/open/floor/plasteel/dark,
-/area/commons/fitness/recreation)
+/area/commons/fitness/pool)
 "lMM" = (
 /obj/machinery/atmospherics/components/unary/outlet_injector/atmos/toxins_mixing_input{
 	dir = 1
@@ -29706,7 +29708,7 @@
 	name = "NO RUNNING!!!"
 	},
 /turf/closed/wall/mineral/sandstone,
-/area/commons/fitness/recreation)
+/area/commons/fitness/pool)
 "lUb" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
 /obj/effect/turf_decal/tile/red,
@@ -30345,7 +30347,7 @@
 	pixel_y = 28
 	},
 /turf/open/floor/mineral/sandstone_floor,
-/area/commons/fitness/recreation)
+/area/commons/fitness/pool)
 "mgO" = (
 /obj/effect/landmark/event_spawn,
 /turf/open/floor/glass/reinforced,
@@ -30854,7 +30856,7 @@
 	dir = 4
 	},
 /turf/open/floor/mineral/sandstone_floor,
-/area/commons/fitness/recreation)
+/area/commons/fitness/pool)
 "mqk" = (
 /obj/machinery/light,
 /obj/effect/turf_decal/tile/neutral{
@@ -31034,7 +31036,7 @@
 /obj/item/clothing/suit/hooded/wintercoat,
 /obj/effect/turf_decal/stripes/line,
 /turf/open/floor/plating,
-/area/commons/fitness/recreation)
+/area/commons/fitness/pool)
 "mtD" = (
 /obj/effect/landmark/event_spawn,
 /obj/structure/disposalpipe/segment{
@@ -31418,7 +31420,7 @@
 	dir = 8
 	},
 /turf/open/pool,
-/area/commons/fitness/recreation)
+/area/commons/fitness/pool)
 "mBL" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
 	dir = 4
@@ -31560,7 +31562,7 @@
 /obj/item/toy/fluff/frisbee_poly/green,
 /obj/item/toy/fluff/tennis_poly/tri/squeak/rainbow,
 /turf/open/floor/mineral/sandstone_floor,
-/area/commons/fitness/recreation)
+/area/commons/fitness/pool)
 "mER" = (
 /obj/machinery/space_heater,
 /obj/structure/railing{
@@ -31707,7 +31709,7 @@
 	dir = 5
 	},
 /turf/open/floor/plating,
-/area/commons/fitness/recreation)
+/area/commons/fitness/pool)
 "mHV" = (
 /obj/structure/chair/beanbag/blue{
 	dir = 8
@@ -31898,7 +31900,7 @@
 	dir = 8
 	},
 /turf/open/floor/wood,
-/area/commons/fitness/recreation)
+/area/commons/fitness/pool)
 "mMn" = (
 /obj/structure/cable{
 	icon_state = "0-8"
@@ -32259,7 +32261,7 @@
 "mUh" = (
 /obj/structure/extinguisher_cabinet,
 /turf/closed/wall/mineral/sandstone,
-/area/commons/fitness/recreation)
+/area/commons/fitness/pool)
 "mUn" = (
 /obj/structure/cable{
 	icon_state = "4-8"
@@ -32943,7 +32945,7 @@
 /obj/structure/table/reinforced,
 /obj/machinery/chem_dispenser/drinks,
 /turf/open/floor/mineral/sandstone_floor,
-/area/commons/fitness/recreation)
+/area/commons/fitness/pool)
 "nfa" = (
 /obj/effect/spawner/structure/window/reinforced,
 /obj/structure/cable{
@@ -33128,7 +33130,7 @@
 	icon_state = "2-4"
 	},
 /turf/open/floor/catwalk_floor,
-/area/commons/fitness/recreation)
+/area/commons/fitness/pool)
 "niV" = (
 /obj/structure/plasticflaps,
 /obj/machinery/door/firedoor/border_only{
@@ -33716,7 +33718,7 @@
 	},
 /obj/machinery/door/firedoor,
 /turf/open/floor/wood,
-/area/commons/fitness/recreation)
+/area/commons/fitness/pool)
 "nvZ" = (
 /obj/effect/landmark/start/atmospheric_technician,
 /obj/machinery/atmospherics/pipe/manifold/general/visible{
@@ -33827,7 +33829,7 @@
 "nzh" = (
 /obj/machinery/computer/security/telescreen/entertainment,
 /turf/closed/wall,
-/area/commons/fitness/recreation)
+/area/commons/fitness/pool)
 "nzr" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
 	dir = 4
@@ -35361,7 +35363,7 @@
 	dir = 5
 	},
 /turf/open/floor/mineral/sandstone_floor,
-/area/commons/fitness/recreation)
+/area/commons/fitness/pool)
 "ofe" = (
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer1{
 	dir = 1
@@ -35529,7 +35531,7 @@
 "oiD" = (
 /obj/structure/chair/stool/bar,
 /turf/open/pool,
-/area/commons/fitness/recreation)
+/area/commons/fitness/pool)
 "oiE" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 4
@@ -35665,7 +35667,7 @@
 	dir = 10
 	},
 /turf/open/floor/plating,
-/area/commons/fitness/recreation)
+/area/commons/fitness/pool)
 "omg" = (
 /obj/structure/cable{
 	icon_state = "4-8"
@@ -35822,7 +35824,7 @@
 	pixel_y = -24
 	},
 /turf/open/pool,
-/area/commons/fitness/recreation)
+/area/commons/fitness/pool)
 "opu" = (
 /obj/machinery/vending/coffee,
 /turf/open/floor/plasteel,
@@ -36582,7 +36584,7 @@
 	color = "#ffa570"
 	},
 /turf/open/floor/grass,
-/area/commons/fitness/recreation)
+/area/commons/fitness/pool)
 "oIq" = (
 /obj/structure/table/wood,
 /obj/item/storage/lockbox/medal,
@@ -36696,7 +36698,7 @@
 	icon_state = "4-8"
 	},
 /turf/open/floor/catwalk_floor,
-/area/commons/fitness/recreation)
+/area/commons/fitness/pool)
 "oKT" = (
 /obj/structure/cable{
 	icon_state = "4-8"
@@ -37261,7 +37263,7 @@
 	pixel_x = -1
 	},
 /turf/open/floor/plaswood,
-/area/commons/fitness/recreation)
+/area/commons/fitness/pool)
 "oXd" = (
 /obj/machinery/atmospherics/components/unary/vent_pump/siphon/atmos/nitrous_output,
 /turf/open/floor/engine/n2o,
@@ -37315,7 +37317,7 @@
 	},
 /obj/item/reagent_containers/glass/beaker/waterbottle,
 /turf/open/floor/plasteel/dark,
-/area/commons/fitness/recreation)
+/area/commons/fitness/pool)
 "oZO" = (
 /obj/structure/cable{
 	icon_state = "1-2"
@@ -37441,7 +37443,7 @@
 	dir = 8
 	},
 /turf/open/floor/mineral/sandstone_floor,
-/area/commons/fitness/recreation)
+/area/commons/fitness/pool)
 "pbQ" = (
 /obj/structure/table,
 /obj/machinery/reagentgrinder,
@@ -37735,7 +37737,7 @@
 	pixel_x = 23
 	},
 /turf/open/floor/plasteel/dark,
-/area/commons/fitness/recreation)
+/area/commons/fitness/pool)
 "pjJ" = (
 /obj/structure/reagent_dispensers/beerkeg,
 /turf/open/floor/plasteel/grimy,
@@ -38073,7 +38075,7 @@
 	dir = 4
 	},
 /turf/open/floor/mineral/sandstone_floor,
-/area/commons/fitness/recreation)
+/area/commons/fitness/pool)
 "prL" = (
 /obj/structure/cable{
 	icon_state = "4-8"
@@ -38082,7 +38084,7 @@
 	dir = 1
 	},
 /turf/open/floor/catwalk_floor,
-/area/commons/fitness/recreation)
+/area/commons/fitness/pool)
 "psg" = (
 /obj/effect/turf_decal/tile/green,
 /obj/effect/turf_decal/tile/green{
@@ -38136,7 +38138,7 @@
 	dir = 5
 	},
 /turf/open/floor/plating,
-/area/commons/fitness/recreation)
+/area/commons/fitness/pool)
 "ptt" = (
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer1,
 /turf/open/floor/plasteel{
@@ -38943,7 +38945,7 @@
 "pJt" = (
 /obj/effect/spawner/structure/window/reinforced,
 /turf/open/floor/plating,
-/area/commons/fitness/recreation)
+/area/commons/fitness/pool)
 "pJE" = (
 /obj/effect/turf_decal/loading_area,
 /turf/open/floor/plasteel,
@@ -38963,11 +38965,11 @@
 /area/cargo/storage)
 "pKd" = (
 /obj/machinery/power/apc{
-	areastring = "/area/crew_quarters/dorms";
-	dir = 1;
+	dir = 4;
 	name = "Dormitories APC";
 	pixel_y = 1;
-	pixel_x = 32
+	pixel_x = 24;
+	auto_name = 1
 	},
 /obj/structure/cable{
 	icon_state = "0-8"
@@ -39153,7 +39155,7 @@
 	pixel_x = -24
 	},
 /turf/open/floor/wood,
-/area/commons/fitness/recreation)
+/area/commons/fitness/pool)
 "pPq" = (
 /obj/effect/turf_decal/loading_area{
 	dir = 2;
@@ -39168,7 +39170,7 @@
 	pixel_y = 1
 	},
 /turf/open/floor/plasteel/dark,
-/area/commons/fitness/recreation)
+/area/commons/fitness/pool)
 "pPy" = (
 /obj/structure/cable{
 	icon_state = "4-8"
@@ -39721,7 +39723,7 @@
 /area/commons/dorms)
 "qbO" = (
 /turf/open/floor/mineral/sandstone_floor,
-/area/commons/fitness/recreation)
+/area/commons/fitness/pool)
 "qcx" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/visible{
 	dir = 4
@@ -40406,7 +40408,7 @@
 "qqw" = (
 /obj/structure/pool/ladder,
 /turf/open/pool,
-/area/commons/fitness/recreation)
+/area/commons/fitness/pool)
 "qqP" = (
 /obj/structure/table/wood,
 /obj/item/reagent_containers/rag,
@@ -40564,7 +40566,7 @@
 	pixel_y = -31
 	},
 /turf/open/floor/wood,
-/area/commons/fitness/recreation)
+/area/commons/fitness/pool)
 "qsT" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -40757,7 +40759,7 @@
 	dir = 4
 	},
 /turf/open/floor/mineral/sandstone_floor,
-/area/commons/fitness/recreation)
+/area/commons/fitness/pool)
 "qyt" = (
 /obj/effect/spawner/structure/window/reinforced,
 /obj/structure/cable{
@@ -40872,7 +40874,7 @@
 "qzo" = (
 /obj/structure/sign/warning/enginesafety,
 /turf/closed/wall,
-/area/commons/fitness/recreation)
+/area/commons/fitness/pool)
 "qzB" = (
 /obj/structure/table,
 /obj/item/paper_bin{
@@ -41027,7 +41029,7 @@
 "qCJ" = (
 /obj/structure/medkit_cabinet,
 /turf/closed/wall/mineral/sandstone,
-/area/commons/fitness/recreation)
+/area/commons/fitness/pool)
 "qCU" = (
 /obj/machinery/airalarm{
 	pixel_y = 28
@@ -41594,7 +41596,7 @@
 /area/cargo/storage)
 "qNs" = (
 /turf/open/floor/wood,
-/area/commons/fitness/recreation)
+/area/commons/fitness/pool)
 "qND" = (
 /obj/machinery/airalarm{
 	pixel_y = 26
@@ -42038,7 +42040,7 @@
 	pixel_y = -2
 	},
 /turf/open/floor/mineral/basaltstone_floor,
-/area/commons/fitness/recreation)
+/area/commons/fitness/pool)
 "qXE" = (
 /turf/closed/indestructible/rock/glacierrock/blue,
 /area/engineering/atmos)
@@ -42453,7 +42455,7 @@
 	dir = 10
 	},
 /turf/open/floor/catwalk_floor,
-/area/commons/fitness/recreation)
+/area/commons/fitness/pool)
 "riK" = (
 /obj/machinery/atmospherics/pipe/manifold/green/visible{
 	dir = 8
@@ -42580,7 +42582,7 @@
 	dir = 1
 	},
 /turf/open/floor/mineral/sandstone_floor,
-/area/commons/fitness/recreation)
+/area/commons/fitness/pool)
 "rkG" = (
 /obj/machinery/door/firedoor/border_only,
 /obj/machinery/door/airlock/research/glass{
@@ -43222,7 +43224,7 @@
 "ruy" = (
 /obj/machinery/light/floor,
 /turf/open/pool,
-/area/commons/fitness/recreation)
+/area/commons/fitness/pool)
 "ruY" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3,
 /obj/effect/turf_decal/bot,
@@ -43604,7 +43606,7 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1,
 /obj/structure/disposalpipe/segment,
 /turf/open/floor/mineral/sandstone_floor,
-/area/commons/fitness/recreation)
+/area/commons/fitness/pool)
 "rEF" = (
 /obj/effect/turf_decal/tile/blue{
 	dir = 1
@@ -44462,7 +44464,7 @@
 	pixel_y = 3
 	},
 /turf/open/floor/plasteel/dark,
-/area/commons/fitness/recreation)
+/area/commons/fitness/pool)
 "saj" = (
 /obj/structure/cable{
 	icon_state = "1-2"
@@ -44604,7 +44606,7 @@
 	},
 /obj/structure/pool/ladder,
 /turf/open/pool,
-/area/commons/fitness/recreation)
+/area/commons/fitness/pool)
 "sds" = (
 /obj/structure/cable{
 	icon_state = "4-8"
@@ -44669,7 +44671,7 @@
 	dir = 4
 	},
 /turf/open/floor/grass/fairy/blue,
-/area/commons/fitness/recreation)
+/area/commons/fitness/pool)
 "sfl" = (
 /obj/structure/cable{
 	icon_state = "4-8"
@@ -45358,7 +45360,7 @@
 "sts" = (
 /obj/structure/closet/wardrobe/mixed,
 /turf/open/floor/plasteel/dark,
-/area/commons/fitness/recreation)
+/area/commons/fitness/pool)
 "stF" = (
 /obj/structure/fans/tiny,
 /obj/machinery/door/airlock/external{
@@ -45512,7 +45514,7 @@
 	},
 /obj/machinery/door/firedoor,
 /turf/open/floor/plating,
-/area/commons/fitness/recreation)
+/area/commons/fitness/pool)
 "swF" = (
 /obj/structure/cable{
 	icon_state = "4-8"
@@ -45586,7 +45588,7 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1,
 /turf/open/floor/plating,
-/area/commons/fitness/recreation)
+/area/commons/fitness/pool)
 "sxI" = (
 /obj/machinery/atmospherics/pipe/simple/cyan/visible{
 	dir = 6
@@ -45940,7 +45942,7 @@
 	dir = 10
 	},
 /turf/open/floor/plasteel/dark,
-/area/commons/fitness/recreation)
+/area/commons/fitness/pool)
 "sES" = (
 /obj/structure/cable{
 	icon_state = "1-8"
@@ -46592,7 +46594,7 @@
 "sPB" = (
 /obj/structure/chair/bench/right,
 /turf/open/floor/plaswood,
-/area/commons/fitness/recreation)
+/area/commons/fitness/pool)
 "sPG" = (
 /obj/machinery/atmospherics/pipe/simple{
 	dir = 10
@@ -47171,7 +47173,7 @@
 "tbr" = (
 /obj/structure/weightmachine/weightlifter,
 /turf/open/floor/wood,
-/area/commons/fitness/recreation)
+/area/commons/fitness/pool)
 "tbG" = (
 /obj/machinery/firealarm{
 	dir = 8;
@@ -47331,7 +47333,7 @@
 	},
 /obj/structure/disposalpipe/segment,
 /turf/open/floor/mineral/sandstone_floor,
-/area/commons/fitness/recreation)
+/area/commons/fitness/pool)
 "tgr" = (
 /obj/structure/cable{
 	icon_state = "0-2"
@@ -47938,7 +47940,7 @@
 	pixel_x = -24
 	},
 /turf/open/floor/mineral/sandstone_floor,
-/area/commons/fitness/recreation)
+/area/commons/fitness/pool)
 "ttS" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1{
 	dir = 4
@@ -48280,7 +48282,7 @@
 	pixel_y = -31
 	},
 /turf/open/floor/wood,
-/area/commons/fitness/recreation)
+/area/commons/fitness/pool)
 "tDq" = (
 /obj/structure/cable{
 	icon_state = "1-2"
@@ -48514,7 +48516,7 @@
 	name = "Steam Vapor Storage"
 	},
 /turf/open/floor/plating,
-/area/commons/fitness/recreation)
+/area/commons/fitness/pool)
 "tGS" = (
 /obj/machinery/atmospherics/pipe/manifold4w/general/visible,
 /turf/open/floor/plasteel/dark,
@@ -48663,7 +48665,7 @@
 	id_tag = "private_pool3"
 	},
 /turf/open/floor/wood,
-/area/commons/fitness/recreation)
+/area/commons/fitness/pool)
 "tJr" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -48712,7 +48714,7 @@
 	dir = 1
 	},
 /turf/open/floor/mineral/basaltstone_floor,
-/area/commons/fitness/recreation)
+/area/commons/fitness/pool)
 "tJQ" = (
 /obj/structure/disposalpipe/segment,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3,
@@ -49093,7 +49095,7 @@
 	name = "drain"
 	},
 /turf/open/floor/wood,
-/area/commons/fitness/recreation)
+/area/commons/fitness/pool)
 "tSa" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1,
 /obj/machinery/door/firedoor/border_only{
@@ -49419,7 +49421,7 @@
 	},
 /obj/effect/turf_decal/tile/yellow,
 /turf/open/floor/mineral/sandstone_floor,
-/area/commons/fitness/recreation)
+/area/commons/fitness/pool)
 "ubj" = (
 /obj/effect/turf_decal/bot_white,
 /obj/structure/window/reinforced{
@@ -49574,7 +49576,7 @@
 	pixel_y = -31
 	},
 /turf/open/floor/wood,
-/area/commons/fitness/recreation)
+/area/commons/fitness/pool)
 "udw" = (
 /obj/machinery/chem_master/condimaster{
 	name = "CondiMaster Neo"
@@ -49642,7 +49644,7 @@
 	dir = 1
 	},
 /turf/open/floor/plasteel/dark,
-/area/commons/fitness/recreation)
+/area/commons/fitness/pool)
 "ufg" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
 	dir = 9
@@ -50008,7 +50010,7 @@
 	dir = 4
 	},
 /turf/open/floor/plasteel/dark,
-/area/commons/fitness/recreation)
+/area/commons/fitness/pool)
 "ukX" = (
 /turf/open/floor/plasteel{
 	icon_state = "floor_whole"
@@ -50289,7 +50291,7 @@
 /obj/structure/flora/junglebush/b,
 /obj/structure/flora/ausbushes/ywflowers,
 /turf/open/floor/grass,
-/area/commons/fitness/recreation)
+/area/commons/fitness/pool)
 "uro" = (
 /obj/structure/cable{
 	icon_state = "2-4"
@@ -51115,7 +51117,7 @@
 "uGR" = (
 /obj/structure/bed/double,
 /turf/open/floor/mineral/basaltstone_floor,
-/area/commons/fitness/recreation)
+/area/commons/fitness/pool)
 "uGV" = (
 /obj/machinery/vending/snack/random,
 /turf/open/floor/plasteel,
@@ -51643,7 +51645,7 @@
 	pixel_x = -24
 	},
 /turf/open/floor/mineral/sandstone_floor,
-/area/commons/fitness/recreation)
+/area/commons/fitness/pool)
 "uTn" = (
 /obj/machinery/computer/pandemic,
 /obj/effect/turf_decal/tile/green{
@@ -51659,7 +51661,7 @@
 "uTo" = (
 /obj/structure/chair/bench/left,
 /turf/open/floor/plaswood,
-/area/commons/fitness/recreation)
+/area/commons/fitness/pool)
 "uTx" = (
 /obj/machinery/atmospherics/pipe/simple/green/visible{
 	dir = 5
@@ -51823,7 +51825,7 @@
 	dir = 9
 	},
 /turf/open/floor/mineral/sandstone_floor,
-/area/commons/fitness/recreation)
+/area/commons/fitness/pool)
 "uXD" = (
 /obj/structure/chair/stool,
 /obj/effect/turf_decal/tile/blue{
@@ -52123,7 +52125,7 @@
 "vbO" = (
 /obj/structure/chair/bench,
 /turf/open/floor/plaswood,
-/area/commons/fitness/recreation)
+/area/commons/fitness/pool)
 "vci" = (
 /obj/structure/cable{
 	icon_state = "4-8"
@@ -52684,7 +52686,7 @@
 	},
 /obj/structure/disposalpipe/segment,
 /turf/open/floor/mineral/sandstone_floor,
-/area/commons/fitness/recreation)
+/area/commons/fitness/pool)
 "vlq" = (
 /obj/effect/turf_decal/stripes/line{
 	dir = 4
@@ -52726,7 +52728,7 @@
 "vme" = (
 /obj/structure/punching_bag,
 /turf/open/floor/wood,
-/area/commons/fitness/recreation)
+/area/commons/fitness/pool)
 "vmi" = (
 /obj/effect/turf_decal/bot_white,
 /obj/structure/window/reinforced{
@@ -52768,7 +52770,7 @@
 "vnv" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1,
 /turf/open/floor/wood,
-/area/commons/fitness/recreation)
+/area/commons/fitness/pool)
 "vnA" = (
 /obj/machinery/mineral/equipment_vendor,
 /obj/machinery/door/firedoor,
@@ -53019,7 +53021,7 @@
 /area/service/library)
 "vsv" = (
 /turf/closed/wall/mineral/sandstone,
-/area/commons/fitness/recreation)
+/area/commons/fitness/pool)
 "vsX" = (
 /obj/structure/cable{
 	icon_state = "2-8"
@@ -53167,7 +53169,7 @@
 	dir = 8
 	},
 /turf/open/floor/plaswood,
-/area/commons/fitness/recreation)
+/area/commons/fitness/pool)
 "vwu" = (
 /obj/structure/cable{
 	icon_state = "1-2"
@@ -53229,7 +53231,7 @@
 /obj/structure/flora/crystal/small/pile,
 /obj/structure/flora/crystal/small/growth,
 /turf/open/floor/grass/fairy/blue,
-/area/commons/fitness/recreation)
+/area/commons/fitness/pool)
 "vxH" = (
 /obj/structure/disposalpipe/segment{
 	dir = 5
@@ -53802,7 +53804,7 @@
 	pixel_x = 23
 	},
 /turf/open/floor/plating,
-/area/commons/fitness/recreation)
+/area/commons/fitness/pool)
 "vIA" = (
 /obj/structure/table/rolling,
 /obj/item/trash/fatoray_scrap1,
@@ -54127,7 +54129,7 @@
 	name = "drain"
 	},
 /turf/open/floor/mineral/basaltstone_floor,
-/area/commons/fitness/recreation)
+/area/commons/fitness/pool)
 "vOs" = (
 /obj/structure/cable{
 	icon_state = "4-8"
@@ -54371,7 +54373,7 @@
 	pixel_y = 1
 	},
 /turf/open/floor/wood,
-/area/commons/fitness/recreation)
+/area/commons/fitness/pool)
 "vUS" = (
 /obj/effect/turf_decal/tile/red{
 	dir = 8
@@ -54487,7 +54489,7 @@
 	dir = 6
 	},
 /turf/open/floor/mineral/sandstone_floor,
-/area/commons/fitness/recreation)
+/area/commons/fitness/pool)
 "vWP" = (
 /obj/structure/cable{
 	icon_state = "1-8"
@@ -54795,7 +54797,7 @@
 	pixel_y = 7
 	},
 /turf/open/floor/plasteel/dark,
-/area/commons/fitness/recreation)
+/area/commons/fitness/pool)
 "wdq" = (
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer1{
 	dir = 4
@@ -55159,7 +55161,7 @@
 	},
 /obj/machinery/portable_atmospherics/scrubber,
 /turf/open/floor/plating,
-/area/commons/fitness/recreation)
+/area/commons/fitness/pool)
 "wjJ" = (
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on{
 	dir = 1
@@ -55215,7 +55217,7 @@
 	pixel_y = -2
 	},
 /turf/open/floor/plating,
-/area/commons/fitness/recreation)
+/area/commons/fitness/pool)
 "wlf" = (
 /obj/machinery/airalarm{
 	pixel_y = 28
@@ -55719,7 +55721,7 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1,
 /turf/open/floor/mineral/sandstone_floor,
-/area/commons/fitness/recreation)
+/area/commons/fitness/pool)
 "wyg" = (
 /obj/structure/cable{
 	icon_state = "1-2"
@@ -55933,7 +55935,7 @@
 	dir = 8
 	},
 /turf/open/floor/plasteel/dark,
-/area/commons/fitness/recreation)
+/area/commons/fitness/pool)
 "wCE" = (
 /obj/structure/table,
 /obj/effect/turf_decal/tile/brown{
@@ -56009,7 +56011,7 @@
 	pixel_y = 19
 	},
 /turf/open/floor/plating,
-/area/commons/fitness/recreation)
+/area/commons/fitness/pool)
 "wDS" = (
 /obj/structure/cable{
 	icon_state = "1-2"
@@ -56658,7 +56660,7 @@
 	name = "drain"
 	},
 /turf/open/floor/wood,
-/area/commons/fitness/recreation)
+/area/commons/fitness/pool)
 "wPP" = (
 /obj/structure/cable{
 	icon_state = "4-8"
@@ -57968,7 +57970,7 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1,
 /turf/open/floor/mineral/sandstone_floor,
-/area/commons/fitness/recreation)
+/area/commons/fitness/pool)
 "xuD" = (
 /obj/structure/cable{
 	icon_state = "1-2"
@@ -57984,7 +57986,7 @@
 	dir = 4
 	},
 /turf/open/floor/mineral/sandstone_floor,
-/area/commons/fitness/recreation)
+/area/commons/fitness/pool)
 "xuZ" = (
 /obj/machinery/airalarm{
 	dir = 4;
@@ -58092,7 +58094,7 @@
 	dir = 4
 	},
 /turf/open/floor/mineral/sandstone_floor,
-/area/commons/fitness/recreation)
+/area/commons/fitness/pool)
 "xxj" = (
 /obj/structure/closet/emcloset,
 /obj/machinery/light{
@@ -58150,7 +58152,7 @@
 	name = "drain"
 	},
 /turf/open/floor/wood,
-/area/commons/fitness/recreation)
+/area/commons/fitness/pool)
 "xzd" = (
 /turf/closed/wall,
 /area/maintenance/aft)
@@ -58198,7 +58200,7 @@
 "xzO" = (
 /obj/machinery/space_heater,
 /turf/open/floor/wood,
-/area/commons/fitness/recreation)
+/area/commons/fitness/pool)
 "xzR" = (
 /obj/effect/turf_decal/tile/purple{
 	dir = 4
@@ -58396,7 +58398,7 @@
 "xDM" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1,
 /turf/open/floor/mineral/sandstone_floor,
-/area/commons/fitness/recreation)
+/area/commons/fitness/pool)
 "xDW" = (
 /obj/effect/turf_decal/tile/blue{
 	dir = 8
@@ -58458,7 +58460,7 @@
 "xFq" = (
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer1,
 /turf/open/floor/plating,
-/area/commons/fitness/recreation)
+/area/commons/fitness/pool)
 "xFB" = (
 /obj/machinery/light{
 	dir = 8
@@ -58760,7 +58762,7 @@
 	name = "drain"
 	},
 /turf/open/floor/wood,
-/area/commons/fitness/recreation)
+/area/commons/fitness/pool)
 "xMw" = (
 /obj/machinery/atmospherics/components/unary/vent_pump/on{
 	dir = 4
@@ -58810,7 +58812,7 @@
 "xNR" = (
 /obj/structure/weightmachine/stacklifter,
 /turf/open/floor/wood,
-/area/commons/fitness/recreation)
+/area/commons/fitness/pool)
 "xNT" = (
 /obj/structure/cable{
 	icon_state = "1-2"
@@ -59001,7 +59003,7 @@
 	},
 /obj/effect/turf_decal/tile/yellow,
 /turf/open/floor/mineral/sandstone_floor,
-/area/commons/fitness/recreation)
+/area/commons/fitness/pool)
 "xTK" = (
 /obj/machinery/atmospherics/pipe/manifold/scrubbers/hidden,
 /turf/open/floor/plasteel/white,
@@ -59135,7 +59137,7 @@
 	color = "#ffa570"
 	},
 /turf/open/floor/grass,
-/area/commons/fitness/recreation)
+/area/commons/fitness/pool)
 "xWd" = (
 /obj/structure/disposalpipe/segment,
 /turf/open/floor/plating,
@@ -59357,7 +59359,7 @@
 	dir = 1
 	},
 /turf/open/floor/plating,
-/area/commons/fitness/recreation)
+/area/commons/fitness/pool)
 "yaJ" = (
 /obj/effect/turf_decal/tile/yellow{
 	dir = 4
@@ -59494,7 +59496,7 @@
 /area/maintenance/department/electrical)
 "yee" = (
 /turf/open/pool,
-/area/commons/fitness/recreation)
+/area/commons/fitness/pool)
 "yeh" = (
 /obj/structure/cable{
 	icon_state = "4-8"
@@ -218735,18 +218737,18 @@ sgP
 btn
 btn
 btn
-izF
-izF
-izF
-izF
-izF
-izF
-izF
-izF
-izF
-izF
-izF
-izF
+ahi
+ahi
+ahi
+ahi
+ahi
+ahi
+ahi
+ahi
+ahi
+ahi
+ahi
+ahi
 btn
 btn
 btn
@@ -218992,18 +218994,18 @@ btn
 btn
 btn
 btn
-izF
+ahi
 grl
 wDH
 ffF
 wkU
-izF
+ahi
 sfk
 vxd
 sfk
 vxd
 sfk
-izF
+ahi
 btn
 btn
 btn
@@ -219240,27 +219242,27 @@ sgP
 rBc
 dPG
 sgP
-izF
+ahi
 pJt
 dBr
 pJt
-izF
+ahi
 btn
 btn
-izF
-izF
-izF
+ahi
+ahi
+ahi
 dwJ
 kGJ
 xFq
 mHU
-izF
+ahi
 jeQ
 yee
 yee
 yee
 eew
-izF
+ahi
 btn
 btn
 btn
@@ -219497,27 +219499,27 @@ sgP
 rBc
 dPG
 sgP
-izF
+ahi
 mtC
 cQp
 kEh
-izF
+ahi
 btn
 btn
-izF
+ahi
 jfW
 tGJ
 kGJ
 kGJ
 kGJ
 wjD
-izF
+ahi
 yee
 yee
 yee
 yee
 yee
-izF
+ahi
 btn
 btn
 btn
@@ -219754,32 +219756,32 @@ sgP
 rBc
 dPG
 btn
-izF
+ahi
 hmh
 cQp
 yaH
-izF
+ahi
 btn
 btn
-izF
+ahi
 jfW
 dwr
 fLR
 bce
 cXC
 fYk
-izF
+ahi
 yee
 yee
 mBD
 yee
 yee
-izF
-izF
-izF
-izF
-izF
-izF
+ahi
+ahi
+ahi
+ahi
+ahi
+ahi
 btn
 btn
 btn
@@ -220011,32 +220013,32 @@ eKi
 rBc
 dPG
 btn
-izF
-izF
+ahi
+ahi
 dvL
-izF
-izF
-izF
-izF
-izF
-izF
+ahi
+ahi
+ahi
+ahi
+ahi
+ahi
 qzo
 koJ
 fQU
 kGJ
 fSb
-izF
+ahi
 tJP
 aME
 vOq
 hFN
 ebX
-izF
+ahi
 fuJ
 tRQ
 jaF
 oIb
-izF
+ahi
 btn
 btn
 btn
@@ -220268,7 +220270,7 @@ sgP
 rBc
 dPG
 btn
-izF
+ahi
 chH
 riA
 goW
@@ -220282,18 +220284,18 @@ sxC
 oma
 vIq
 ptp
-izF
+ahi
 uGR
 fQV
 gUU
 jjC
 qXm
-izF
+ahi
 uTo
 qNs
 uTo
 haz
-izF
+ahi
 btn
 btn
 sgP
@@ -220525,32 +220527,32 @@ sgP
 rBc
 dPG
 btn
-izF
+ahi
 oKJ
-izF
-izF
-izF
-izF
-izF
-izF
-izF
-izF
-izF
-izF
-izF
+ahi
+ahi
+ahi
+ahi
+ahi
+ahi
+ahi
+ahi
+ahi
+ahi
+ahi
 swt
-izF
-izF
-izF
+ahi
+ahi
+ahi
 iMb
-izF
-izF
-izF
+ahi
+ahi
+ahi
 aFk
 qNs
 vbO
 dMk
-izF
+ahi
 btn
 btn
 sgP
@@ -220782,9 +220784,9 @@ sgP
 rBc
 dPG
 btn
-izF
+ahi
 prL
-izF
+ahi
 mED
 ttk
 vWL
@@ -220807,7 +220809,7 @@ qNs
 qNs
 sPB
 luG
-izF
+ahi
 btn
 btn
 btn
@@ -221039,9 +221041,9 @@ sgP
 rBc
 dPG
 btn
-izF
+ahi
 oKJ
-izF
+ahi
 abT
 qbO
 djz
@@ -221059,13 +221061,13 @@ iHO
 djz
 gJX
 qbO
-izF
-izF
-izF
-izF
-izF
-izF
-izF
+ahi
+ahi
+ahi
+ahi
+ahi
+ahi
+ahi
 btn
 btn
 btn
@@ -221296,9 +221298,9 @@ sgP
 rBc
 dPG
 btn
-izF
+ahi
 oKJ
-izF
+ahi
 nzh
 qbO
 vsv
@@ -221316,13 +221318,13 @@ jwK
 qCJ
 gJX
 qbO
-izF
+ahi
 oWE
 hvS
 vws
 xzb
 xWb
-izF
+ahi
 btn
 btn
 btn
@@ -221553,9 +221555,9 @@ sgP
 rBc
 dPG
 btn
-izF
+ahi
 oKJ
-izF
+ahi
 gdV
 qbO
 dKu
@@ -221579,7 +221581,7 @@ qNs
 qNs
 xMu
 uqT
-izF
+ahi
 btn
 btn
 mJy
@@ -221810,9 +221812,9 @@ eKi
 rBc
 dPG
 btn
-izF
+ahi
 oKJ
-izF
+ahi
 dAj
 qbO
 drR
@@ -221836,7 +221838,7 @@ qNs
 qNs
 xMu
 jhI
-izF
+ahi
 btn
 btn
 sjZ
@@ -222067,9 +222069,9 @@ sgP
 rBc
 dPG
 btn
-izF
+ahi
 oKJ
-izF
+ahi
 avz
 qbO
 dKu
@@ -222087,13 +222089,13 @@ opm
 ubi
 gJX
 qbO
-izF
+ahi
 ieD
 hvS
 vws
 wPw
 bEx
-izF
+ahi
 btn
 btn
 mJy
@@ -222324,9 +222326,9 @@ sgP
 rBc
 dPG
 btn
-izF
+ahi
 oKJ
-izF
+ahi
 rkC
 qbO
 drR
@@ -222344,14 +222346,14 @@ yee
 ubi
 gJX
 qbO
-izF
-izF
-izF
-izF
-izF
-izF
-izF
-izF
+ahi
+ahi
+ahi
+ahi
+ahi
+ahi
+ahi
+ahi
 btn
 mJy
 lMO
@@ -222581,9 +222583,9 @@ sgP
 rBc
 dPG
 btn
-izF
+ahi
 oKJ
-izF
+ahi
 neU
 qbO
 dKu
@@ -222608,7 +222610,7 @@ pPd
 vUK
 mMg
 xzO
-izF
+ahi
 btn
 mJy
 uXQ
@@ -222838,10 +222840,10 @@ sgP
 rBc
 dPG
 btn
-izF
+ahi
 oKJ
-izF
-izF
+ahi
+ahi
 mgL
 vsv
 jnR
@@ -222865,7 +222867,7 @@ jjZ
 qNs
 fps
 tCU
-izF
+ahi
 btn
 mJy
 sZy
@@ -223095,9 +223097,9 @@ sgP
 rBc
 dPG
 btn
-izF
+ahi
 bug
-izF
+ahi
 xuQ
 qbO
 gbm
@@ -223122,7 +223124,7 @@ dVh
 vnv
 iKa
 gRN
-izF
+ahi
 btn
 mJy
 xqs
@@ -223352,7 +223354,7 @@ sgP
 sfl
 dPG
 btn
-izF
+ahi
 prL
 ctD
 joU
@@ -223379,7 +223381,7 @@ xNR
 qNs
 xNR
 qsO
-izF
+ahi
 btn
 mJy
 mJy
@@ -223609,9 +223611,9 @@ sgP
 rBc
 ooT
 btn
-izF
+ahi
 oKJ
-izF
+ahi
 efy
 efy
 efy
@@ -223636,7 +223638,7 @@ qNs
 qNs
 qNs
 udv
-izF
+ahi
 btn
 mJy
 mWm
@@ -223866,7 +223868,7 @@ fvR
 frf
 dPG
 btn
-izF
+ahi
 niP
 dZm
 kMm
@@ -223893,7 +223895,7 @@ tbr
 qNs
 tbr
 hiE
-izF
+ahi
 btn
 mJy
 rVu
@@ -224123,9 +224125,9 @@ rXE
 mGx
 dPG
 btn
-izF
+ahi
 fIi
-izF
+ahi
 efy
 wat
 efy
@@ -224150,7 +224152,7 @@ dVh
 vnv
 iKa
 qNs
-izF
+ahi
 btn
 mJy
 rVu
@@ -224382,7 +224384,7 @@ lno
 mqt
 mqt
 mwY
-izF
+ahi
 czx
 wat
 efy
@@ -224407,7 +224409,7 @@ vme
 qNs
 vme
 deY
-izF
+ahi
 btn
 mJy
 rVu
@@ -224639,7 +224641,7 @@ ajf
 ajf
 jYZ
 mqy
-izF
+ahi
 efy
 wat
 efy
@@ -224664,7 +224666,7 @@ kbs
 bZc
 bch
 xzO
-izF
+ahi
 btn
 mJy
 rVu
@@ -224911,17 +224913,17 @@ pbn
 sUu
 sUu
 efy
-izF
-izF
-izF
-izF
-izF
-izF
-izF
-izF
-izF
-izF
-izF
+ahi
+ahi
+ahi
+ahi
+ahi
+ahi
+ahi
+ahi
+ahi
+ahi
+ahi
 btn
 mJy
 pvi
