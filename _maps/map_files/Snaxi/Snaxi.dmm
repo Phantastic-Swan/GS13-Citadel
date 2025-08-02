@@ -5412,7 +5412,7 @@
 	dir = 4;
 	pixel_y = 32
 	},
-/obj/structure/sign/directions/bar{
+/obj/structure/sign/directions/service{
 	pixel_y = 24;
 	dir = 4
 	},
@@ -10344,7 +10344,7 @@
 /obj/effect/turf_decal/tile/neutral{
 	dir = 8
 	},
-/obj/structure/sign/directions/bar{
+/obj/structure/sign/directions/service{
 	pixel_y = 24;
 	dir = 4
 	},

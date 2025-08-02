@@ -47,11 +47,9 @@
 	icon_state = "direction_bridge"
 
 /obj/structure/sign/directions/bar
-	// GS13 EDIT
-	name = "service"														// from "bar"
-	desc = "A direction sign, pointing out which way the caffeteria is."	// "which way the bar is"
-	icon_state = "direction_service"										// from "direction_bar"
-	// GS13 END EDIT
+	name = "bar"
+	desc = "A direction sign, pointing out which way the Bar is."
+	icon_state = "direction_bar"
 
 /obj/structure/sign/directions/cafe
 	name = "cafe"
