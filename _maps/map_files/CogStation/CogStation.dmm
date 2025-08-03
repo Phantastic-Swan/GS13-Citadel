@@ -3475,6 +3475,7 @@
 	pixel_x = -6;
 	pixel_y = -2
 	},
+/obj/item/folder,
 /turf/open/floor/plasteel,
 /area/commons/storage/tools)
 "ais" = (
@@ -5730,6 +5731,7 @@
 /obj/item/wrench{
 	pixel_y = 4
 	},
+/obj/item/book/manual/wiki/engineering_hacking,
 /turf/open/floor/plasteel,
 /area/commons/storage/tools)
 "anO" = (
@@ -6848,6 +6850,12 @@
 /obj/structure/sign/poster/contraband/hacking_guide{
 	pixel_x = 32
 	},
+/obj/item/storage/box/lights/mixed,
+/obj/item/stack/sheet/glass/fifty{
+	pixel_x = -6;
+	pixel_y = 2
+	},
+/obj/item/stack/sheet/glass/fifty,
 /turf/open/floor/plasteel,
 /area/commons/storage/tools)
 "aqu" = (
@@ -7505,7 +7513,6 @@
 /area/medical/clinic)
 "arQ" = (
 /obj/structure/window/reinforced{
-	dir = 1;
 	pixel_y = 1
 	},
 /obj/structure/table/reinforced,
@@ -7599,7 +7606,8 @@
 /obj/item/clothing/glasses/regular,
 /obj/machinery/door/window/northright{
 	name = "Medical Booth Desk";
-	req_access_txt = "5"
+	req_access_txt = "5";
+	dir = 2
 	},
 /turf/open/floor/plasteel/white,
 /area/medical/clinic)
@@ -8509,6 +8517,11 @@
 	pixel_x = 28
 	},
 /obj/machinery/atmospherics/components/unary/vent_pump/on,
+/obj/item/stack/sheet/metal/fifty{
+	pixel_x = -3;
+	pixel_y = -7
+	},
+/obj/item/stack/sheet/metal/fifty,
 /turf/open/floor/plasteel,
 /area/commons/storage/tools)
 "atY" = (
@@ -13544,10 +13557,6 @@
 /turf/open/floor/plasteel,
 /area/hallway/primary/port/fore)
 "aEr" = (
-/obj/structure/window/reinforced{
-	dir = 8;
-	layer = 2.9
-	},
 /obj/structure/table,
 /obj/effect/turf_decal/tile/green,
 /obj/effect/turf_decal/tile/green{
@@ -13565,6 +13574,13 @@
 /obj/item/lighter,
 /obj/item/clothing/glasses/sunglasses{
 	pixel_y = 4
+	},
+/obj/item/pen,
+/obj/item/clipboard,
+/obj/machinery/door/window/westleft{
+	name = "Hydroponics Desk";
+	req_access_txt = "35";
+	dir = 4
 	},
 /turf/open/floor/plasteel,
 /area/service/hydroponics/lobby)
@@ -14054,12 +14070,15 @@
 	dir = 1
 	},
 /obj/item/folder/blue,
-/obj/machinery/door/window/westleft{
-	name = "Hydroponics Desk";
-	req_access_txt = "35"
-	},
 /obj/machinery/atmospherics/pipe/simple/orange/hidden{
 	dir = 8
+	},
+/obj/item/hand_labeler,
+/obj/item/stack/packageWrap,
+/obj/item/stack/packageWrap,
+/obj/machinery/door/window/westright{
+	dir = 4;
+	req_one_access_txt = "30;35"
 	},
 /turf/open/floor/plasteel,
 /area/service/hydroponics/lobby)
@@ -14424,48 +14443,9 @@
 /obj/machinery/atmospherics/pipe/simple/orange/hidden,
 /turf/open/floor/plasteel,
 /area/hallway/secondary/civilian)
-"aGl" = (
-/obj/structure/window/reinforced{
-	dir = 8;
-	layer = 2.9
-	},
-/obj/structure/window/reinforced,
-/obj/structure/table,
-/obj/effect/turf_decal/tile/green,
-/obj/effect/turf_decal/tile/green{
-	dir = 8
-	},
-/obj/effect/turf_decal/tile/green{
-	dir = 4
-	},
-/obj/effect/turf_decal/tile/green{
-	dir = 1
-	},
-/obj/item/clipboard,
-/obj/item/pen,
-/turf/open/floor/plasteel,
-/area/service/hydroponics/lobby)
 "aGm" = (
-/obj/structure/table,
-/obj/effect/turf_decal/tile/green,
-/obj/effect/turf_decal/tile/green{
-	dir = 8
-	},
-/obj/effect/turf_decal/tile/green{
-	dir = 4
-	},
-/obj/effect/turf_decal/tile/green{
-	dir = 1
-	},
-/obj/item/stack/packageWrap,
-/obj/item/stack/packageWrap,
-/obj/item/hand_labeler,
-/obj/machinery/door/window/southright{
-	name = "Hydroponics Desk";
-	req_access_txt = "35"
-	},
 /turf/open/floor/plasteel,
-/area/service/hydroponics/lobby)
+/area/space/station_ruins)
 "aGn" = (
 /obj/effect/spawner/structure/window/reinforced,
 /turf/open/floor/plating,
@@ -15332,21 +15312,12 @@
 /area/commons/cryopod)
 "aHZ" = (
 /obj/structure/table/reinforced,
-/obj/structure/window/reinforced,
-/obj/structure/window/reinforced{
-	dir = 1;
-	pixel_y = 1
-	},
 /obj/machinery/door/window/eastleft{
 	name = "Security Office Desk";
-	req_one_access_txt = "63"
+	req_one_access_txt = "63";
+	dir = 8
 	},
 /obj/item/folder/red,
-/obj/item/stamp/denied{
-	pixel_x = 4;
-	pixel_y = 4
-	},
-/obj/item/stamp,
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
@@ -15686,6 +15657,11 @@
 /obj/structure/cable{
 	icon_state = "4-8"
 	},
+/obj/item/stamp/denied{
+	pixel_x = 4;
+	pixel_y = 4
+	},
+/obj/item/stamp,
 /turf/open/floor/plasteel,
 /area/security/office)
 "aIG" = (
@@ -16386,29 +16362,6 @@
 	},
 /turf/open/floor/circuit,
 /area/command/bridge)
-"aJY" = (
-/obj/structure/window/reinforced{
-	dir = 4
-	},
-/obj/structure/table,
-/obj/effect/turf_decal/tile/yellow,
-/obj/effect/turf_decal/tile/yellow{
-	dir = 1
-	},
-/obj/effect/turf_decal/tile/yellow{
-	dir = 4
-	},
-/obj/effect/turf_decal/tile/yellow{
-	dir = 8
-	},
-/obj/item/stack/sheet/metal/fifty,
-/obj/item/storage/box/lights/mixed,
-/obj/item/stack/sheet/metal/fifty{
-	pixel_x = -3;
-	pixel_y = -7
-	},
-/turf/open/floor/plasteel,
-/area/commons/storage/tools)
 "aJZ" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -23146,7 +23099,9 @@
 	c_tag = "Customs - Fore";
 	dir = 4
 	},
-/obj/structure/window/reinforced/spawner/north,
+/obj/structure/window/reinforced/spawner/north{
+	dir = 2
+	},
 /obj/machinery/door/poddoor/shutters/preopen{
 	id = "HoPFore";
 	name = "HoP Fore Desk Shutters"
@@ -23162,7 +23117,8 @@
 /obj/structure/table/reinforced,
 /obj/machinery/door/window/northright{
 	name = "Customs Desk";
-	req_access_txt = "57"
+	req_access_txt = "57";
+	dir = 2
 	},
 /obj/machinery/door/poddoor/shutters/preopen{
 	id = "HoPFore";
@@ -24956,6 +24912,12 @@
 	pixel_x = -24;
 	pixel_y = -24;
 	req_access_txt = "57"
+	},
+/obj/structure/table,
+/obj/item/stamp,
+/obj/item/stamp/denied{
+	pixel_x = 4;
+	pixel_y = 4
 	},
 /turf/open/floor/plasteel/dark,
 /area/security/checkpoint/customs)
@@ -30319,7 +30281,9 @@
 "bnZ" = (
 /obj/structure/table/reinforced,
 /obj/item/flashlight/lamp,
-/obj/structure/window/reinforced/spawner/north,
+/obj/structure/window/reinforced/spawner/north{
+	dir = 2
+	},
 /obj/machinery/door/poddoor/shutters/preopen{
 	id = "HoPFore";
 	name = "HoP Fore Desk Shutters"
@@ -30344,7 +30308,9 @@
 	c_tag = "Customs - Aft";
 	dir = 4
 	},
-/obj/structure/window/reinforced/spawner,
+/obj/structure/window/reinforced/spawner{
+	dir = 1
+	},
 /obj/machinery/door/poddoor/shutters/preopen{
 	id = "HoPAft";
 	name = "HoP Aft Desk Shutters"
@@ -31886,25 +31852,6 @@
 /obj/effect/landmark/start/assistant,
 /turf/open/floor/plasteel,
 /area/commons/storage/tools)
-"brD" = (
-/obj/structure/table,
-/obj/machinery/door/window/eastright{
-	name = "Auxiliary Tool Storage Desk";
-	req_access_txt = "12"
-	},
-/obj/effect/turf_decal/tile/yellow,
-/obj/effect/turf_decal/tile/yellow{
-	dir = 1
-	},
-/obj/effect/turf_decal/tile/yellow{
-	dir = 4
-	},
-/obj/effect/turf_decal/tile/yellow{
-	dir = 8
-	},
-/obj/item/folder,
-/turf/open/floor/plasteel,
-/area/commons/storage/tools)
 "brE" = (
 /obj/structure/cable{
 	icon_state = "4-8"
@@ -32294,48 +32241,6 @@
 "bsp" = (
 /turf/open/floor/plasteel/dark,
 /area/medical/medbay/lobby)
-"bsq" = (
-/obj/structure/table,
-/obj/machinery/door/window/southleft{
-	name = "Auxiliary Tool Storage Desk";
-	req_access_txt = "12"
-	},
-/obj/effect/turf_decal/tile/yellow,
-/obj/effect/turf_decal/tile/yellow{
-	dir = 1
-	},
-/obj/effect/turf_decal/tile/yellow{
-	dir = 4
-	},
-/obj/effect/turf_decal/tile/yellow{
-	dir = 8
-	},
-/obj/item/book/manual/wiki/engineering_hacking,
-/turf/open/floor/plasteel,
-/area/commons/storage/tools)
-"bsr" = (
-/obj/structure/window/reinforced{
-	dir = 4
-	},
-/obj/structure/window/reinforced,
-/obj/structure/table,
-/obj/effect/turf_decal/tile/yellow,
-/obj/effect/turf_decal/tile/yellow{
-	dir = 1
-	},
-/obj/effect/turf_decal/tile/yellow{
-	dir = 4
-	},
-/obj/effect/turf_decal/tile/yellow{
-	dir = 8
-	},
-/obj/item/stack/sheet/glass/fifty,
-/obj/item/stack/sheet/glass/fifty{
-	pixel_x = -6;
-	pixel_y = 2
-	},
-/turf/open/floor/plasteel,
-/area/commons/storage/tools)
 "bss" = (
 /obj/structure/table,
 /obj/effect/turf_decal/tile/blue{
@@ -42683,14 +42588,10 @@
 "bOY" = (
 /obj/structure/table/reinforced,
 /obj/item/clipboard,
-/obj/item/stamp/denied{
-	pixel_x = 4;
-	pixel_y = 4
-	},
-/obj/item/stamp,
 /obj/machinery/door/window/southright{
 	name = "Customs Desk";
-	req_access_txt = "57"
+	req_access_txt = "57";
+	dir = 1
 	},
 /obj/machinery/door/poddoor/shutters/preopen{
 	id = "HoPAft";
@@ -46121,7 +46022,9 @@
 "bVY" = (
 /obj/structure/table/reinforced,
 /obj/item/flashlight/lamp,
-/obj/structure/window/reinforced/spawner,
+/obj/structure/window/reinforced/spawner{
+	dir = 1
+	},
 /obj/machinery/door/poddoor/shutters/preopen{
 	id = "HoPAft";
 	name = "HoP Aft Desk Shutters"
@@ -46303,7 +46206,9 @@
 /area/hallway/primary/central)
 "bWr" = (
 /obj/structure/table/reinforced,
-/obj/structure/window/reinforced,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
 /obj/effect/turf_decal/tile/brown,
 /obj/effect/turf_decal/tile/brown{
 	dir = 1
@@ -46318,11 +46223,6 @@
 	dir = 8
 	},
 /obj/item/clipboard,
-/obj/item/stamp,
-/obj/item/stamp/denied{
-	pixel_x = 4;
-	pixel_y = 4
-	},
 /obj/item/pen/red,
 /obj/item/pen/blue{
 	pixel_x = -5;
@@ -46345,7 +46245,8 @@
 	},
 /obj/machinery/door/window/southleft{
 	name = "Cargo Desk";
-	req_access_txt = "31"
+	req_access_txt = "31";
+	dir = 1
 	},
 /obj/item/folder,
 /obj/effect/turf_decal/delivery,
@@ -46379,7 +46280,9 @@
 /area/service/lawoffice)
 "bWx" = (
 /obj/structure/table/reinforced,
-/obj/structure/window/reinforced,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
 /obj/effect/turf_decal/tile/brown,
 /obj/effect/turf_decal/tile/brown{
 	dir = 1
@@ -46394,7 +46297,6 @@
 /obj/item/stack/packageWrap,
 /obj/item/stack/packageWrap,
 /obj/item/pen,
-/obj/item/wirecutters,
 /obj/effect/turf_decal/delivery,
 /turf/open/floor/plasteel,
 /area/cargo/sorting)
@@ -57859,7 +57761,8 @@
 /obj/structure/table/reinforced,
 /obj/machinery/door/window/southleft{
 	name = "Workshop Desk";
-	req_access_txt = "11"
+	req_access_txt = "11";
+	dir = 1
 	},
 /obj/item/paper_bin,
 /obj/item/pen,
@@ -59181,7 +59084,8 @@
 /obj/structure/table/reinforced,
 /obj/machinery/door/window/southright{
 	name = "Workshop Desk";
-	req_access_txt = "11"
+	req_access_txt = "11";
+	dir = 1
 	},
 /obj/item/folder/yellow,
 /obj/machinery/door/firedoor/border_only{
@@ -59203,7 +59107,8 @@
 	},
 /obj/machinery/door/window/southleft{
 	name = "Primary Tool Storage Desk";
-	req_access_txt = "11"
+	req_access_txt = "11";
+	dir = 1
 	},
 /obj/item/folder/yellow,
 /obj/machinery/door/firedoor/border_only{
@@ -68313,7 +68218,8 @@
 	},
 /obj/machinery/door/window/southright{
 	name = "Primary Tool Storage Desk";
-	req_access_txt = "11"
+	req_access_txt = "11";
+	dir = 1
 	},
 /obj/structure/cable{
 	icon_state = "1-2"
@@ -68348,12 +68254,16 @@
 /obj/item/folder/red,
 /obj/machinery/atmospherics/pipe/simple/cyan/hidden,
 /obj/machinery/door/window/northright{
-	name = "Security Checkpoint";
-	req_access_txt = "1"
+	name = "Security Checkpoint"
 	},
 /obj/machinery/door/firedoor/border_only{
 	dir = 1;
 	name = "north facing firelock"
+	},
+/obj/machinery/door/window/northright{
+	name = "Security Checkpoint";
+	req_access_txt = "1";
+	dir = 2
 	},
 /turf/open/floor/plasteel,
 /area/security/checkpoint/supply)
@@ -71890,6 +71800,12 @@
 /obj/structure/table,
 /obj/item/storage/toolbox/mechanical,
 /obj/item/paper/guides/cogstation/letter_supp,
+/obj/item/wirecutters,
+/obj/item/stamp/denied{
+	pixel_x = 4;
+	pixel_y = 4
+	},
+/obj/item/stamp,
 /turf/open/floor/plasteel,
 /area/cargo/sorting)
 "qxz" = (
@@ -73114,7 +73030,7 @@ ckl
 ckl
 ckl
 ckl
-ckl
+aGm
 "}
 (2,1,1) = {"
 ckl
@@ -117152,7 +117068,7 @@ atX
 ayV
 aJJ
 brC
-bsq
+amc
 aIy
 aLo
 aOm
@@ -117407,9 +117323,9 @@ amc
 amc
 amc
 azF
-aJY
-brD
-bsr
+amN
+amN
+amc
 aIB
 aLj
 aOy
@@ -118180,7 +118096,7 @@ awp
 awx
 aEr
 aFx
-aGl
+awp
 aIZ
 aLr
 amG
@@ -118437,7 +118353,7 @@ awp
 aDA
 aEt
 aFA
-aGm
+awp
 aIZ
 aLr
 amG
