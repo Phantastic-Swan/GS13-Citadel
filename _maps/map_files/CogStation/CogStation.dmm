@@ -14444,27 +14444,22 @@
 /turf/open/floor/plasteel,
 /area/hallway/secondary/civilian)
 "aGl" = (
+/obj/effect/turf_decal/stripes/line{
+	dir = 1
+	},
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/atmospherics/pipe/simple/supplymain/hidden{
 	dir = 4
 	},
-/obj/machinery/door/airlock{
-	name = "Chapel Maintenance";
-	req_one_access_txt = "12;22;26;27;50";
-	dir = 4
+/mob/living/simple_animal/opossum/poppy,
+/turf/open/floor/plasteel,
+/area/cargo/warehouse)
+"aGm" = (
+/obj/machinery/light/small{
+	dir = 1
 	},
 /turf/open/floor/plasteel,
-/area/maintenance/department/chapel)
-"aGm" = (
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/orange/hidden{
-	dir = 8
-	},
-/obj/structure/trash_pile,
-/turf/open/floor/plating,
-/area/maintenance/department/chapel)
+/area/service/janitor)
 "aGn" = (
 /obj/effect/spawner/structure/window/reinforced,
 /turf/open/floor/plating,
@@ -16381,6 +16376,9 @@
 	},
 /turf/open/floor/circuit,
 /area/command/bridge)
+"aJY" = (
+/turf/open/floor/plasteel,
+/area/space/station_ruins)
 "aJZ" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -26324,19 +26322,15 @@
 /turf/open/floor/plasteel,
 /area/cargo/office)
 "bfS" = (
-/obj/effect/turf_decal/tile/blue,
-/obj/effect/turf_decal/tile/blue{
-	dir = 8
-	},
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/obj/structure/sign/directions/service{
-	dir = 1;
-	pixel_y = -32
+/obj/machinery/atmospherics/pipe/simple/orange/hidden{
+	dir = 8
 	},
-/turf/open/floor/plasteel,
-/area/hallway/primary/aft)
+/obj/structure/trash_pile,
+/turf/open/floor/plating,
+/area/maintenance/department/chapel)
 "bfT" = (
 /obj/machinery/atmospherics/pipe/simple/orange/hidden{
 	dir = 8
@@ -29154,10 +29148,13 @@
 /turf/open/floor/plasteel,
 /area/hallway/primary/central)
 "blP" = (
-/obj/machinery/atmospherics/pipe/simple/cyan/hidden{
-	dir = 4
+/obj/machinery/power/apc{
+	areastring = "/area/maintenance/central";
+	dir = 1;
+	name = "Custodial Closet APC";
+	pixel_y = 23
 	},
-/turf/closed/wall,
+/turf/open/floor/plasteel,
 /area/service/janitor)
 "blQ" = (
 /obj/machinery/atmospherics/pipe/simple/cyan/hidden,
@@ -31878,14 +31875,10 @@
 /turf/open/floor/plasteel,
 /area/commons/storage/tools)
 "brD" = (
-/obj/machinery/power/apc{
-	areastring = "/area/maintenance/central";
-	dir = 1;
-	name = "Custodial Closet APC";
-	pixel_y = 23
-	},
+/obj/effect/decal/cleanable/dirt,
+/obj/machinery/vending/mealdor,
 /turf/open/floor/plasteel,
-/area/service/janitor)
+/area/hallway/secondary/civilian)
 "brE" = (
 /obj/structure/cable{
 	icon_state = "4-8"
@@ -32271,17 +32264,17 @@
 "bsp" = (
 /turf/open/floor/plasteel/dark,
 /area/medical/medbay/lobby)
-"bsq" = (
-/obj/machinery/light/small{
-	dir = 1
+"bsr" = (
+/obj/machinery/door/airlock{
+	name = "Custodial Closet";
+	req_access_txt = "26";
+	dir = 8
 	},
+/obj/machinery/door/firedoor,
+/obj/effect/turf_decal/delivery,
+/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel,
 /area/service/janitor)
-"bsr" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/machinery/vending/mealdor,
-/turf/open/floor/plasteel,
-/area/hallway/secondary/civilian)
 "bss" = (
 /obj/structure/table,
 /obj/effect/turf_decal/tile/blue{
@@ -33299,6 +33292,18 @@
 	},
 /turf/open/floor/plasteel,
 /area/tcommsat/computer)
+"buW" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/machinery/atmospherics/pipe/simple/supplymain/hidden{
+	dir = 4
+	},
+/obj/machinery/door/airlock{
+	name = "Chapel Maintenance";
+	req_one_access_txt = "12;22;26;27;50";
+	dir = 4
+	},
+/turf/open/floor/plasteel,
+/area/maintenance/department/chapel)
 "buX" = (
 /obj/structure/chair/stool,
 /obj/effect/landmark/start/bartender,
@@ -33485,8 +33490,11 @@
 /turf/open/floor/plasteel/freezer,
 /area/service/kitchen/coldroom)
 "bvs" = (
-/turf/open/floor/plasteel,
-/area/space/station_ruins)
+/obj/machinery/atmospherics/pipe/simple/cyan/hidden{
+	dir = 4
+	},
+/turf/closed/wall,
+/area/service/janitor)
 "bvt" = (
 /obj/effect/turf_decal/tile/neutral{
 	dir = 4
@@ -33519,6 +33527,13 @@
 /obj/machinery/atmospherics/pipe/simple/general/visible,
 /turf/closed/wall,
 /area/service/kitchen/coldroom)
+"bvx" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/machinery/atmospherics/pipe/simple/cyan/hidden{
+	dir = 4
+	},
+/turf/closed/wall,
+/area/service/janitor)
 "bvy" = (
 /turf/open/floor/plasteel/white,
 /area/science/mixing)
@@ -35202,10 +35217,6 @@
 	},
 /turf/open/floor/plasteel,
 /area/service/janitor)
-"bzg" = (
-/obj/effect/turf_decal/bot,
-/turf/open/floor/plasteel,
-/area/service/janitor)
 "bzh" = (
 /obj/structure/disposalpipe/trunk{
 	dir = 8
@@ -36089,13 +36100,6 @@
 /obj/machinery/status_display,
 /turf/closed/wall/r_wall,
 /area/hallway/secondary/exit/departure_lounge)
-"bBb" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/machinery/atmospherics/pipe/simple/cyan/hidden{
-	dir = 4
-	},
-/turf/closed/wall,
-/area/service/janitor)
 "bBc" = (
 /obj/machinery/atmospherics/components/binary/valve/digital/on,
 /turf/closed/wall/r_wall,
@@ -39699,6 +39703,20 @@
 	},
 /turf/open/floor/carpet/blue,
 /area/command/heads_quarters/hop)
+"bIX" = (
+/obj/effect/turf_decal/tile/blue,
+/obj/effect/turf_decal/tile/blue{
+	dir = 8
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/structure/sign/directions/service{
+	dir = 1;
+	pixel_y = -32
+	},
+/turf/open/floor/plasteel,
+/area/hallway/primary/aft)
 "bIY" = (
 /obj/machinery/atmospherics/pipe/simple/violet/hidden,
 /obj/structure/lattice,
@@ -57039,17 +57057,6 @@
 /obj/machinery/atmospherics/pipe/simple/cyan/hidden,
 /turf/open/floor/plasteel,
 /area/security/checkpoint/supply)
-"csi" = (
-/obj/machinery/door/airlock{
-	name = "Custodial Closet";
-	req_access_txt = "26";
-	dir = 8
-	},
-/obj/machinery/door/firedoor,
-/obj/effect/turf_decal/delivery,
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/plasteel,
-/area/service/janitor)
 "csj" = (
 /obj/machinery/atmospherics/pipe/simple/cyan/hidden{
 	dir = 4
@@ -69158,6 +69165,10 @@
 	},
 /turf/open/floor/catwalk_floor,
 /area/maintenance/aft)
+"cPz" = (
+/obj/effect/turf_decal/bot,
+/turf/open/floor/plasteel,
+/area/service/janitor)
 "cPA" = (
 /obj/structure/lattice,
 /obj/structure/disposalpipe/segment,
@@ -73006,7 +73017,7 @@ ckl
 ckl
 ckl
 ckl
-bvs
+aJY
 "}
 (2,1,1) = {"
 ckl
@@ -101956,7 +101967,7 @@ cNi
 cvl
 cIF
 ccp
-bfS
+bIX
 bbh
 bpB
 bqm
@@ -115046,7 +115057,7 @@ bbV
 bfN
 bhk
 bhk
-bwt
+aGl
 bja
 bLn
 bbV
@@ -116006,7 +116017,7 @@ ajV
 anG
 aro
 avb
-bsr
+brD
 awI
 amc
 agU
@@ -116037,10 +116048,10 @@ bet
 bse
 aMd
 aJd
-aGl
+buW
 bxg
-blP
-csi
+bvs
+bsr
 czS
 bwx
 bwx
@@ -116295,9 +116306,9 @@ cAR
 buZ
 aJd
 bhe
-aGm
-bBb
-bzg
+bfS
+bvx
+cPz
 czT
 bva
 bwy
@@ -116553,7 +116564,7 @@ cCB
 aJd
 bhi
 byM
-blP
+bvs
 brF
 czU
 czY
@@ -116810,8 +116821,8 @@ bvf
 aJd
 bhw
 byO
-bBb
-brD
+bvx
+blP
 btc
 czZ
 cAf
@@ -117067,8 +117078,8 @@ aJd
 bvu
 bdA
 bxg
-blP
-bsq
+bvs
+aGm
 aNc
 bvQ
 cAg
