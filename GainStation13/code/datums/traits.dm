@@ -28,6 +28,15 @@
 	lose_text = "<span class='notice'>Your legs cannot bear heavier loads anymore.</span>"
 	medical_record_text = "Patient exhibits increased muscle strength in their legs."
 
+/datum/quirk/lipolicide_tolerance //GS13
+	name = "Lipolicide Tolerance"
+	desc = "Whether because your liver turned resistant to weight-loss chemicals, or just because your genes were aligned this way, your body barely processes lipolicide."
+	value = 0
+	mob_trait = TRAIT_LIPOLICIDE_TOLERANCE
+	gain_text = "<span class='notice'>You feel like you need to watch what you eat.</span>"
+	lose_text = "<span class='notice'>You feel like you can be careless with your diet.</span>"
+	medical_record_text = "Patient's digestive system exhibits strong resistance to lipolicide."
+
 /datum/quirk/draconicspeaker
 	name = "Draconic speaker"
 	desc = "Due to your time spent around lizards, you can speak Draconic!"
