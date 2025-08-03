@@ -1472,12 +1472,8 @@
 /turf/open/floor/plasteel,
 /area/security/prison)
 "aBw" = (
-/obj/machinery/atmospherics/pipe/manifold/supply/hidden/layer1{
-	dir = 8
-	},
-/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3{
-	dir = 6
-	},
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3,
+/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1,
 /turf/open/floor/wood,
 /area/commons/dorms)
 "aBE" = (
@@ -14935,9 +14931,12 @@
 /turf/open/floor/plasteel/white,
 /area/medical/medbay/zone3)
 "fVJ" = (
-/obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer3,
 /obj/structure/cable{
 	icon_state = "1-2"
+	},
+/obj/machinery/atmospherics/pipe/manifold/scrubbers/hidden/layer3,
+/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1{
+	dir = 4
 	},
 /turf/open/floor/wood,
 /area/commons/dorms)
@@ -26852,9 +26851,6 @@
 /obj/structure/cable{
 	icon_state = "4-8"
 	},
-/obj/item/clothing/suit/pirate,
-/obj/item/clothing/head/pirate,
-/obj/item/clothing/glasses/meson/eyepatch,
 /obj/effect/turf_decal/tile/yellow{
 	dir = 8
 	},
@@ -29794,7 +29790,7 @@
 	name = "Unisex Restrooms";
 	dir = 4
 	},
-/turf/open/floor/plating,
+/turf/open/floor/plasteel/freezer,
 /area/commons/dorms)
 "lUK" = (
 /obj/effect/turf_decal/loading_area{
@@ -36489,7 +36485,12 @@
 /turf/open/floor/plasteel,
 /area/hallway/primary/central)
 "oFq" = (
-/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1,
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3{
+	dir = 6
+	},
+/obj/machinery/atmospherics/pipe/manifold/supply/hidden/layer1{
+	dir = 8
+	},
 /turf/open/floor/wood,
 /area/commons/dorms)
 "oFR" = (
@@ -39444,15 +39445,14 @@
 /turf/open/floor/carpet,
 /area/service/chapel/main)
 "pWI" = (
-/obj/structure/cable{
-	icon_state = "1-2"
-	},
-/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1{
+/obj/machinery/door/airlock/atmos/glass{
+	id_tag = "";
+	name = "Turbine Airlock";
+	autoclose = 0;
 	dir = 4
 	},
-/obj/machinery/atmospherics/pipe/manifold/scrubbers/hidden/layer3,
-/turf/open/floor/wood,
-/area/commons/dorms)
+/turf/open/floor/engine,
+/area/maintenance/disposal/incinerator)
 "pWU" = (
 /obj/effect/turf_decal/bot_white,
 /obj/structure/window/reinforced{
@@ -39999,7 +39999,6 @@
 	icon_state = "1-4"
 	},
 /obj/machinery/light,
-/obj/item/holosign_creator/atmos,
 /obj/effect/turf_decal/tile/yellow{
 	dir = 8
 	},
@@ -51942,12 +51941,6 @@
 	},
 /turf/open/floor/plasteel,
 /area/security/brig)
-"uZo" = (
-/obj/machinery/light{
-	dir = 1
-	},
-/turf/closed/wall,
-/area/service/hydroponics)
 "uZR" = (
 /obj/machinery/cryopod/tele,
 /turf/open/floor/pod/dark,
@@ -227457,9 +227450,9 @@ ajf
 gQX
 efr
 nBj
-uFo
+hRM
 fVJ
-pWI
+uFo
 jLK
 jzO
 pMj
@@ -234144,7 +234137,7 @@ iye
 jqh
 iye
 iye
-uZo
+iye
 bTq
 pFN
 pFN
@@ -238224,8 +238217,8 @@ btn
 btn
 wJr
 wJr
-sgP
-sgP
+ftZ
+ftZ
 puu
 ndl
 uTU
@@ -238480,9 +238473,9 @@ btn
 btn
 btn
 wJr
-sgP
-sgP
-sgP
+ftZ
+ftZ
+ftZ
 iWV
 hjK
 puk
@@ -238736,9 +238729,9 @@ btn
 btn
 btn
 btn
-sgP
-sgP
-sgP
+ftZ
+ftZ
+ftZ
 nit
 nit
 igS
@@ -238993,7 +238986,7 @@ btn
 btn
 btn
 wJr
-sgP
+ftZ
 uTU
 uTU
 ihB
@@ -239254,7 +239247,7 @@ puu
 stq
 stq
 nit
-nit
+pWI
 nit
 yhe
 nit
