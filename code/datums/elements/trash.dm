@@ -9,7 +9,9 @@
 	if((M == user || user.vore_flags & TRASH_FORCEFEED) && ishuman(user))
 		var/mob/living/carbon/human/H = user
 		if(HAS_TRAIT(H, TRAIT_TRASHCAN))
-			playsound(H.loc,'sound/items/eatfood.ogg', rand(10,50), 1)
+			//GS13 Edit - Eating sound prefs
+			playsound_prefed(H.loc,'sound/items/eatfood.ogg', EATING_NOISES, rand(10,50), 1)
+			//GS13 Edit end
 			if(H.vore_selected)
 				H.visible_message("<span class='notice'>[H] [H.vore_selected.vore_verb]s the [source.name] into their [H.vore_selected.name]</span>",
 					"<span class='notice'>You [H.vore_selected.vore_verb] the [source.name] into your [H.vore_selected.name]</span>")

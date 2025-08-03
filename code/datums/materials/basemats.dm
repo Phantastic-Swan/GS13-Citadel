@@ -3,7 +3,7 @@
 	name = "iron"
 	desc = "Common iron ore often found in sedimentary and igneous layers of the crust."
 	color = "#878687"
-	categories = list(MAT_CATEGORY_ORE = TRUE, MAT_CATEGORY_RIGID = TRUE, MAT_CATEGORY_BASE_RECIPES = TRUE)
+	categories = list(MAT_CATEGORY_ORE = TRUE, MAT_CATEGORY_RIGID = TRUE/*GS13 EDIT , MAT_CATEGORY_BASE_RECIPES = TRUE GS13 END EDIT*/)
 	sheet_type = /obj/item/stack/sheet/metal
 	value_per_unit = 0.0025
 
