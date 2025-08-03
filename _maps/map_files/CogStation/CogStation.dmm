@@ -28539,7 +28539,7 @@
 /turf/open/floor/plasteel,
 /area/cargo/warehouse)
 "bkC" = (
-/obj/effect/spawner/structure/window/reinforced,
+/obj/effect/spawner/structure/window/plasma/reinforced,
 /obj/structure/cable{
 	icon_state = "0-4"
 	},
@@ -33273,7 +33273,7 @@
 /turf/closed/wall/rust,
 /area/service/chapel/main)
 "buO" = (
-/obj/effect/spawner/structure/window/reinforced,
+/obj/effect/spawner/structure/window/plasma/reinforced,
 /obj/structure/cable{
 	icon_state = "0-8"
 	},
@@ -42624,9 +42624,6 @@
 /obj/machinery/atmospherics/pipe/simple/cyan/hidden{
 	dir = 5
 	},
-/obj/structure/cable{
-	icon_state = "1-2"
-	},
 /turf/open/floor/plasteel/dark,
 /area/command/heads_quarters/captain)
 "bOR" = (
@@ -42635,9 +42632,6 @@
 /obj/item/card/id/captains_spare,
 /obj/item/hand_tele,
 /obj/item/disk/nuclear,
-/obj/structure/cable{
-	icon_state = "4-8"
-	},
 /turf/open/floor/plasteel/dark,
 /area/command/heads_quarters/captain)
 "bOS" = (
@@ -42648,15 +42642,6 @@
 	pixel_y = -6
 	},
 /obj/item/stamp/captain,
-/obj/structure/cable{
-	icon_state = "1-8"
-	},
-/obj/structure/cable{
-	icon_state = "1-4"
-	},
-/obj/structure/cable{
-	icon_state = "1-2"
-	},
 /turf/open/floor/plasteel/dark,
 /area/command/heads_quarters/captain)
 "bOT" = (
@@ -43662,9 +43647,6 @@
 /area/command/heads_quarters/captain)
 "bRc" = (
 /obj/machinery/suit_storage_unit/captain,
-/obj/structure/cable{
-	icon_state = "4-8"
-	},
 /turf/open/floor/plasteel/dark,
 /area/command/heads_quarters/captain)
 "bRd" = (
@@ -46022,17 +46004,6 @@
 /obj/machinery/atmospherics/pipe/simple/cyan/hidden,
 /turf/open/floor/plasteel,
 /area/science/research)
-"bVN" = (
-/obj/effect/spawner/structure/window/reinforced,
-/obj/structure/cable{
-	icon_state = "0-4"
-	},
-/obj/structure/cable,
-/obj/machinery/door/poddoor/preopen{
-	id = "capblast"
-	},
-/turf/open/floor/plating,
-/area/command/heads_quarters/captain)
 "bVO" = (
 /obj/structure/disposalpipe/segment{
 	dir = 6
@@ -47135,19 +47106,6 @@
 /obj/effect/landmark/event_spawn,
 /turf/open/floor/plasteel,
 /area/service/hydroponics)
-"bXI" = (
-/obj/effect/spawner/structure/window/reinforced,
-/obj/structure/cable{
-	icon_state = "0-4"
-	},
-/obj/structure/cable{
-	icon_state = "0-8"
-	},
-/obj/machinery/door/poddoor/preopen{
-	id = "capblast"
-	},
-/turf/open/floor/plating,
-/area/command/heads_quarters/captain)
 "bXJ" = (
 /obj/effect/turf_decal/tile/purple,
 /obj/machinery/atmospherics/pipe/simple/orange/hidden,
@@ -48621,20 +48579,6 @@
 /obj/effect/landmark/event_spawn,
 /turf/open/floor/engine,
 /area/science/explab)
-"cbi" = (
-/obj/effect/spawner/structure/window/reinforced,
-/obj/structure/cable{
-	icon_state = "0-4"
-	},
-/obj/structure/cable{
-	icon_state = "0-8"
-	},
-/obj/structure/cable,
-/obj/machinery/door/poddoor/preopen{
-	id = "capblast"
-	},
-/turf/open/floor/plating,
-/area/command/heads_quarters/captain)
 "cbj" = (
 /obj/structure/chair{
 	dir = 4
@@ -48706,17 +48650,6 @@
 /obj/structure/window/reinforced/spawner,
 /turf/open/floor/plasteel,
 /area/science/xenobiology)
-"cbp" = (
-/obj/effect/spawner/structure/window/reinforced,
-/obj/structure/cable{
-	icon_state = "0-8"
-	},
-/obj/structure/cable,
-/obj/machinery/door/poddoor/preopen{
-	id = "capblast"
-	},
-/turf/open/floor/plating,
-/area/command/heads_quarters/captain)
 "cbq" = (
 /obj/structure/table/reinforced,
 /obj/item/clipboard,
@@ -91549,8 +91482,8 @@ cDB
 bLh
 aQW
 aQW
-bkC
-bVN
+aQW
+aQW
 aaa
 aaa
 aaa
@@ -91807,7 +91740,7 @@ bLk
 aVP
 cpt
 bOR
-bXI
+aQW
 aaa
 aaa
 aaa
@@ -92064,7 +91997,7 @@ bMh
 bRb
 bOQ
 bOS
-cbi
+aQW
 aaa
 aaa
 aaa
@@ -92321,7 +92254,7 @@ bOJ
 aVR
 bBj
 bRc
-bXI
+aQW
 aaa
 aaa
 aaa
@@ -92577,8 +92510,8 @@ bEN
 bOL
 aQW
 aQW
-buO
-cbp
+aQW
+aQW
 aaa
 aaa
 aaa
