@@ -6,13 +6,16 @@
 /datum/gas_reaction/lipoifium_formation/init_reqs()
 	min_requirements = list(
 		"MAX_TEMP" = 100,
-		GAS_BZ = 15,
-		GAS_TRITIUM = 15
+		GAS_PLASMA = MINIMUM_MOLE_COUNT,
+		GAS_TRITIUM = MINIMUM_MOLE_COUNT
 	)
 
 /datum/gas_reaction/lipoifium_formation/react(datum/gas_mixture/air)
-	if (air.get_moles(GAS_BZ) < 15 || air.get_moles(GAS_TRITIUM) < 15)
+	var/plasma_moles = air.get_moles(GAS_PLASMA)
+	var/tritium_moles = air.get_moles(GAS_TRITIUM)
+	if (plasma_moles < MINIMUM_MOLE_COUNT || tritium_moles < MINIMUM_MOLE_COUNT)
 		return NO_REACTION
+
 	var/temperature = air.return_temperature()
 	var/reaction_efficiency = 0
 	if (temperature <= 5)
@@ -22,11 +25,15 @@
 	else
 		reaction_efficiency = -((temperature - 5) / 95) + 1		// will equal 1 at 5 kelvin, and will linearly fall until 0 at 100k
 
-	var/energy_released = reaction_efficiency * FIRE_CARBON_ENERGY_RELEASED
+	
 	var/old_heat_capacity = air.heat_capacity()
-	air.adjust_moles(GAS_FAT, reaction_efficiency)
-	air.adjust_moles(GAS_TRITIUM, -reaction_efficiency / 2)
-	air.adjust_moles(GAS_BZ, -reaction_efficiency / 2)
+
+	var/used_moles = min((reaction_efficiency * min(plasma_moles, tritium_moles) * 0.5), 10)
+	var/energy_released = used_moles * FIRE_CARBON_ENERGY_RELEASED
+	
+	air.adjust_moles(GAS_FAT, used_moles)
+	air.adjust_moles(GAS_TRITIUM, -used_moles)
+	air.adjust_moles(GAS_PLASMA, -used_moles)
 	var/new_heat_capacity = air.heat_capacity()
 	air.set_temperature(max((temperature * old_heat_capacity + energy_released) / new_heat_capacity, TCMB))
 
