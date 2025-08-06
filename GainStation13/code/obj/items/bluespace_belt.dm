@@ -154,8 +154,6 @@
 		
 		activate()
 
-
-
 /obj/item/bluespace_belt/primitive/attack_self(mob/person)
 	if (!cell)
 		return
@@ -193,7 +191,10 @@
 		to_chat(user, "<span class='notice'>The belt beeps as it's battery runs out, and your mass starts flowing out!</span>")
 		deactivate()
 		return
-
+	
+	if(!equipped)
+		STOP_PROCESSING(SSprocessing, src)
+		return
 
 	var/power_drained = min(power_drain, cell.charge)
 	cell.use(power_drained)
