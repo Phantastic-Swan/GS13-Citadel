@@ -71,7 +71,7 @@
 	if(!on || !is_operational())
 		if (on) // If it's broken, turn it off too
 			on = FALSE
-		return PROCESS_KILL
+		return
 
 	if(cell && cell.charge > 1 / efficiency)
 		var/turf/L = loc
@@ -85,7 +85,7 @@
 	else
 		on = FALSE
 		update_icon()
-		return PROCESS_KILL
+		return
 
 /obj/machinery/space_heater/proc/PerformHeating(turf/L)
 	if(!istype(L))
@@ -223,6 +223,8 @@
 			update_icon()
 			if (on)
 				SSair.start_processing_machine(src)
+			else
+				SSair.stop_processing_machine(src)
 			. = TRUE
 		if("mode")
 			setMode = params["mode"]
