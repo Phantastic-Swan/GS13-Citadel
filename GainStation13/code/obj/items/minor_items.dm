@@ -244,6 +244,8 @@
 
 /obj/item/melee/curator_whip/fattening
 	name = "calorite-lined whip"
+	icon = 'GainStation13/icons/obj/weapons/fat_whip.dmi'
+	icon_state = "calorite"
 	desc = "The whip seems to glisten with an orange gleam inbetween its threads."
 	damtype = "fat"
 	attack_verb = list("fattened")
@@ -251,6 +253,8 @@
 
 /obj/item/melee/curator_whip/permafattening
 	name = "galbanic whip"
+	icon = 'GainStation13/icons/obj/weapons/fat_whip.dmi'
+	icon_state = "galbanic"
 	desc = "How can a whip even be infused galbanic? No one knows."
 	damtype = "perma_fat"
 	attack_verb = list("fattened")
