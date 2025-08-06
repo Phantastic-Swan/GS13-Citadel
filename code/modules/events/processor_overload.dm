@@ -1,8 +1,11 @@
 /datum/round_event_control/processor_overload
 	name = "Processor Overload"
 	typepath = /datum/round_event/processor_overload
-	weight = 15
-	min_players = 20
+	// GS13 EDIT
+	weight = 10					// from 15 to 10, because of the change below
+	min_players = 10			// from 20 to 10, we want to have a chance of this spawning but not to shaft REALLY low pop
+	max_occurrences = 3			// from INF to 3, let's not have them blow up constantly
+	// GS13 END EDIT
 	category = EVENT_CATEGORY_ENGINEERING
 	description = "Emps the telecomm processors, scrambling radio speech. Might blow up a few."
 

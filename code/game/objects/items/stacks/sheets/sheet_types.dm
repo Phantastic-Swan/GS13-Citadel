@@ -56,12 +56,27 @@ GLOBAL_LIST_INIT(metal_recipes, list ( \
 		)), \
 	null, \
 	new/datum/stack_recipe("rack parts", /obj/item/rack_parts), \
-	new/datum/stack_recipe("closet", /obj/structure/closet, 2, time = 15, one_per_turf = TRUE, on_floor = TRUE), \
+	// GS13 EDIT
+	// adds empty, craftable lockers
+	//new/datum/stack_recipe("closet", /obj/structure/closet, 2, time = 15, one_per_turf = TRUE, on_floor = TRUE), 
+	new/datum/stack_recipe_list("closets", list( \
+		new/datum/stack_recipe("closet", /obj/structure/closet, 2, time = 15, one_per_turf = TRUE, on_floor = TRUE),
+		new/datum/stack_recipe("emergency closet", /obj/structure/closet/emcloset/empty, 2, time = 15, one_per_turf = TRUE, on_floor = TRUE), \
+		new/datum/stack_recipe("fire-safety closet", /obj/structure/closet/firecloset/empty, 2, time = 15, one_per_turf = TRUE, on_floor = TRUE), \
+		new/datum/stack_recipe("tool closet", /obj/structure/closet/toolcloset/empty, 2, time = 15, one_per_turf = TRUE, on_floor = TRUE), \
+		new/datum/stack_recipe("radiation closet", /obj/structure/closet/radiation/empty, 2, time = 15, one_per_turf = TRUE, on_floor = TRUE), \
+		new/datum/stack_recipe("biohazard gear closet", /obj/structure/closet/l3closet/empty, 2, time = 15, one_per_turf = TRUE, on_floor = TRUE), \
+	)), \
+	// moves the recipe for a sink, toilet and chair from base recipes (since base recipes has a floor tile which is bugged)
+	new /datum/stack_recipe("Chair", /obj/structure/chair/greyscale, one_per_turf = TRUE, on_floor = TRUE, applies_mats = TRUE), \
+	new /datum/stack_recipe("Toilet", /obj/structure/toilet/greyscale, one_per_turf = TRUE, on_floor = TRUE, applies_mats = TRUE), \
+	new /datum/stack_recipe("Sink Frame", /obj/structure/sink/greyscale, one_per_turf = TRUE, on_floor = TRUE, applies_mats = TRUE), \
+	// GS13 END EDIT
 	null, \
 	new/datum/stack_recipe("canister", /obj/machinery/portable_atmospherics/canister, 10, time = 15, one_per_turf = TRUE, on_floor = TRUE), \
 	new/datum/stack_recipe("trash bin", /obj/structure/closet/crate/bin, 10, time = 15, one_per_turf = TRUE, on_floor = TRUE),\
 	null, \
-	new/datum/stack_recipe("floor tile", /obj/item/stack/tile/plasteel, 1, 4, 20), \
+	new/datum/stack_recipe("Floor tile", /obj/item/stack/tile/plasteel, 1, 4, 20), \
 	new/datum/stack_recipe("metal rod", /obj/item/stack/rods, 1, 2, 60), \
 	null, \
 	new/datum/stack_recipe("wall girders", /obj/structure/girder, 2, time = 40, one_per_turf = TRUE, on_floor = TRUE, trait_booster = TRAIT_QUICK_BUILD, trait_modifier = 0.75), \
