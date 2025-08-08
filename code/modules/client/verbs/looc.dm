@@ -17,8 +17,8 @@ GLOBAL_VAR_INIT(normal_looc_colour, "#6699CC")
 	if(!msg)
 		return
 
-	if(!(prefs.chat_toggles & CHAT_OOC))
-		to_chat(src, "<span class='danger'> You have OOC muted.</span>")
+	if(!(prefs.chat_toggles & CHAT_LOOC)) //GS13 - LOOC toggle tweaks, OOC toggle should not disable LOOC
+		to_chat(src, "<span class='danger'> You have LOOC muted.</span>")
 		return
 	if(jobban_isbanned(mob, "OOC"))
 		to_chat(src, "<span class='danger'>You have been banned from OOC.</span>")
@@ -60,14 +60,14 @@ GLOBAL_VAR_INIT(normal_looc_colour, "#6699CC")
 	for(var/turf/viewed_turf in view(get_turf(mob)))
 		in_view[viewed_turf] = TRUE
 	for(var/client/client in GLOB.clients)
-		if(!client.mob || !(client.prefs.toggles & CHAT_OOC) || (client in GLOB.admins))
+		if(!client.mob || !(client.prefs.toggles & CHAT_LOOC) || (client in GLOB.admins))
 			continue
 		if(in_view[get_turf(client.mob)])
 			targets |= client
 			to_chat(client, "<span class='looc'><span class='prefix'>LOOC:</span> <EM>[src.mob.name]:</EM> <span class='message'>[msg]</span></b></font>")
 
 	for(var/client/client in GLOB.admins)
-		if(!(client.prefs.toggles & CHAT_OOC))
+		if(!(client.prefs.toggles & CHAT_LOOC))
 			continue
 		var/prefix = "(R)LOOC"
 		to_chat(client, "<span class='looc'><span class='prefix'>[prefix]:</span> <EM>[ADMIN_LOOKUPFLW(usr)]:</EM> <span class='message'>[msg]</span></span>", avoid_highlighting = (client == src))
