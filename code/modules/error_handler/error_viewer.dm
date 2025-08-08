@@ -79,6 +79,7 @@ GLOBAL_DATUM(error_cache, /datum/error_viewer/error_cache)
 	var/list/error_sources = list()
 	var/list/errors_silenced = list()
 
+//GS13: Runtime viewer for users
 /datum/error_viewer/error_cache/proc/show_to_minimal(user, datum/error_viewer/back_to, linear)
 	var/html = "<b>[GLOB.total_runtimes]</b> runtimes, <b>[GLOB.total_runtimes_skipped]</b> skipped<br><br>"
 	var/datum/error_viewer/error_source/error_source
