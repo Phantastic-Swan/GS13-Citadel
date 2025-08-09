@@ -173,7 +173,7 @@
 	icon_living = "creamdemon"
 	move_to_delay = 7
 	projectiletype = /obj/item/projectile/beam/fattening/icecream/strong
-	speak_emote = list()
+	speak = list("Come here.", "Come closer.", "Accept my blessing.")
 	ranged_cooldown_time = 40
 	speed = 3
 	maxHealth = 250
