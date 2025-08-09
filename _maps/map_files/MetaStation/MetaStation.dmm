@@ -81419,7 +81419,10 @@
 	pixel_x = 29;
 	pixel_y = 1
 	},
-/obj/item/paper,
+/obj/item/toy/plush/gs13/gatito{
+	pixel_x = 0;
+	pixel_y = 7
+	},
 /turf/open/floor/carpet/gato,
 /area/commons/dorms)
 "vqN" = (
@@ -84996,9 +84999,9 @@
 /area/service/hydroponics/garden)
 "xgL" = (
 /obj/structure/table/wood,
-/obj/item/toy/plush/carpplushie{
-	color = "red";
-	name = "GATO wildlife department space carp plushie"
+/obj/item/toy/plush/gs13/gatito{
+	pixel_x = 0;
+	pixel_y = 7
 	},
 /turf/open/floor/carpet,
 /area/command/corporate_showroom)

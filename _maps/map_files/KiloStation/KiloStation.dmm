@@ -84136,6 +84136,14 @@
 	},
 /turf/open/floor/plating/asteroid/airless,
 /area/space/nearstation)
+"sqo" = (
+/obj/structure/dresser,
+/obj/item/toy/plush/gs13/gatito{
+	pixel_x = 0;
+	pixel_y = 15
+	},
+/turf/open/floor/wood,
+/area/commons/locker)
 "sqP" = (
 /obj/effect/turf_decal/vg_decals/atmos/oxygen,
 /turf/open/floor/engine/o2{
@@ -105571,7 +105579,7 @@ bxO
 bxQ
 bzg
 lbJ
-bLu
+sqo
 bUa
 beo
 lbJ

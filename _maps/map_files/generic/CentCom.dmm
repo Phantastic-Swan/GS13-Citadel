@@ -3407,6 +3407,10 @@
 /obj/effect/turf_decal/stripes/line,
 /obj/structure/table,
 /obj/machinery/light,
+/obj/item/toy/plush/gs13/gatito{
+	pixel_x = 0;
+	pixel_y = 7
+	},
 /turf/open/floor/plasteel,
 /area/centcom/control)
 "cGI" = (
@@ -12860,6 +12864,10 @@
 	name = "drain"
 	},
 /obj/structure/chair/sofa,
+/obj/item/toy/plush/gs13/gatito{
+	pixel_x = 0;
+	pixel_y = 7
+	},
 /turf/open/floor/carpet/black,
 /area/centcom/ferry)
 "jJT" = (
@@ -21622,10 +21630,13 @@
 /area/centcom/ferry)
 "qbp" = (
 /obj/structure/table/wood,
-/obj/item/storage/dice,
 /obj/machinery/light,
 /obj/structure/sign/poster/official/gato_logo{
 	pixel_y = -32
+	},
+/obj/item/toy/plush/gs13/gatito{
+	pixel_x = 0;
+	pixel_y = 7
 	},
 /turf/open/floor/carpet/gato,
 /area/centcom/evac)
@@ -29333,6 +29344,10 @@
 	icon_state = "rightsecure";
 	name = "CentCom Customs";
 	req_access_txt = "109"
+	},
+/obj/item/toy/plush/gs13/gatito{
+	pixel_x = 0;
+	pixel_y = 7
 	},
 /turf/open/floor/plasteel,
 /area/centcom/evac)

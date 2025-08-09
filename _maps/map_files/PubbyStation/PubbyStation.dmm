@@ -34210,11 +34210,11 @@
 /turf/open/floor/wood,
 /area/commons/fitness/recreation)
 "bsi" = (
-/obj/structure/chair/sofa/corner{
-	dir = 1
-	},
 /obj/structure/sign/poster/official/random{
 	pixel_x = -32
+	},
+/obj/structure/chair/sofa/corner{
+	dir = 4
 	},
 /turf/open/floor/carpet,
 /area/commons/fitness/recreation)
@@ -34225,6 +34225,10 @@
 	name = "drain"
 	},
 /obj/structure/chair/sofa/left,
+/obj/item/toy/plush/gs13/gatito{
+	pixel_x = 0;
+	pixel_y = 4
+	},
 /turf/open/floor/carpet,
 /area/commons/fitness/recreation)
 "bsk" = (
@@ -57301,6 +57305,14 @@
 	},
 /turf/open/floor/plasteel/dark,
 /area/science/explab)
+"gEo" = (
+/obj/structure/chair/comfy/black,
+/obj/item/toy/plush/gs13/gatito{
+	pixel_x = 0;
+	pixel_y = 4
+	},
+/turf/open/floor/plasteel/dark,
+/area/command/bridge)
 "gFh" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
 /turf/open/floor/plasteel/dark,
@@ -96390,7 +96402,7 @@ aqJ
 arK
 aiM
 atT
-auR
+gEo
 avV
 axb
 ayb

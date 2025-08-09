@@ -5669,7 +5669,10 @@
 	pixel_y = 23
 	},
 /obj/structure/table/wood,
-/obj/item/flashlight/lamp/green,
+/obj/item/toy/plush/gs13/gatito{
+	pixel_x = 0;
+	pixel_y = 7
+	},
 /turf/open/floor/carpet/gato,
 /area/xenoarch/gen)
 "mz" = (
@@ -13293,6 +13296,7 @@
 /obj/machinery/computer/security/telescreen/entertainment{
 	pixel_y = 32
 	},
+/obj/item/toy/plush/gs13/gatito,
 /turf/open/indestructible/hotelwood,
 /area/xenoarch/gen)
 "MP" = (
