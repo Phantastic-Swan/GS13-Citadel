@@ -212,21 +212,3 @@
 			user.cursed_fat = 1
 			user.fattening_steps_left += 200
 			to_chat(user, "<span class='notice'>As you embrace the creature, a warmth passes you as it passes onto you its cursed blessing. You feel a strange, warm sensation inside, growing stronger the more you move...</span>")
-
-/mob/living/simple_animal/hostile/feed/chocolate_slime/creambeast/cream_demon/PickTarget(list/Targets)
-	if(target != null)//If we already have a target, but are told to pick again, calculate the lowest distance between all possible, and pick from the lowest distance targets
-		for(var/pos_targ in Targets)
-			var/atom/A = pos_targ
-			to_chat(A, "<span class='notice'>you've been put up for picking!!</span>")
-			var/target_dist = get_dist(targets_from, target)
-			var/possible_target_distance = get_dist(targets_from, A)
-			if(target_dist < possible_target_distance)
-				Targets -= A
-			var/mob/living/fatty = A
-			if(istype(fatty) && fatty.cursed_fat)
-				to_chat(A, "<span class='notice'>you've been spared due to your awesome fattiness</span>")
-				Targets -= A
-	if(!Targets.len)//We didnt find nothin!
-		return
-	var/chosen_target = pick(Targets)//Pick the remaining targets (if any) at random
-	return chosen_target
