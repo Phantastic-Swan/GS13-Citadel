@@ -61,13 +61,13 @@
 	required_reagents = list(/datum/reagent/consumable/cafe_latte = 1, /datum/reagent/consumable/sugar = 1, /datum/reagent/consumable/cream = 1)
 
 /datum/chemical_reaction/oreo_classic
-	name = "Heavy Cafe"
+	name = "Oreo Classic"
 	id = /datum/reagent/consumable/oreo_classic
 	results = list(/datum/reagent/consumable/oreo_classic = 3)
 	required_reagents = list(/datum/reagent/consumable/flour = 2, /datum/reagent/consumable/sugar = 2, /datum/reagent/consumable/coco = 1)
 
 /datum/chemical_reaction/oreo_milky
-	name = "Heavy Cafe"
+	name = "Oreo Milky"
 	id = /datum/reagent/consumable/oreo_milky
 	results = list(/datum/reagent/consumable/oreo_milky = 3)
 	required_reagents = list(/datum/reagent/consumable/flour = 2, /datum/reagent/consumable/sugar = 2, /datum/reagent/consumable/milk = 1)
@@ -84,7 +84,7 @@
 	bonus_reagents = list(/datum/reagent/consumable/nutriment = 20, /datum/reagent/consumable/sugar = 20)
 	list_reagents = list(/datum/reagent/consumable/nutriment = 200, /datum/reagent/consumable/sugar = 100, /datum/reagent/consumable/milk = 50)
 	tastes = list("sugar" = 1, "sugar shock" = 1, "syrup" = 1, "slop" = 1, "overwhelming surge of calories" = 10)
-	foodtype = DAIRY| JUNKFOOD
+	foodtype = DAIRY | JUNKFOOD
 
 /datum/crafting_recipe/food/hugeoreo
 	name = "GlucoBomb Oreo Cookieshake"
