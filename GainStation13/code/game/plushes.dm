@@ -81,3 +81,9 @@
 	desc = "A plush of a toothy, sharky creature."
 	icon_state = "sharky"
 	attack_verb = list("squished", "bit", "sharkied")
+
+/obj/item/toy/plush/gs13/kot
+	name = "Demon plushie"
+	desc = "A plush of a pale demon twink."
+	icon_state = "kot"
+	attack_verb = list("squished", "hugged", "kissed")

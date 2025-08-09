@@ -73,8 +73,8 @@
 	if(owner.reagents)
 		if(eater.satiety > -200)
 			eater.satiety -= owner.junkiness
-		playsound(eater.loc,'sound/items/eatfood.ogg', rand(10,50), 1)
-		playsound(original_eater.loc,'sound/items/eatfood.ogg', rand(10,50), 1)
+		playsound_prefed(eater.loc,'sound/items/eatfood.ogg', EATING_NOISES, rand(10,50), 1)
+		playsound_prefed(original_eater.loc,'sound/items/eatfood.ogg', EATING_NOISES, rand(10,50), 1)
 		eater.visible_message("<span class='warning'>[eater]'s belly seems to visibly distend a bit further'!</span>", "<span class='danger'>You feel your stomach get filled by food!</span>")
 		var/bitevolume = 1
 		if(HAS_TRAIT(original_eater, TRAIT_VORACIOUS))
@@ -105,8 +105,8 @@
 		return FALSE
 	if(eater.satiety > -200)
 		eater.satiety -= foodstuff.junkiness
-	playsound(original_eater.loc,'sound/items/eatfood.ogg', rand(10,50), TRUE)
-	playsound(eater.loc,'sound/items/eatfood.ogg', rand(10,50), TRUE)
+	playsound_prefed(original_eater.loc,'sound/items/eatfood.ogg', EATING_NOISES, rand(10,50), TRUE)
+	playsound_prefed(eater.loc,'sound/items/eatfood.ogg', EATING_NOISES, rand(10,50), TRUE)
 	eater.visible_message("<span class='warning'>[eater]'s belly seems to visibly distend a bit further'!</span>", "<span class='danger'>You feel your stomach get filled by something!</span>")
 	var/mob/living/carbon/human/human_eater = original_eater
 	if(istype(human_eater))
