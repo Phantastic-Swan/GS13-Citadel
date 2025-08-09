@@ -87,3 +87,9 @@
 	desc = "A plush of a pale demon twink."
 	icon_state = "kot"
 	attack_verb = list("squished", "hugged", "kissed")
+
+/obj/item/toy/plush/gs13/gatito
+	name = "Gatito plushie"
+	desc = "Cutie kitty meow meow gatito plushie! Corporate flavor!!"
+	icon_state = "gatito"
+	attack_verb = list("squished", "hugged", "meowed")

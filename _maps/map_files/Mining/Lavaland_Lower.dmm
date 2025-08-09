@@ -5669,7 +5669,10 @@
 	pixel_y = 23
 	},
 /obj/structure/table/wood,
-/obj/item/flashlight/lamp/green,
+/obj/item/toy/plush/gs13/gatito{
+	pixel_x = 0;
+	pixel_y = 7
+	},
 /turf/open/floor/carpet/gato,
 /area/xenoarch/gen)
 "mz" = (
@@ -10430,6 +10433,10 @@
 /obj/structure/flora/grass/jungle,
 /turf/open/floor/plating/asteroid/basalt/lava_land_surface,
 /area/lavaland/surface/outdoors)
+"Ch" = (
+/obj/structure/spawner/candy/creambeast,
+/turf/open/candyfloor,
+/area/ruin/powered/candyland)
 "Cj" = (
 /obj/structure/table,
 /turf/open/floor/plasteel,
@@ -12084,6 +12091,10 @@
 /obj/structure/tree/candylight,
 /turf/open/candyfloor,
 /area/ruin/powered/candyland)
+"II" = (
+/obj/structure/spawner/candy/chocoslime,
+/turf/open/indestructible/bubblegum,
+/area/ruin/powered/candyland)
 "IJ" = (
 /obj/effect/turf_decal/tile/yellow{
 	dir = 4
@@ -13293,6 +13304,7 @@
 /obj/machinery/computer/security/telescreen/entertainment{
 	pixel_y = 32
 	},
+/obj/item/toy/plush/gs13/gatito,
 /turf/open/indestructible/hotelwood,
 /area/xenoarch/gen)
 "MP" = (
@@ -15170,6 +15182,10 @@
 	},
 /turf/open/floor/plating,
 /area/xenoarch/caloriteresearch_powered)
+"TG" = (
+/obj/structure/spawner/candy/chocoslime,
+/turf/open/candyfloor,
+/area/ruin/powered/candyland)
 "TH" = (
 /turf/open/floor/pod,
 /area/xenoarch/caloriteresearch_powered)
@@ -16198,6 +16214,10 @@
 	},
 /turf/open/floor/plating,
 /area/xenoarch/arch)
+"Xz" = (
+/obj/structure/spawner/candy/creamdemon,
+/turf/open/candyfloor,
+/area/ruin/powered/candyland)
 "XA" = (
 /obj/item/trash/can,
 /turf/open/floor/plasteel/freezer,
@@ -16304,6 +16324,10 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel,
 /area/xenoarch/caloriteresearch_powered)
+"XM" = (
+/obj/structure/spawner/candy/magehand,
+/turf/open/floor/plating/asteroid/basalt/lava_land_surface,
+/area/lavaland/surface/outdoors)
 "XQ" = (
 /obj/structure/table/reinforced/brass,
 /obj/item/reagent_containers/food/snacks/grown/ash_flora/cactus_fruit{
@@ -60378,7 +60402,7 @@ jY
 lQ
 lQ
 lQ
-Td
+lQ
 BP
 lQ
 lQ
@@ -63726,7 +63750,7 @@ lQ
 lQ
 lQ
 lQ
-lQ
+XM
 lQ
 lQ
 lQ
@@ -64634,7 +64658,7 @@ Za
 DE
 Ad
 Ad
-IH
+Ch
 WT
 WT
 DE
@@ -65913,7 +65937,7 @@ DE
 Za
 Rz
 DE
-IH
+TG
 xm
 xm
 We
@@ -67448,7 +67472,7 @@ WT
 Fb
 Za
 KI
-IH
+WT
 WT
 Kc
 uD
@@ -68222,7 +68246,7 @@ Za
 Za
 rE
 DE
-Rc
+II
 Rc
 DE
 DE
@@ -68480,7 +68504,7 @@ Za
 Za
 DE
 TB
-Zl
+Rc
 Rc
 DE
 Za
@@ -68747,7 +68771,7 @@ WT
 uD
 WT
 WT
-IH
+Xz
 DE
 Za
 Za

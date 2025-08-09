@@ -47,3 +47,11 @@
 	suffix = "lavaland_surface_cow_barn.dmm"
 	allow_duplicates = TRUE
 	cost = 0
+
+/datum/map_template/ruin/lavaland/candyland_choco //GS13
+	name = "Candyland Pocket (Choco)"
+	id = "candyland_choco"
+	description = "A small pocket of candyland, somehow manifested in the harsh conditions of lavaland."
+	suffix = "lavaland_surface_candyland_choco.dmm"
+	allow_duplicates = FALSE
+	cost = 0

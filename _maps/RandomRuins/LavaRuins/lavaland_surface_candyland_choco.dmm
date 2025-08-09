@@ -1,0 +1,102 @@
+"aj" = (/turf/open/chocolateriver,/area/ruin/powered/gluttony)
+"ax" = (/obj/structure/table/wood,/obj/item/reagent_containers/food/snacks/store/cake/chocolate{pixel_x = -3; pixel_y = 0},/turf/open/indestructible/chocolate,/area/ruin/powered/gluttony)
+"aE" = (/obj/item/reagent_containers/food/snacks/tinychocolate{pixel_x = 11; pixel_y = 3},/turf/open/indestructible/chocolate,/area/ruin/powered/gluttony)
+"bK" = (/obj/item/reagent_containers/food/snacks/chocolateegg{pixel_x = -13; pixel_y = 7},/obj/item/reagent_containers/food/snacks/chocolatebunny,/turf/open/indestructible/chocolate,/area/ruin/powered/gluttony)
+"cv" = (/obj/structure/barricade/wooden,/obj/structure/fans/tiny/invisible,/turf/open/indestructible/chocolate,/area/ruin/powered/gluttony)
+"cJ" = (/obj/item/seeds/cocoapod{pixel_x = 4; pixel_y = -3},/obj/item/seeds/cocoapod/vanillapod{pixel_x = -10; pixel_y = -15},/turf/open/indestructible/chocolate,/area/ruin/powered/gluttony)
+"ec" = (/turf/closed/indestructible/chocolate{icon_state = "choco_wall2"},/area/ruin/powered/gluttony)
+"eW" = (/obj/item/reagent_containers/food/snacks/tinychocolate{pixel_x = 6; pixel_y = -6},/turf/open/indestructible/chocolate,/area/ruin/powered/gluttony)
+"fe" = (/obj/item/reagent_containers/food/snacks/chocolateegg{pixel_x = -8; pixel_y = 10},/turf/open/indestructible/chocolate,/area/ruin/powered/gluttony)
+"fO" = (/obj/item/reagent_containers/food/snacks/tinychocolate{pixel_x = 10; pixel_y = -7},/turf/open/indestructible/chocolate,/area/ruin/powered/gluttony)
+"fW" = (/obj/item/reagent_containers/food/snacks/tinychocolate{pixel_x = -7; pixel_y = -14},/turf/open/indestructible/chocolate,/area/ruin/powered/gluttony)
+"gY" = (/obj/item/reagent_containers/food/drinks/bottle/cream{pixel_x = -1; pixel_y = -1},/obj/item/reagent_containers/food/drinks/bottle/cream{pixel_x = 11; pixel_y = 12},/obj/item/reagent_containers/food/drinks/bottle/cream{pixel_x = 13; pixel_y = -6},/turf/open/indestructible/chocolate,/area/ruin/powered/gluttony)
+"iH" = (/obj/item/reagent_containers/food/snacks/tinychocolate{pixel_x = -10; pixel_y = 9},/turf/open/indestructible/chocolate,/area/ruin/powered/gluttony)
+"ji" = (/obj/item/reagent_containers/food/snacks/chocolateegg{pixel_x = 10; pixel_y = -7},/turf/open/indestructible/chocolate,/area/ruin/powered/gluttony)
+"jl" = (/turf/open/floor/wood/damturf/broken3,/area/ruin/powered/gluttony)
+"lF" = (/obj/structure/table/wood,/obj/item/reagent_containers/food/snacks/store/cake/chocolate{pixel_x = 1; pixel_y = 0},/obj/item/reagent_containers/food/snacks/store/cake/chocolate{pixel_x = 15; pixel_y = 15},/turf/open/indestructible/chocolate,/area/ruin/powered/gluttony)
+"nG" = (/obj/item/reagent_containers/food/snacks/tinychocolate{pixel_x = -8; pixel_y = 8},/turf/open/indestructible/chocolate,/area/ruin/powered/gluttony)
+"oF" = (/obj/structure/table/wood,/turf/open/indestructible/chocolate,/area/ruin/powered/gluttony)
+"oP" = (/obj/item/reagent_containers/food/snacks/chocolateegg{pixel_x = -6; pixel_y = 6},/turf/open/indestructible/chocolate,/area/ruin/powered/gluttony)
+"oZ" = (/mob/living/simple_animal/hostile/feed/chocolate_slime/creambeast/cream_demon,/turf/open/indestructible/chocolate,/area/ruin/powered/gluttony)
+"pg" = (/obj/item/reagent_containers/food/snacks/tinychocolate{pixel_x = 8; pixel_y = 5},/obj/item/reagent_containers/food/snacks/chocolateegg{pixel_x = -7; pixel_y = -6},/turf/open/indestructible/chocolate,/area/ruin/powered/gluttony)
+"re" = (/obj/item/reagent_containers/food/snacks/chocolateegg{pixel_x = 6; pixel_y = -5},/obj/item/reagent_containers/food/snacks/chocolateegg{pixel_x = -8; pixel_y = 5},/turf/open/indestructible/chocolate,/area/ruin/powered/gluttony)
+"rp" = (/obj/item/reagent_containers/food/snacks/tinychocolate{pixel_x = 6; pixel_y = -1},/obj/item/reagent_containers/food/snacks/chocolateegg{pixel_x = -14; pixel_y = 12},/turf/open/indestructible/chocolate,/area/ruin/powered/gluttony)
+"ru" = (/turf/open/floor/wood/damturf/broken5,/area/ruin/powered/gluttony)
+"rW" = (/mob/living/simple_animal/hostile/feed/chocolate_slime,/turf/open/indestructible/chocolate,/area/ruin/powered/gluttony)
+"ss" = (/obj/structure/barricade/wooden,/obj/structure/barricade/wooden/crude,/obj/structure/fans/tiny/invisible,/turf/open/indestructible/chocolate,/area/ruin/powered/gluttony)
+"sP" = (/obj/item/reagent_containers/food/snacks/tinychocolate{pixel_x = -4; pixel_y = -9},/turf/open/indestructible/chocolate,/area/ruin/powered/gluttony)
+"wH" = (/obj/item/reagent_containers/food/snacks/donut/choco{pixel_x = 9; pixel_y = 0},/obj/item/reagent_containers/food/snacks/donut/choco{pixel_x = -8; pixel_y = 16},/obj/item/reagent_containers/food/snacks/donut/choco{pixel_x = 0; pixel_y = 5},/obj/item/reagent_containers/food/snacks/donut/choco{pixel_x = -20; pixel_y = 14},/obj/item/reagent_containers/food/snacks/donut/choco{pixel_x = 18; pixel_y = 5},/obj/item/reagent_containers/food/snacks/donut/choco{pixel_x = 8; pixel_y = 17},/obj/item/reagent_containers/food/snacks/donut/choco{pixel_x = -12; pixel_y = 1},/obj/item/reagent_containers/food/snacks/donut/choco{pixel_x = 2; pixel_y = -11},/obj/item/reagent_containers/food/snacks/donut/choco{pixel_x = 12; pixel_y = -8},/obj/item/reagent_containers/food/snacks/donut/choco{pixel_x = -13; pixel_y = -9},/turf/open/indestructible/chocolate,/area/ruin/powered/gluttony)
+"xn" = (/obj/structure/railing{dir = 1},/turf/open/chocolateriver,/area/ruin/powered/gluttony)
+"xz" = (/obj/item/reagent_containers/food/snacks/tinychocolate{pixel_x = -11; pixel_y = 5},/turf/open/indestructible/chocolate,/area/ruin/powered/gluttony)
+"yq" = (/turf/template_noop,/area/template_noop)
+"yt" = (/obj/item/reagent_containers/food/snacks/tinychocolate{pixel_x = -6; pixel_y = -8},/turf/open/indestructible/chocolate,/area/ruin/powered/gluttony)
+"yJ" = (/obj/item/reagent_containers/food/snacks/chocolateegg{pixel_x = 11; pixel_y = 6},/turf/open/indestructible/chocolate,/area/ruin/powered/gluttony)
+"zO" = (/obj/item/reagent_containers/food/snacks/chocolateegg{pixel_x = 6; pixel_y = 15},/turf/open/indestructible/chocolate,/area/ruin/powered/gluttony)
+"Ab" = (/mob/living/simple_animal/hostile/feed/chocolate_slime,/obj/item/reagent_containers/food/snacks/tinychocolate{pixel_x = 7; pixel_y = 10},/turf/open/indestructible/chocolate,/area/ruin/powered/gluttony)
+"Af" = (/obj/structure/table/wood,/obj/item/reagent_containers/food/snacks/chocolatebar{pixel_x = 3; pixel_y = 7},/obj/item/reagent_containers/food/snacks/candy{pixel_x = -12; pixel_y = 12},/obj/item/reagent_containers/food/snacks/candy{pixel_x = -11; pixel_y = -3},/turf/open/indestructible/chocolate,/area/ruin/powered/gluttony)
+"Ah" = (/obj/item/reagent_containers/food/snacks/tinychocolate{pixel_x = 12; pixel_y = -6},/turf/open/indestructible/chocolate,/area/ruin/powered/gluttony)
+"Aw" = (/obj/item/reagent_containers/food/snacks/donut/choco,/obj/item/reagent_containers/food/snacks/donut/choco{pixel_x = 7; pixel_y = 17},/obj/item/reagent_containers/food/snacks/donut/choco{pixel_x = 17; pixel_y = -2},/turf/open/indestructible/chocolate,/area/ruin/powered/gluttony)
+"Bu" = (/obj/item/reagent_containers/food/snacks/tinychocolate{pixel_x = -15; pixel_y = 10},/obj/item/reagent_containers/food/snacks/chocolatebunny,/turf/open/indestructible/chocolate,/area/ruin/powered/gluttony)
+"Cm" = (/obj/item/reagent_containers/food/snacks/tinychocolate{pixel_x = 11; pixel_y = -11},/turf/open/indestructible/chocolate,/area/ruin/powered/gluttony)
+"Db" = (/obj/item/reagent_containers/food/snacks/tinychocolate{pixel_x = 7; pixel_y = 19},/obj/item/reagent_containers/food/snacks/tinychocolate{pixel_x = 9; pixel_y = 0},/turf/open/indestructible/chocolate,/area/ruin/powered/gluttony)
+"Fy" = (/mob/living/simple_animal/hostile/feed/chocolate_slime,/obj/item/reagent_containers/food/snacks/tinychocolate{pixel_x = -6; pixel_y = 3},/turf/open/indestructible/chocolate,/area/ruin/powered/gluttony)
+"Hw" = (/obj/item/reagent_containers/food/snacks/chocolateegg{pixel_x = -8; pixel_y = 19},/turf/open/indestructible/chocolate,/area/ruin/powered/gluttony)
+"HB" = (/obj/item/reagent_containers/food/snacks/tinychocolate{pixel_x = -2; pixel_y = -8},/turf/open/indestructible/chocolate,/area/ruin/powered/gluttony)
+"IF" = (/obj/item/chair/wood/wings,/turf/open/indestructible/chocolate,/area/ruin/powered/gluttony)
+"IR" = (/obj/machinery/iv_drip/feeding_tube,/turf/open/indestructible/chocolate,/area/ruin/powered/gluttony)
+"Jg" = (/obj/item/reagent_containers/food/snacks/chocolateegg{pixel_x = -7; pixel_y = 6},/turf/open/indestructible/chocolate,/area/ruin/powered/gluttony)
+"JG" = (/obj/item/reagent_containers/food/snacks/chocolateegg{pixel_x = 3; pixel_y = -16},/turf/open/indestructible/chocolate,/area/ruin/powered/gluttony)
+"Km" = (/obj/item/reagent_containers/food/snacks/chocolateegg{pixel_x = -7; pixel_y = -14},/obj/item/reagent_containers/food/snacks/donut/choco{pixel_x = 9; pixel_y = 12},/turf/open/indestructible/chocolate,/area/ruin/powered/gluttony)
+"Kz" = (/obj/item/reagent_containers/food/snacks/tinychocolate{pixel_x = 5; pixel_y = 4},/turf/open/indestructible/chocolate,/area/ruin/powered/gluttony)
+"Lg" = (/obj/item/reagent_containers/food/snacks/chocolatebunny,/turf/open/indestructible/chocolate,/area/ruin/powered/gluttony)
+"LG" = (/obj/item/reagent_containers/food/snacks/chocolatebunny,/turf/open/chocolateriver,/area/ruin/powered/gluttony)
+"MZ" = (/obj/item/reagent_containers/food/snacks/tinychocolate{pixel_x = -5; pixel_y = -8},/turf/open/indestructible/chocolate,/area/ruin/powered/gluttony)
+"Nb" = (/obj/item/flashlight/lantern{icon_state = "lantern-on"; on = 1; pixel_y = 8; pixel_x = 5},/turf/open/indestructible/chocolate,/area/ruin/powered/gluttony)
+"Ns" = (/obj/item/reagent_containers/food/snacks/donut/choco,/obj/item/reagent_containers/food/snacks/donut/choco{pixel_x = -4; pixel_y = 12},/obj/item/reagent_containers/food/snacks/donut/choco{pixel_x = -11; pixel_y = -8},/turf/open/indestructible/chocolate,/area/ruin/powered/gluttony)
+"NO" = (/turf/open/indestructible/chocolate,/area/ruin/powered/gluttony)
+"Oc" = (/obj/structure/railing,/turf/open/chocolateriver,/area/ruin/powered/gluttony)
+"RI" = (/obj/item/reagent_containers/food/snacks/donut/choco{pixel_x = -8; pixel_y = 0},/obj/item/reagent_containers/food/snacks/donut/choco{pixel_x = 12; pixel_y = 10},/turf/open/indestructible/chocolate,/area/ruin/powered/gluttony)
+"Sv" = (/obj/item/reagent_containers/food/snacks/tinychocolate{pixel_x = 8; pixel_y = -8},/turf/open/indestructible/chocolate,/area/ruin/powered/gluttony)
+"Tb" = (/obj/item/reagent_containers/food/snacks/tinychocolate{pixel_x = -9; pixel_y = 6},/turf/open/indestructible/chocolate,/area/ruin/powered/gluttony)
+"Ua" = (/obj/structure/spawner/candy/chocoslime,/turf/open/indestructible/chocolate,/area/ruin/powered/gluttony)
+"Un" = (/obj/item/reagent_containers/food/snacks/tinychocolate{pixel_x = -6; pixel_y = 5},/obj/item/reagent_containers/food/snacks/tinychocolate{pixel_x = -8; pixel_y = -9},/turf/open/indestructible/chocolate,/area/ruin/powered/gluttony)
+"Uo" = (/obj/item/reagent_containers/food/snacks/tinychocolate{pixel_x = -5; pixel_y = -10},/turf/open/indestructible/chocolate,/area/ruin/powered/gluttony)
+"VF" = (/obj/item/reagent_containers/food/snacks/tinychocolate{pixel_x = 7; pixel_y = -5},/turf/open/indestructible/chocolate,/area/ruin/powered/gluttony)
+"Yp" = (/turf/open/floor/plating/asteroid/basalt/lava_land_surface,/area/template_noop)
+"YS" = (/obj/item/reagent_containers/food/snacks/chocolateegg{pixel_x = -10; pixel_y = 11},/obj/item/reagent_containers/food/snacks/chocolatebunny,/turf/open/indestructible/chocolate,/area/ruin/powered/gluttony)
+"YU" = (/obj/item/reagent_containers/food/snacks/tinychocolate{pixel_x = -7; pixel_y = -10},/obj/item/reagent_containers/food/snacks/tinychocolate{pixel_x = -6; pixel_y = 4},/turf/open/indestructible/chocolate,/area/ruin/powered/gluttony)
+"YY" = (/obj/item/reagent_containers/food/snacks/tinychocolate{pixel_x = 16; pixel_y = 10},/turf/open/indestructible/chocolate,/area/ruin/powered/gluttony)
+"ZS" = (/turf/open/floor/wood/damturf/broken1,/area/ruin/powered/gluttony)
+
+(1,1,1) = {"
+yqyqyqyqyqyqyqyqyqyqyqyqyqyqyqyqyqyqyqyqyqyqyqyqyqyqyqyqyqyq
+yqyqyqyqyqyqyqyqyqyqyqyqyqyqyqyqyqyqyqyqyqyqyqyqyqyqyqyqyqyq
+yqyqyqyqyqyqyqyqyqyqyqyqyqyqyqyqyqyqyqyqyqyqyqyqyqyqyqyqyqyq
+yqyqyqyqyqyqyqyqyqyqyqyqyqyqyqyqyqyqyqyqyqyqyqyqyqyqyqyqyqyq
+yqyqyqyqyqyqyqyqyqyqyqyqyqyqyqyqyqyqyqyqyqyqyqyqyqyqyqyqyqyq
+yqyqyqyqyqyqyqyqyqyqajecajajajecececajyqyqyqyqyqyqyqyqyqyqyq
+yqyqyqyqyqyqyqecajajLGajajajajajajajajajyqyqyqyqyqyqyqyqyqyq
+yqyqyqyqyqecajajajajajajajajajajajajajajajajecyqyqyqyqyqyqyq
+yqyqyqyqyqecajajajajajecececececececajajLGajajajyqyqyqyqyqyq
+yqyqyqyqyqajajajajajececYSTbNOxzrWececajajajajajajajyqyqyqyq
+yqyqYpYpyqajLGajajececNOrWNOMZNObKNOecececajajajajajecyqyqyq
+yqyqYpYpajajajecececfeNOecececececJgNOJGececajajajajajyqyqyq
+yqyqYpYpOcOcOcecNbNOSvececpgUarpececaENOfWecajajajajajyqyqyq
+yqYpYpYpZSrujlssHwLgececUnNONONOreececNbNOececajajajajyqyqyq
+yqYpYpYpxnxnxnececececrWNboFAfcJNOnGecNOBuoPecajajLGajajyqyq
+yqyqYpYpajajajajecrWcvUoKmNswHAwgYDbecNOrWzOecajajajajajyqyq
+yqyqyqYpecajajajecNOececCmRIoZNOIRAbecHBfOeWecajajajajecyqyq
+yqyqyqyqajajajajecYULgececlFaxNbIFAhecNOKzececajajajajecyqyq
+yqyqyqyqajajajajececytNOecececFyVFececNOLgecajajajajajajyqyq
+yqyqyqyqyqecajajajececNOYYrWececececNOjiececajajajajajajyqyq
+yqyqyqyqyqyqecajajajecececsPNONONOiHyJececajajajajajecyqyqyq
+yqyqyqyqyqyqecajajajajajececececececececajajajajajajecyqyqyq
+yqyqyqyqyqyqyqajajajajajajajajajajajajajajLGajajajajyqyqyqyq
+yqyqyqyqyqyqyqyqajecajajLGajajajajajajajajajajajajajyqyqyqyq
+yqyqyqyqyqyqyqyqyqyqajajececyqyqyqyqecajajajececajyqyqyqyqyq
+yqyqyqyqyqyqyqyqyqyqyqyqyqyqyqyqyqyqyqajajajyqyqyqyqyqyqyqyq
+yqyqyqyqyqyqyqyqyqyqyqyqyqyqyqyqyqyqyqyqyqyqyqyqyqyqyqyqyqyq
+yqyqyqyqyqyqyqyqyqyqyqyqyqyqyqyqyqyqyqyqyqyqyqyqyqyqyqyqyqyq
+yqyqyqyqyqyqyqyqyqyqyqyqyqyqyqyqyqyqyqyqyqyqyqyqyqyqyqyqyqyq
+yqyqyqyqyqyqyqyqyqyqyqyqyqyqyqyqyqyqyqyqyqyqyqyqyqyqyqyqyqyq
+"}

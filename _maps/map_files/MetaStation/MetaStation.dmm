@@ -5299,11 +5299,6 @@
 /turf/open/floor/carpet,
 /area/maintenance/fore)
 "arG" = (
-/obj/machinery/light/small{
-	dir = 1;
-	pixel_x = -8;
-	pixel_y = 12
-	},
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on{
 	dir = 1
 	},
@@ -14654,7 +14649,11 @@
 /obj/machinery/atmospherics/pipe/manifold/scrubbers/hidden{
 	dir = 1
 	},
-/turf/closed/wall,
+/obj/machinery/door/airlock{
+	name = "Theatre Backstage";
+	req_access_txt = "46"
+	},
+/turf/open/floor/wood,
 /area/commons/fitness/recreation)
 "bfL" = (
 /obj/structure/dresser,
@@ -46378,6 +46377,11 @@
 	pixel_x = -26
 	},
 /obj/machinery/vending/autodrobe,
+/obj/machinery/light/small{
+	dir = 1;
+	pixel_x = -8;
+	pixel_y = 12
+	},
 /turf/open/floor/wood,
 /area/service/theater)
 "dhx" = (
@@ -66981,6 +66985,11 @@
 /obj/structure/disposalpipe/segment{
 	dir = 6
 	},
+/obj/machinery/light/small{
+	dir = 1;
+	pixel_x = -8;
+	pixel_y = 12
+	},
 /turf/open/floor/wood,
 /area/service/theater)
 "nBX" = (
@@ -81410,7 +81419,10 @@
 	pixel_x = 29;
 	pixel_y = 1
 	},
-/obj/item/paper,
+/obj/item/toy/plush/gs13/gatito{
+	pixel_x = 0;
+	pixel_y = 7
+	},
 /turf/open/floor/carpet/gato,
 /area/commons/dorms)
 "vqN" = (
@@ -84987,9 +84999,9 @@
 /area/service/hydroponics/garden)
 "xgL" = (
 /obj/structure/table/wood,
-/obj/item/toy/plush/carpplushie{
-	color = "red";
-	name = "GATO wildlife department space carp plushie"
+/obj/item/toy/plush/gs13/gatito{
+	pixel_x = 0;
+	pixel_y = 7
 	},
 /turf/open/floor/carpet,
 /area/command/corporate_showroom)
