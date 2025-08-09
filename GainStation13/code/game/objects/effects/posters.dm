@@ -1,11 +1,11 @@
 /obj/structure/sign/poster/official/gatito
-	name = "Gato Poster"
+	name = "GATO"
 	desc = "A poster from the Gato company, it reads: 'Remember to take care of your station!' "
 	icon_state = "gato13"
 	icon = 'GainStation13/icons/obj/contraband.dmi'
 
 /obj/structure/sign/poster/official/captainposter
-	name = "Respect your captain poster"
+	name = "Respect your captain"
 	desc = "A poster from the Gato company, it reads: 'Your captain is always watching, do not do anything suspicious.' "
 	icon_state = "capitan"
 	icon = 'GainStation13/icons/obj/contraband.dmi'
@@ -17,7 +17,7 @@
 	icon = 'GainStation13/icons/obj/contraband.dmi'
 
 /obj/structure/sign/poster/official/libraryposter
-	name = "Motivational Poster"
+	name = "Motivational"
 	desc = "A poster motivating you in reading books, reading this is already giving you a headache."
 	icon_state = "libraryposter"
 	icon = 'GainStation13/icons/obj/contraband.dmi'
@@ -29,76 +29,76 @@
 	icon = 'GainStation13/icons/obj/contraband.dmi'
 
 /obj/structure/sign/poster/official/hoverchair
-	name = "Take A Load Off Poster"
+	name = "Take A Load Off"
 	desc = "A poster advertising freely available wheelchairs and hoverchairs, not only for the disabled, but for horizontally tall too."
 	icon_state = "poster36_legit"
 	icon = 'GainStation13/icons/obj/contraband.dmi'
 
 /obj/structure/sign/poster/official/calorite
-	name = "Calorite Warning Poster"
+	name = "Calorite Warning"
 	desc = "A poster warning workers of the dangers of calorite. Be wary when making contact with this mass-multiplicating material!"
 	icon_state = "poster37_legit"
 	icon = 'GainStation13/icons/obj/contraband.dmi'
 
 /obj/structure/sign/poster/official/fatorays
-	name = "NutriTech Weapons Poster"
+	name = "NutriTech Weapons"
 	desc = "An informative poster showing off a line of weapon designs from the NutriTech design line."
 	icon_state = "poster38_legit"
 	icon = 'GainStation13/icons/obj/contraband.dmi'
 
 /obj/structure/sign/poster/official/waddle
-	name = "Waddle Poster"
+	name = "Waddle"
 	desc = "A poster enticing GATO employees to enjoy the free benefit of a mobility support exoskeleton."
 	icon_state = "poster39_legit"
 	icon = 'GainStation13/icons/obj/contraband.dmi'
 
-
+//contraband posters
 /obj/structure/sign/poster/contraband/corn_oil
-	name = "Corn Oil Poster"
+	name = "Corn Oil"
 	desc = "A strange poster advertising corn oil beverage. Who would want to drink that...?"
 	icon_state = "poster45"
 	icon = 'GainStation13/icons/obj/contraband.dmi'
 
 /obj/structure/sign/poster/contraband/supermatter
-	name = "Supermatter Warning Poster"
+	name = "Supermatter Warning"
 	desc = "In case it wasn't already obvious, you shouldn't poke this giant yellow crystal..."
 	icon_state = "poster46"
 	icon = 'GainStation13/icons/obj/contraband.dmi'
 
 /obj/structure/sign/poster/contraband/chonk
-	name = "CHONK POSTER"
+	name = "CHONK"
 	desc = "Next time eat a salad."
 	icon_state = "poster47"
 	icon = 'GainStation13/icons/obj/contraband.dmi'
 
 /obj/structure/sign/poster/contraband/missingpizza
-	name = "Missing Pizza Poster"
+	name = "Missing Pizza"
 	desc = "On GS13, it isn't uncommon to lose your food whenever you look away..."
 	icon_state = "poster48"
 	icon = 'GainStation13/icons/obj/contraband.dmi'
 
 /obj/structure/sign/poster/contraband/chefpropaganda
-	name = "Chef Propaganda Poster"
+	name = "Chef Propaganda"
 	desc = "Enlist and learn how to cook nothing else but burgers, pizza and bread TODAY!"
 	icon_state = "poster49"
 	icon = 'GainStation13/icons/obj/contraband.dmi'
 
 /obj/structure/sign/poster/contraband/malta
-	name = "Malta Poster"
+	name = "Malta"
 	desc = "A poster from terran sectors, suggesting non-existence of mythical country of Malta."
 	icon_state = "poster50"
 	icon = 'GainStation13/icons/obj/contraband.dmi'
 
 /obj/structure/sign/poster/contraband/gulp
-	name = "Just Gulp Poster"
+	name = "Just Gulp"
 	desc = "Keep that hose strapped to your mouth and let your worries melt away. Just keep gulping."
 	icon_state = "poster51"
 	icon = 'GainStation13/icons/obj/contraband.dmi'
 
 /obj/structure/sign/poster/contraband/loosen
-	name = "Loosen Poster"
+	name = "Loosen"
 	desc = "A broken belt is a sign progress - so loosen up!"
-	icon_state = "poster51"
+	icon_state = "poster52"
 	icon = 'GainStation13/icons/obj/contraband.dmi'
 
 //recoloring of propaganda posters - from NT blue to GT pink

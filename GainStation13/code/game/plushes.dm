@@ -91,5 +91,5 @@
 /obj/item/toy/plush/gs13/gatito
 	name = "Gatito plushie"
 	desc = "Cutie kitty meow meow gatito plushie! Corporate flavor!!"
-	icon_state = "kot"
+	icon_state = "gatito"
 	attack_verb = list("squished", "hugged", "meowed")

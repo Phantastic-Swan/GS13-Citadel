@@ -94,5 +94,5 @@
 		/datum/reagent/consumable/milk = 100,
 		/datum/reagent/consumable/cream = 50
 	)
-	result = /obj/item/reagent_containers/food/snacks/hugeoreo
+	result = /obj/item/reagent_containers/food/snacks/store/cake/hugeoreo
 	subcategory = CAT_CAKE

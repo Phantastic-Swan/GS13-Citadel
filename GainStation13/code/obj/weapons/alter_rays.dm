@@ -4,7 +4,7 @@
 
 /obj/item/gun/energy/laser/alter_ray
 	name = "alter-ray"
-	icon = 'GainStation13/icons/obj/weapon/alter_ray.dmi'
+	icon = 'GainStation13/icons/obj/weapons/alter_ray.dmi'
 	icon_state = "alter_ray"
 	desc = "This weapon is capable of altering one's body capabilities."
 	item_state = null

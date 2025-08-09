@@ -48,7 +48,7 @@
 	name = "poster"
 	var/original_name
 	desc = "A large piece of space-resistant printed paper."
-	icon = 'icons/obj/contraband.dmi'
+	icon = 'GainStation13/icons/obj/contraband.dmi' //GS13 - gato posters
 	plane = ABOVE_WALL_PLANE
 	anchored = TRUE
 	buildable_sign = FALSE //Cannot be unwrenched from a wall.
