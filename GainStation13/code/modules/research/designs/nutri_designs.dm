@@ -25,7 +25,7 @@
 	departmental_flags = DEPARTMENTAL_FLAG_MEDICAL | DEPARTMENTAL_FLAG_SCIENCE | DEPARTMENTAL_FLAG_SECURITY
 
 /datum/design/alter_ray_metabolism
-	name = "AL-T-Ray: Metabolism"
+	name = "AlteRay: Metabolism"
 	id = "alter_ray_metabolism"
 	build_type = PROTOLATHE
 	materials = list(/datum/material/iron = 10000, /datum/material/glass = 8000, /datum/material/calorite = 26000)
@@ -36,7 +36,7 @@
 
 
 /datum/design/alter_ray_reverser
-	name = "AL-T-Ray: Reverser"
+	name = "AlteRay: Reverser"
 	id = "alter_ray_reverser"
 	build_type = PROTOLATHE
 	materials = list(/datum/material/iron = 10000, /datum/material/glass = 8000, /datum/material/calorite = 26000)

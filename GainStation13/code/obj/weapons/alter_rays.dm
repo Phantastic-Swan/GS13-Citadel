@@ -4,8 +4,8 @@
 
 /obj/item/gun/energy/laser/alter_ray
 	name = "alter-ray"
-	icon = 'icons/obj/guns/energy.dmi'
-	icon_state = "lasernew"
+	icon = 'GainStation13/icons/obj/weapon/alter_ray.dmi'
+	icon_state = "alter_ray"
 	desc = "This weapon is capable of altering one's body capabilities."
 	item_state = null
 	selfcharge = EGUN_SELFCHARGE
@@ -14,7 +14,7 @@
 	clumsy_check = 1
 
 /obj/item/gun/energy/laser/alter_ray/gainrate
-	name = "AL-T-Ray: Metabolism"
+	name = "AlteRay: Metabolism"
 	desc = "This weapon is capable of altering one's body capabilities. This model appears to be capable of altering one's weight gain and loss rate by 10%."
 	ammo_type = list(/obj/item/ammo_casing/energy/laser/gainrate_decrease, /obj/item/ammo_casing/energy/laser/gainrate_increase, /obj/item/ammo_casing/energy/laser/lossrate_decrease, /obj/item/ammo_casing/energy/laser/lossrate_increase)
 
@@ -70,7 +70,7 @@
 //wg rate increase
 /obj/item/projectile/alter_ray/gainrate_increase/on_hit(atom/target, blocked)
 	. = ..()
-	
+
 	var/mob/living/carbon/gainer = target
 
 	if(iscarbon(gainer))
@@ -85,7 +85,7 @@
 //wg rate decrease
 /obj/item/projectile/alter_ray/gainrate_decrease/on_hit(atom/target, blocked)
 	. = ..()
-	
+
 	var/mob/living/carbon/gainer = target
 
 	if(iscarbon(gainer))
@@ -100,7 +100,7 @@
 //wl rate increase
 /obj/item/projectile/alter_ray/lossrate_increase/on_hit(atom/target, blocked)
 	. = ..()
-	
+
 	var/mob/living/carbon/gainer = target
 
 	if(iscarbon(gainer))
@@ -114,7 +114,7 @@
 //wl rate decrease
 /obj/item/projectile/alter_ray/lossrate_decrease/on_hit(atom/target, blocked)
 	. = ..()
-	
+
 	var/mob/living/carbon/gainer = target
 
 	if(iscarbon(gainer))
@@ -123,7 +123,7 @@
 			return TRUE
 		if(gainer.weight_loss_rate <= 0.1)
 			return FALSE
-		
+
 	return FALSE
 
 //ammo casings - these are needed to allow guns to switch between firing modes
@@ -148,7 +148,7 @@
 //ALTRay for making someone gain from weight loss
 
 /obj/item/gun/energy/laser/alter_ray/noloss
-	name = "AL-T-Ray: Reverser"
+	name = "AlteRay: Reverser"
 	desc = "This weapon is capable of altering one's body capabilities. This one reverse's ones body functions, to make it so weight loss results in weight gain."
 	ammo_type = list(/obj/item/ammo_casing/energy/laser/lossrate_reverse)
 
@@ -162,7 +162,7 @@
 
 /obj/item/projectile/alter_ray/lossrate_reverse/on_hit(atom/target, blocked)
 	. = ..()
-	
+
 	var/mob/living/carbon/gainer = target
 
 	if(iscarbon(gainer))

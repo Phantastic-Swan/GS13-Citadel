@@ -28,6 +28,31 @@
 	icon_state = "poster2_legit"
 	icon = 'GainStation13/icons/obj/contraband.dmi'
 
+/obj/structure/sign/poster/official/hoverchair
+	name = "Take A Load Off Poster"
+	desc = "A poster advertising freely available wheelchairs and hoverchairs, not only for the disabled, but for horizontally tall too."
+	icon_state = "poster36_legit"
+	icon = 'GainStation13/icons/obj/contraband.dmi'
+
+/obj/structure/sign/poster/official/calorite
+	name = "Calorite Warning Poster"
+	desc = "A poster warning workers of the dangers of calorite. Be wary when making contact with this mass-multiplicating material!"
+	icon_state = "poster37_legit"
+	icon = 'GainStation13/icons/obj/contraband.dmi'
+
+/obj/structure/sign/poster/official/fatorays
+	name = "NutriTech Weapons Poster"
+	desc = "An informative poster showing off a line of weapon designs from the NutriTech design line."
+	icon_state = "poster38_legit"
+	icon = 'GainStation13/icons/obj/contraband.dmi'
+
+/obj/structure/sign/poster/official/waddle
+	name = "Waddle Poster"
+	desc = "A poster enticing GATO employees to enjoy the free benefit of a mobility support exoskeleton."
+	icon_state = "poster39_legit"
+	icon = 'GainStation13/icons/obj/contraband.dmi'
+
+
 /obj/structure/sign/poster/contraband/corn_oil
 	name = "Corn Oil Poster"
 	desc = "A strange poster advertising corn oil beverage. Who would want to drink that...?"
@@ -64,6 +89,17 @@
 	icon_state = "poster50"
 	icon = 'GainStation13/icons/obj/contraband.dmi'
 
+/obj/structure/sign/poster/contraband/gulp
+	name = "Just Gulp Poster"
+	desc = "Keep that hose strapped to your mouth and let your worries melt away. Just keep gulping."
+	icon_state = "poster51"
+	icon = 'GainStation13/icons/obj/contraband.dmi'
+
+/obj/structure/sign/poster/contraband/loosen
+	name = "Loosen Poster"
+	desc = "A broken belt is a sign progress - so loosen up!"
+	icon_state = "poster51"
+	icon = 'GainStation13/icons/obj/contraband.dmi'
 
 //recoloring of propaganda posters - from NT blue to GT pink
 /obj/structure/sign/poster/gato/safety

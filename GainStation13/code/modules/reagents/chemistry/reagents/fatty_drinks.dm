@@ -157,3 +157,53 @@
 	glass_desc = "Nothing better than cream AND cocoa!"
 	shot_glass_icon_state = "shotglassbrown"
 	use_gs_icon = TRUE
+
+
+/datum/reagent/consumable/oreo_milky
+	name = "Oreo Milkshake"
+	description = "For when you feel like pouring cookies down your throat."
+	color = "#c4ac95ff"
+	taste_description = "cookies, milk and sugar"
+	quality = DRINK_GOOD
+	glass_icon_state = "oreo_milky"
+	glass_name = "milky oreo shake"
+	glass_desc = "For when you feel like pouring cookies down your throat."
+	shot_glass_icon_state = "shotglassbrown"
+	use_gs_icon = TRUE
+
+/datum/reagent/consumable/oreo_milky/on_mob_life(mob/living/carbon/M)
+	M.dizziness = max(0,M.dizziness-5)
+	M.drowsyness = max(0,M.drowsyness-3)
+	if(M && M?.client?.prefs.weight_gain_food) // GS13
+		M.nutrition += 15 * REAGENTS_METABOLISM
+	else
+		M.nutrition += 1
+	..()
+
+/datum/reagent/consumable/oreo_classic
+	name = "Oreo Cookieshake"
+	description = "For when you feel like pouring cookies down your throat."
+	color = "#584532ff"
+	taste_description = "cookies and sugar"
+	quality = DRINK_GOOD
+	glass_icon_state = "oreo_classic"
+	glass_name = "oreo shake"
+	glass_desc = "For when you feel like pouring cookies down your throat."
+	shot_glass_icon_state = "shotglassbrown"
+	use_gs_icon = TRUE
+
+/datum/reagent/consumable/oreo_classic/on_mob_life(mob/living/carbon/M)
+	M.dizziness = max(0,M.dizziness-5)
+	M.drowsyness = max(0,M.drowsyness-3)
+	if(M && M?.client?.prefs.weight_gain_food) // GS13
+		M.nutrition += 15 * REAGENTS_METABOLISM
+	else
+		M.nutrition += 1
+	..()
+
+/obj/structure/reagent_dispensers/keg/lipoifier //gs13
+	name = "keg of lipoifier"
+	desc = "Good luck downing that and not getting beached."
+	icon_state = "orangekeg"
+	reagent_id = /datum/reagent/consumable/lipoifier
+	tank_volume = 300

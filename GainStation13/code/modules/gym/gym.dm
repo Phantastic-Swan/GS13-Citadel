@@ -35,8 +35,8 @@
 /obj/machinery/treadmill
 	name = "treadmill"
 	desc = "A treadmil, for losing weight!"
-	icon = 'icons/obj/recycling.dmi'
-	icon_state = "conveyor0"
+	icon = 'GainStation13/icons/obj/structure/treadmill.dmi'
+	icon_state = "treadmill"
 	circuit = /obj/item/circuitboard/machine/treadmill
 
 	var/fatloss = -10
