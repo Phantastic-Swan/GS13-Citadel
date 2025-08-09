@@ -19,7 +19,7 @@
 				user.visible_message("<span class='notice'>[user] crunches on some of [src].</span>", "<span class='notice'>You crunch on some of [src].</span>")
 			else
 				M.visible_message("<span class='danger'>[user] attempts to feed some of [src] to [M].</span>", "<span class='userdanger'>[user] attempts to feed some of [src] to [M].</span>")
-			playsound(M,'sound/items/eatfood.ogg', rand(10,50), 1)
+			playsound_prefed(M,'sound/items/eatfood.ogg', EATING_NOISES, rand(10,50), 1)
 			use(1)
 			M.nutrition += crunch_value
 			if(crunch_left == 0)
