@@ -77,6 +77,21 @@
 					if(M.lying)
 						user.visible_message("<span class='notice'>[user] shakes [M] trying to get [M.p_them()] up!</span>", \
 										"<span class='notice'>You shake [M] trying to get [M.p_them()] up!</span>")
+					else if(user.zone_selected == BODY_ZONE_PRECISE_GROIN)
+						var/mob/living/carbon/human/H = M
+						user.visible_message("<span class='notice'>[user] rubs [H]'s belly to make [H.p_them()] feel better!</span>", \
+						"<span class='notice'>You rub [H]'s belly to make [H.p_them()] feel less stuffed!</span>")
+						H.reduce_fullness(rand(4,16), FALSE)
+						if(!HAS_TRAIT(H, TRAIT_ROBOTIC_ORGANISM))
+							H.adjust_nutrition(rand(-5,-1))
+						SEND_SIGNAL(M, COMSIG_ADD_MOOD_EVENT, "bellyrub_good", /datum/mood_event/bellyrub_good)
+						if(prob(5))
+							user.visible_message("<span class='notice'> Belly rubbing causes [H] to belch!</span>", \
+							"<span class='notice'>Your belly massage made [H.p_them()] to burp!</span>")
+							H.emote(pick("belch","burp"))
+						if(prob(10))
+							H.emote("gurgle")
+						user.DelayNextAction(100)
 					else
 						user.visible_message("<span class='notice'>[user] hugs [M] to make [M.p_them()] feel better!</span>", \
 								"<span class='notice'>You hug [M] to make [M.p_them()] feel better!</span>")
