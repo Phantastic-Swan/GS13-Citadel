@@ -247,8 +247,11 @@
 /obj/item/clothing/under/color/grey/security
 	name = "security jumpsuit (Modular)"
 	modular_icon_location = 'GainStation13/icons/mob/modclothes/modular_secofficer.dmi'
+	icon = 'icons/obj/clothing/uniforms.dmi'
+	icon_state = "rsecurity"
+	item_state = "r_suit"
 	desc = "Grey only in name"
-	color = "#F4080C"
+	color = "#FFFFFF"
 	armor = list(MELEE = 10, BULLET = 0, LASER = 0,ENERGY = 0, BOMB = 0, BIO = 0, RAD = 0, FIRE = 30, ACID = 30, WOUND = 10)
 
 /obj/item/clothing/under/color/grey/command
