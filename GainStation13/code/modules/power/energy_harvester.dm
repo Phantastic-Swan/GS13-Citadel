@@ -18,6 +18,7 @@
 	var/credit_conversion_rate = 0.000005
 	var/power_available = 0
 	var/active = FALSE
+	var/waiting_for_power = 0
 
 /obj/machinery/power/energy_harvester/Initialize(mapload)
 	. = ..()
@@ -62,6 +63,9 @@
 
 	power_available = avail()
 	if(power_available <= 0)
+		if (waiting_for_power < 1) // grace period for not having power in the wire - allows for the machine to stay on without producing credits even if power is cut for a short period
+			waiting_for_power += 1
+			return
 		src.visible_message("<span class='alert'>[src] buzzes. Seems like there is no energy in the connected powernet.</span>")
 		playsound(src, 'sound/machines/buzz-two.ogg', 50)
 		active = FALSE
@@ -70,6 +74,7 @@
 		soundloop.stop()
 		return
 
+	waiting_for_power = 0
 	var/power_drain = power_available * set_power_drain
 	add_load(power_drain)
 	var/credits_earned = credit_conversion_rate * power_drain
