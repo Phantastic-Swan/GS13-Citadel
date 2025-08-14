@@ -28,7 +28,7 @@
 	
 	var/old_heat_capacity = air.heat_capacity()
 
-	var/used_moles = min((reaction_efficiency * min(plasma_moles, tritium_moles) * 0.5), 10)
+	var/used_moles = min((reaction_efficiency * min(plasma_moles, tritium_moles) * 0.5), 5)
 	var/energy_released = used_moles * FIRE_CARBON_ENERGY_RELEASED
 	
 	air.adjust_moles(GAS_FAT, used_moles)
