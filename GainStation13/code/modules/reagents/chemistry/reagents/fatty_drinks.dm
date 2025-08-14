@@ -159,19 +159,19 @@
 	use_gs_icon = TRUE
 
 
-/datum/reagent/consumable/oreo_milky
-	name = "Oreo Milkshake"
+/datum/reagent/consumable/cookiecream_milky
+	name = "Cookies and Cream Milkshake"
 	description = "For when you feel like pouring cookies down your throat."
 	color = "#c4ac95ff"
 	taste_description = "cookies, milk and sugar"
 	quality = DRINK_GOOD
-	glass_icon_state = "oreo_milky"
-	glass_name = "milky oreo shake"
+	glass_icon_state = "cookiecream_milky"
+	glass_name = "milky cookiecream shake"
 	glass_desc = "For when you feel like pouring cookies down your throat."
 	shot_glass_icon_state = "shotglassbrown"
 	use_gs_icon = TRUE
 
-/datum/reagent/consumable/oreo_milky/on_mob_life(mob/living/carbon/M)
+/datum/reagent/consumable/cookiecream_milky/on_mob_life(mob/living/carbon/M)
 	M.dizziness = max(0,M.dizziness-5)
 	M.drowsyness = max(0,M.drowsyness-3)
 	if(M && M?.client?.prefs.weight_gain_food) // GS13
@@ -180,14 +180,14 @@
 		M.nutrition += 1
 	..()
 
-/datum/reagent/consumable/oreo_classic
-	name = "Oreo Cookieshake"
+/datum/reagent/consumable/cookiecream_classic
+	name = "Creamy Cookieshake"
 	description = "For when you feel like pouring cookies down your throat."
 	color = "#584532ff"
 	taste_description = "cookies and sugar"
 	quality = DRINK_GOOD
-	glass_icon_state = "oreo_classic"
-	glass_name = "oreo shake"
+	glass_icon_state = "cookiecream_classic"
+	glass_name = "cookiecream shake"
 	glass_desc = "For when you feel like pouring cookies down your throat."
 	shot_glass_icon_state = "shotglassbrown"
 	use_gs_icon = TRUE

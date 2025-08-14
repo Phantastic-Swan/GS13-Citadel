@@ -60,23 +60,23 @@
 	results = list(/datum/reagent/consumable/heavy_cafe = 3)
 	required_reagents = list(/datum/reagent/consumable/cafe_latte = 1, /datum/reagent/consumable/sugar = 1, /datum/reagent/consumable/cream = 1)
 
-/datum/chemical_reaction/oreo_classic
+/datum/chemical_reaction/cookiecream_classic
 	name = "Oreo Classic"
-	id = /datum/reagent/consumable/oreo_classic
-	results = list(/datum/reagent/consumable/oreo_classic = 3)
+	id = /datum/reagent/consumable/cookiecream_classic
+	results = list(/datum/reagent/consumable/cookiecream_classic = 3)
 	required_reagents = list(/datum/reagent/consumable/flour = 2, /datum/reagent/consumable/sugar = 2, /datum/reagent/consumable/coco = 1)
 
-/datum/chemical_reaction/oreo_milky
+/datum/chemical_reaction/cookiecream_milky
 	name = "Oreo Milky"
-	id = /datum/reagent/consumable/oreo_milky
-	results = list(/datum/reagent/consumable/oreo_milky = 3)
+	id = /datum/reagent/consumable/cookiecream_milky
+	results = list(/datum/reagent/consumable/cookiecream_milky = 3)
 	required_reagents = list(/datum/reagent/consumable/flour = 2, /datum/reagent/consumable/sugar = 2, /datum/reagent/consumable/milk = 1)
 
-/obj/item/reagent_containers/food/snacks/store/cake/hugeoreo
-	name = "GlucoBomb Oreo Cookieshake"
+/obj/item/reagent_containers/food/snacks/store/cake/hugecookiecream
+	name = "GlucoBomb Cookies and Cream Cakeshake"
 	desc = "Are you out of your fucking mind?"
 	icon = 'GainStation13/icons/obj/food/food64x64.dmi'
-	icon_state = "oreo_huge"
+	icon_state = "cookiecream_huge"
 	pixel_x = -16
 	pixel_y = -16
 	inhand_x_dimension = 64
@@ -94,5 +94,5 @@
 		/datum/reagent/consumable/milk = 100,
 		/datum/reagent/consumable/cream = 50
 	)
-	result = /obj/item/reagent_containers/food/snacks/store/cake/hugeoreo
+	result = /obj/item/reagent_containers/food/snacks/store/cake/hugecookiecream
 	subcategory = CAT_CAKE
