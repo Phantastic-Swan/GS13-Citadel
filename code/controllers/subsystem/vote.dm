@@ -438,7 +438,7 @@ SUBSYSTEM_DEF(vote)
 				to_chat(usr, "<span class='warning'>A vote was initiated recently, you must wait [DisplayTimeText(next_allowed_time-world.time)] before a new vote can be started!</span>")
 				return FALSE
 
-		SEND_SOUND(world, sound('sound/misc/notice2.ogg'))
+		SEND_SOUND(world, sound('GainStation13/sound/misc/vote_started.ogg')) //gs13 - our own more noticeable version
 		reset()
 		display_votes = display //CIT CHANGE - adds obfuscated votes
 		switch(vote_type)
