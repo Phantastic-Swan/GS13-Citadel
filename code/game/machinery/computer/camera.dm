@@ -267,7 +267,9 @@
 /obj/machinery/computer/security/telescreen/entertainment
 	name = "entertainment monitor"
 	desc = "Damn, they better have the /tg/ channel on these things."
-	icon = 'icons/obj/status_display.dmi'
+	// GS13 EDIT
+	icon = 'GainStation13/icons/obj/status_display.dmi'
+	// GS13 END EDIT
 	icon_state = "entertainment_blank"
 	network = list("thunder")
 	density = FALSE
