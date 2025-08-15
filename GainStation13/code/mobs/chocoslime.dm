@@ -158,7 +158,7 @@
 
 /mob/living/simple_animal/hostile/fatten/CanAttack(atom/the_target)
 	var/mob/living/carbon/target = the_target
-	if(!istype(the_target)|| !check_target_prefs(target))
+	if(!istype(target)|| !check_target_prefs(target))
 		return FALSE
 
 	return ..()
