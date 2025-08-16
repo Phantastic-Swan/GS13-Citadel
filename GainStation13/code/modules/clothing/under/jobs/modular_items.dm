@@ -23,6 +23,9 @@
 
 /obj/item
 	var/modular_icon_location = null	//Locates the sprites, null if it is not a modular item. Changing this makes the item modular
+	var/secondary_modular_icon = null	//Secondary icon for modular sprite, for when you have sprites that use 2 colors. If null it only has one tone
+	var/modular_color_overlay = null	//Color used for sprites from modular_icon_location
+	var/modular_secondary_color = null	//Color used for sprites from secondary_modular_icon
 	var/mod_overlays = list()			//Keeps track of the modular sprite overlays for the item
 	var/mod_breasts_rec					//Records the last used sprite for breasts to avoid building sprites if no change occurred
 	var/mod_butt_rec					//^^^ for butt
@@ -135,10 +138,19 @@
 // No. Damn. Clue. SS13, I don't question it further.
 //
 /obj/item/proc/add_modular_overlay(mob/living/carbon/U, modular_icon, modular_layer, sprite_color)
-	var/mutable_appearance/mod_overlay = mutable_appearance(modular_icon_location, modular_icon, -(modular_layer), color = sprite_color)
+	var/mutable_appearance/mod_overlay
+	if (isnull(modular_color_overlay))
+		mod_overlay = mutable_appearance(modular_icon_location, modular_icon, -(modular_layer), color = sprite_color)
+	else
+		mod_overlay = mutable_appearance(modular_icon_location, modular_icon, -(modular_layer), color = modular_color_overlay)
 	mod_overlays += mod_overlay
 	U.overlays_standing[modular_layer] =  mod_overlay
 	U.apply_overlay(modular_layer)
+	if (!isnull(secondary_modular_icon))	
+		var/mutable_appearance/mod_overlay_secondary = mutable_appearance(secondary_modular_icon, modular_icon, -(modular_layer), color = modular_secondary_color)
+		mod_overlays += mod_overlay_secondary
+		U.overlays_standing[modular_layer] = mod_overlay_secondary
+		U.apply_overlay(modular_layer)
 
 //General function to generate the right icon_state for belly modular sprites
 /obj/item/proc/get_modular_belly(obj/item/organ/genital/G)
@@ -259,3 +271,17 @@
 	desc = "Grey only in name"
 	color = "#004B8F"
 	armor = list(MELEE = 0, BULLET = 0, LASER = 0,ENERGY = 0, BOMB = 0, BIO = 0, RAD = 0, FIRE = 0, ACID = 0, WOUND = 15)
+
+
+/obj/item/clothing/under/color/grey/dual_tone/engineering
+	name = "Engineering 2-tone jumpsuit (Modular)"
+	desc = "Now with stripes!"
+	// icon = 'GainStation13/icons/mob/modclothes/dual_tone_suit_main.dmi'
+	mob_overlay_icon = 'GainStation13/icons/mob/modclothes/dual_tone_suit_main.dmi'
+	icon_state = "engineering"
+	// item_state = "engineering"
+	modular_icon_location = 'GainStation13/icons/mob/modclothes/dual_tone_suit_main.dmi'
+	secondary_modular_icon = 'GainStation13/icons/mob/modclothes/dual_tone_suit_stripe.dmi'
+	// color = "#FF8800"
+	modular_color_overlay = "#FF8800"
+	modular_secondary_color = "#FFFF00"
