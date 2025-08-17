@@ -4047,6 +4047,7 @@
 #include "GainStation13\code\modules\client\loadout\uniform.dm"
 #include "GainStation13\code\modules\client\preferences\preferences.dm"
 #include "GainStation13\code\modules\clothing\under\jobs\modular_items.dm"
+#include "GainStation13\code\modules\clothing\under\jobs\modular_clothing\dual_tone.dm"
 #include "GainStation13\code\modules\events\bluespace_belt_failure.dm"
 #include "GainStation13\code\modules\events\disease_outbreak_light.dm"
 #include "GainStation13\code\modules\events\light_processor_overload.dm"

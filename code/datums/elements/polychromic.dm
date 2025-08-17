@@ -16,9 +16,15 @@
 	var/static/list/suits_with_helmet_typecache = typecacheof(list(/obj/item/clothing/suit/hooded, /obj/item/clothing/suit/space/hardsuit))
 	var/list/helmet_by_suit = list() //because poly winter coats exist.
 	var/list/suit_by_helmet = list() //Idem.
+	// GS13 EDIT - allow it to not be modifiable by the user (used by dual tone suits)
+	var/modifiable_by_user = TRUE
+	// GS13 END EDIT
 
-/datum/element/polychromic/Attach(datum/target, list/colors, states, _flags = POLYCHROMIC_ACTION|POLYCHROMIC_NO_HELD, _icon, _worn, list/names = list("Primary", "Secondary", "Tertiary", "Quaternary", "Quinary", "Senary"))
+// GS13 EDIT - allow it to not be modifiable by the user 
+/datum/element/polychromic/Attach(datum/target, list/colors, states, _flags = POLYCHROMIC_ACTION|POLYCHROMIC_NO_HELD, _icon, _worn, list/names = list("Primary", "Secondary", "Tertiary", "Quaternary", "Quinary", "Senary"), can_be_modified = TRUE)
 	. = ..()
+	modifiable_by_user = can_be_modified
+	// GS13 END EDIT
 	var/make_appearances = islist(states)
 	var/states_len = make_appearances ? length(states) : states
 	var/names_len = length(names)
@@ -54,7 +60,9 @@
 			overlays_names.len += diff
 
 	if(isitem(A))
-		if(_flags & POLYCHROMIC_ACTION)
+		// GS13 EDIT - allow it to not be modifiable by the user 
+		if(_flags & POLYCHROMIC_ACTION && modifiable_by_user)
+		// GS13 END EDIT
 			RegisterSignal(A, COMSIG_ITEM_EQUIPPED, PROC_REF(grant_user_action))
 			RegisterSignal(A, COMSIG_ITEM_DROPPED, PROC_REF(remove_user_action))
 		if(!(_flags & POLYCHROMIC_NO_WORN) || !(_flags & POLYCHROMIC_NO_HELD))
@@ -146,6 +154,10 @@
 /datum/element/polychromic/proc/grant_user_action(atom/source, mob/user, slot)
 	if(slot == ITEM_SLOT_BACKPACK || slot == ITEM_SLOT_LEGCUFFED || slot == ITEM_SLOT_HANDCUFFED || slot == ITEM_SLOT_DEX_STORAGE)
 		return
+	// GS13 EDIT - allow it to not be modifiable by the user 
+	if (!modifiable_by_user)
+		return
+	// GS13 END EDIT
 	var/datum/action/item_action/polychromic/P = actions_by_atom[source]
 	if(!P)
 		P = new (source)
