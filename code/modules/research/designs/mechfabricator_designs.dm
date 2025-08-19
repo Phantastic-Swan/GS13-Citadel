@@ -72,6 +72,16 @@
 	construction_time = 100
 	category = list("Ripley")
 
+//GS13: MK-II Ripley Kit
+/datum/design/ripleyupgrade
+	name = "Ripley MK-1 to MK-II Conversion Kit"
+	id = "ripleyupgrade"
+	build_type = MECHFAB
+	build_path = /obj/item/mecha_parts/mecha_equipment/ripleyupgrade
+	materials = list(/datum/material/iron=10000,/datum/material/plasma=10000)
+	construction_time = 100
+	category = list("Ripley")
+
 //firefighter subtype
 /datum/design/firefighter_chassis
 	name = "Exosuit Chassis (APLU \"Firefighter\")"
