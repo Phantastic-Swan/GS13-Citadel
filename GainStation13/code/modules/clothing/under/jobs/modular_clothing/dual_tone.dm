@@ -189,4 +189,4 @@
 /obj/item/clothing/under/color/dual_tone/centcom
 	name = "CentComs Officer dual tone jumpsuit (Modular)"
 	desc = "Dual tone, black jumpsuit with deep purple stripes. Worn by representatives of GATO corporation."
-	suit_colors = list("#24242B", "#CE1496")
+	suit_colors = list("#1a1a20", "#ee2cb4")

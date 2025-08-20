@@ -264,24 +264,23 @@
 	name = "White dual tone jumpsuit"
 	desc = "A dual tone colored jumpsuit. Check those stripes out baby!"
 
-	modular_icon_location = 'GainStation13/icons/mob/modclothes/dual_tone_suit_main.dmi'
-	var/secondary_modular_icon = 'GainStation13/icons/mob/modclothes/dual_tone_suit_stripe.dmi'	//Secondary icon for modular sprite, for when you have sprites that use 2 colors. If null it only has one tone
+	modular_icon_location = 'GainStation13/icons/mob/modclothes/dual_tone_suit.dmi'
 	var/list/suit_colors = list("#FFFFFF", "#FFFFFF")
 
 	icon = 'GainStation13/icons/obj/clothing/modclothes/dual_tone_suit.dmi'
-	mob_overlay_icon = 'GainStation13/icons/mob/modclothes/dual_tone_suit_main.dmi'
-	icon_state = "polychromic_jumpsuit"
+	mob_overlay_icon = 'GainStation13/icons/mob/modclothes/dual_tone_suit.dmi'
+	icon_state = "dual_tone_jumpsuit"
 
 /obj/item/clothing/under/color/dual_tone/add_modular_overlay(mob/living/carbon/U, modular_icon, modular_layer, sprite_color)
-	var/mutable_appearance/mod_overlay = mutable_appearance(modular_icon_location, modular_icon, -(modular_layer), color = suit_colors[1])
+	var/mutable_appearance/mod_overlay = mutable_appearance(modular_icon_location, modular_icon, -(modular_layer))
 	mod_overlays += mod_overlay
 	U.overlays_standing[modular_layer] =  mod_overlay
 	U.apply_overlay(modular_layer)
-	// if (!isnull(secondary_modular_icon))	
-	var/mutable_appearance/mod_overlay_secondary = mutable_appearance(secondary_modular_icon, (modular_icon+"-1"), -(modular_layer), color = suit_colors[2])
-	mod_overlays += mod_overlay_secondary
-	U.overlays_standing[modular_layer] = mod_overlay_secondary
-	U.apply_overlay(modular_layer)
+	for (var/i = 1, i < 3, i++)
+		mod_overlay = mutable_appearance(modular_icon_location, (modular_icon + "-" + num2text(i)), -(modular_layer), color = suit_colors[i])
+		mod_overlays += mod_overlay
+		U.overlays_standing[modular_layer] =  mod_overlay
+		U.apply_overlay(modular_layer)
 
 /obj/item/clothing/under/color/dual_tone/ComponentInitialize()
 	. = ..()
