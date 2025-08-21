@@ -9,6 +9,7 @@
 	new /obj/item/clothing/head/beret/ce(src)
 	new /obj/item/clothing/under/rank/engineering/chief_engineer(src)
 	new /obj/item/clothing/under/rank/engineering/chief_engineer/skirt(src)
+	new /obj/item/clothing/under/color/dual_tone/engineering/chief(src)	// GS13 EDIT
 	new /obj/item/clothing/head/hardhat/white(src)
 	new /obj/item/clothing/head/hardhat/weldhat/white(src)
 	new /obj/item/clothing/gloves/color/yellow/ce(src)
@@ -17,7 +18,7 @@
 	new /obj/item/radio/headset/heads/ce(src)
 	new /obj/item/megaphone/command(src)
 	new /obj/item/areaeditor/blueprints(src)
-	new /obj/item/holosign_creator/engineering(src)
+	new /obj/item/holosign_creator/atmos(src)	// GS13 EDIT - not even I use the engi holosign projector
 	new /obj/item/assembly/flash/handheld(src)
 	new /obj/item/clothing/glasses/meson/engine(src)
 	new /obj/item/door_remote/chief_engineer(src)

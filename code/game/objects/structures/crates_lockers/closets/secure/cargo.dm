@@ -11,6 +11,7 @@
 	new /obj/item/clothing/suit/toggle/labcoat/depjacket/sup/qm(src)
 	new /obj/item/clothing/under/rank/cargo/qm(src)
 	new /obj/item/clothing/under/rank/cargo/qm/skirt(src)
+	new /obj/item/clothing/under/color/dual_tone/cargo/quartermaster(src)	// GS13 EDIT
 	new /obj/item/clothing/shoes/sneakers/brown(src)
 	new /obj/item/radio/headset/heads/qm(src)
 	new /obj/item/clothing/suit/fire/firefighter(src)

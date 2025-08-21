@@ -2,12 +2,14 @@
 	name = "\proper captain's locker"
 	req_access = list(ACCESS_CAPTAIN)
 	icon_state = "cap"
+
 /obj/structure/closet/secure_closet/captains/PopulateContents() //Excess clothing and such can be found in the Captain's Wardrobe. You can also find this file in code/modules/vending/wardrobes.
 	..()
 	new /obj/item/clothing/neck/petcollar(src) //I considered removing the pet stuff too but eh, who knows. We might get Renault back. Plus I guess you could use that collar for... other means. Aren't you supposed to be guarding the disk?
 	new /obj/item/pet_carrier(src)
 	new /obj/item/clothing/suit/armor/vest/capcarapace(src)
 	new /obj/item/clothing/suit/toggle/captains_parade(src)
+	new /obj/item/clothing/under/color/dual_tone/command/captain(src)	// GS13 EDIT
 	new /obj/item/clothing/head/crown/fancy(src)
 	new /obj/item/cartridge/captain(src)
 	new /obj/item/storage/box/silver_ids(src)
@@ -24,12 +26,14 @@
 	name = "\proper head of personnel's locker"
 	req_access = list(ACCESS_HOP)
 	icon_state = "hop"
+
 /obj/structure/closet/secure_closet/hop/PopulateContents()
 	..()
 	new /obj/item/clothing/neck/cloak/hop(src)
 	new /obj/item/clothing/under/rank/civilian/head_of_personnel/whimsy(src)
 	new /obj/item/clothing/under/rank/civilian/head_of_personnel(src)
 	new /obj/item/clothing/under/rank/civilian/head_of_personnel/skirt(src)
+	new /obj/item/clothing/under/color/dual_tone/service/head_of_personnel(src)	// GS13 EDIT
 	new /obj/item/clothing/head/hopcap(src)
 	new /obj/item/clothing/head/hopcap/beret(src)
 	new /obj/item/cartridge/hop(src)
@@ -55,6 +59,7 @@
 	name = "\proper head of security's locker"
 	req_access = list(ACCESS_HOS)
 	icon_state = "hos"
+
 /obj/structure/closet/secure_closet/hos/PopulateContents()
 	..()
 	new /obj/item/clothing/neck/cloak/hos(src)
@@ -64,6 +69,7 @@
 	new /obj/item/clothing/under/rank/security/head_of_security/parade/female(src)
 	new /obj/item/clothing/under/rank/security/head_of_security/parade(src)
 	new /obj/item/clothing/under/rank/security/officer/blueshirt/seccorp/hoscorp(src)
+	new /obj/item/clothing/under/color/dual_tone/security/head_of_security(src)	// GS13 EDIT
 	new /obj/item/clothing/suit/armor/vest/leather(src)
 	new /obj/item/clothing/suit/armor/hos(src)
 	new /obj/item/clothing/suit/armor/hos/platecarrier(src)
@@ -96,6 +102,7 @@
 	name = "\proper warden's locker"
 	req_access = list(ACCESS_ARMORY)
 	icon_state = "warden"
+
 /obj/structure/closet/secure_closet/warden/PopulateContents()
 	..()
 	new /obj/item/radio/headset/headset_sec(src)
@@ -107,6 +114,7 @@
 	new /obj/item/clothing/under/rank/security/officer/blueshirt/seccorp/wardencorp(src)
 	new /obj/item/clothing/under/rank/security/warden/formal(src)
 	new /obj/item/clothing/under/rank/security/warden/skirt(src)
+	new /obj/item/clothing/under/color/dual_tone/security/warden(src)	// GS13 EDIT
 	new /obj/item/clothing/glasses/hud/security/sunglasses(src)
 	new /obj/item/holosign_creator/security(src)
 	new /obj/item/clothing/mask/gas/sechailer(src)
@@ -197,6 +205,7 @@
 	..()
 	new /obj/item/clothing/under/rank/prisoner( src )
 	new /obj/item/clothing/under/rank/prisoner/skirt( src )
+	new /obj/item/clothing/under/color/dual_tone/prisonner(src)	// GS13 EDIT
 	new /obj/item/clothing/shoes/sneakers/orange( src )
 	new /obj/item/radio/headset/headset_prisoner( src )
 
