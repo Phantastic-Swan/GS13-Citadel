@@ -53,18 +53,19 @@
     icon_state = "paramed_secure"
 
 /obj/structure/closet/secure_closet/paramedic/PopulateContents()
-    ..()
-    new /obj/item/clothing/suit/toggle/labcoat/paramedic(src)
-    new /obj/item/clothing/under/rank/medical/paramedic(src)
-    new /obj/item/clothing/under/rank/medical/paramedic/skirt(src)
-    new /obj/item/radio/headset/headset_med(src)
-    new /obj/item/defibrillator/loaded(src)
-    new /obj/item/clothing/gloves/color/latex/nitrile(src)
-    new /obj/item/storage/belt/medical(src)
-    new /obj/item/clothing/glasses/hud/health(src)
-    new /obj/item/pinpointer/crew(src)
-    new /obj/item/sensor_device(src)
-    return
+	..()
+	new /obj/item/clothing/suit/toggle/labcoat/paramedic(src)
+	new /obj/item/clothing/under/rank/medical/paramedic(src)
+	new /obj/item/clothing/under/rank/medical/paramedic/skirt(src)
+	new /obj/item/clothing/under/color/dual_tone/medbay/paramedic(src)	// GS13 EDIT
+	new /obj/item/radio/headset/headset_med(src)
+	new /obj/item/defibrillator/loaded(src)
+	new /obj/item/clothing/gloves/color/latex/nitrile(src)
+	new /obj/item/storage/belt/medical(src)
+	new /obj/item/clothing/glasses/hud/health(src)
+	new /obj/item/pinpointer/crew(src)
+	new /obj/item/sensor_device(src)
+	return
 
 /obj/structure/closet/secure_closet/CMO
 	name = "\proper chief medical officer's locker"
@@ -82,6 +83,7 @@
 	new /obj/item/clothing/under/rank/medical/chief_medical_officer(src)
 	new /obj/item/clothing/under/rank/medical/chief_medical_officer/skirt(src)
 	new /obj/item/clothing/under/rank/medical/chief_medical_officer/turtleneck(src)
+	new /obj/item/clothing/under/color/dual_tone/medbay/chief_medical_officer(src)	// GS13 EDIT
 	new /obj/item/clothing/shoes/sneakers/brown	(src)
 	new /obj/item/cartridge/cmo(src)
 	new /obj/item/radio/headset/heads/cmo(src)

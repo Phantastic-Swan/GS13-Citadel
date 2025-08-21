@@ -259,3 +259,29 @@
 	desc = "Grey only in name"
 	color = "#004B8F"
 	armor = list(MELEE = 0, BULLET = 0, LASER = 0,ENERGY = 0, BOMB = 0, BIO = 0, RAD = 0, FIRE = 0, ACID = 0, WOUND = 15)
+
+/obj/item/clothing/under/color/dual_tone
+	name = "White dual tone jumpsuit"
+	desc = "A dual tone colored jumpsuit. Check those stripes out baby!"
+
+	modular_icon_location = 'GainStation13/icons/mob/modclothes/dual_tone_suit.dmi'
+	var/list/suit_colors = list("#FFFFFF", "#FFFFFF")
+
+	icon = 'GainStation13/icons/obj/clothing/modclothes/dual_tone_suit.dmi'
+	mob_overlay_icon = 'GainStation13/icons/mob/modclothes/dual_tone_suit.dmi'
+	icon_state = "dual_tone_jumpsuit"
+
+/obj/item/clothing/under/color/dual_tone/add_modular_overlay(mob/living/carbon/U, modular_icon, modular_layer, sprite_color)
+	var/mutable_appearance/mod_overlay = mutable_appearance(modular_icon_location, modular_icon, -(modular_layer))
+	mod_overlays += mod_overlay
+	U.overlays_standing[modular_layer] =  mod_overlay
+	U.apply_overlay(modular_layer)
+	for (var/i = 1, i < 3, i++)
+		mod_overlay = mutable_appearance(modular_icon_location, (modular_icon + "-" + num2text(i)), -(modular_layer), color = suit_colors[i])
+		mod_overlays += mod_overlay
+		U.overlays_standing[modular_layer] =  mod_overlay
+		U.apply_overlay(modular_layer)
+
+/obj/item/clothing/under/color/dual_tone/ComponentInitialize()
+	. = ..()
+	AddElement(/datum/element/polychromic, suit_colors, 2, can_be_modified = FALSE)
