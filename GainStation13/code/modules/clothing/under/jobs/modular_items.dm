@@ -285,3 +285,28 @@
 /obj/item/clothing/under/color/dual_tone/ComponentInitialize()
 	. = ..()
 	AddElement(/datum/element/polychromic, suit_colors, 2, can_be_modified = FALSE)
+
+/obj/item/clothing/under/color/dual_tone/get_belly_size(obj/item/organ/genital/G)
+	var/size = G.size
+	if(G.size > 9)
+		size = 9
+	var/shape = "soft"
+	// if(G.owner.fullness <= FULLNESS_LEVEL_BLOATED)
+	// 	switch(G.shape)
+	// 		if("Soft Belly")
+	// 			shape = "soft"
+	// 		if("Round Belly")
+	// 			shape = "round"
+	// else
+	// 	shape = "stuffed"
+	var/stuffed_modifier
+	switch(G.owner.fullness)
+		if(FULLNESS_LEVEL_BLOATED to FULLNESS_LEVEL_BEEG) // Take the stuffed sprite of the same size
+			stuffed_modifier = 0
+		if(FULLNESS_LEVEL_BEEG to FULLNESS_LEVEL_NOMOREPLZ) // Take the stuffed sprite of size + 1
+			stuffed_modifier = 1
+		if(FULLNESS_LEVEL_NOMOREPLZ to INFINITY)// Take the stuffed sprite of size + 2
+			stuffed_modifier = 2
+	size = size + stuffed_modifier
+
+	return "[shape]_[size]"
