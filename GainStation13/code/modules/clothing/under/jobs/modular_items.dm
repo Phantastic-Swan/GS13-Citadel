@@ -269,6 +269,7 @@
 
 	icon = 'GainStation13/icons/obj/clothing/modclothes/dual_tone_suit.dmi'
 	mob_overlay_icon = 'GainStation13/icons/mob/modclothes/dual_tone_suit.dmi'
+	anthro_mob_worn_overlay = 'GainStation13/icons/mob/modclothes/dual_tone_suit.dmi'
 	icon_state = "dual_tone_jumpsuit"
 
 /obj/item/clothing/under/color/dual_tone/add_modular_overlay(mob/living/carbon/U, modular_icon, modular_layer, sprite_color)
