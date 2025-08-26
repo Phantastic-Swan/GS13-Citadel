@@ -792,9 +792,9 @@
 	},
 /obj/machinery/door/airlock/external{
 	name = "Mining Dock Airlock";
-	req_access_txt = "48";
 	shuttledocked = 1;
-	dir = 8
+	dir = 8;
+	req_one_access_txt = "12, 48"
 	},
 /turf/open/floor/plasteel,
 /area/maintenance/aft/secondary)
@@ -2889,9 +2889,9 @@
 	},
 /obj/machinery/door/airlock/external{
 	name = "Mining Dock Airlock";
-	req_access_txt = "48";
 	shuttledocked = 1;
-	dir = 8
+	dir = 8;
+	req_one_access_txt = "12, 48"
 	},
 /turf/open/floor/plating,
 /area/maintenance/aft/secondary)
@@ -38951,6 +38951,20 @@
 /area/engineering/atmospherics_engine{
 	name = "Supermatter Engine"
 	})
+"pJs" = (
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/obj/docking_port/stationary{
+	dir = 4;
+	dwidth = 11;
+	height = 22;
+	name = "SS13: Auxiliary Dock, Station-Port";
+	width = 35;
+	shuttle_id = "whiteship_home"
+	},
+/turf/open/floor/plating/snowed/smoothed/icemoon,
+/area/icemoon/surface/outdoors)
 "pJt" = (
 /obj/effect/spawner/structure/window/reinforced,
 /turf/open/floor/plating,
@@ -39367,9 +39381,9 @@
 /obj/structure/fans/tiny,
 /obj/machinery/door/airlock/external{
 	name = "Mining Dock Airlock";
-	req_access_txt = "48";
 	shuttledocked = 1;
-	dir = 8
+	dir = 8;
+	req_one_access_txt = "12, 48"
 	},
 /turf/open/floor/plating,
 /area/maintenance/aft/secondary)
@@ -48739,9 +48753,9 @@
 	},
 /obj/machinery/door/airlock/external{
 	name = "Mining Dock Airlock";
-	req_access_txt = "48";
 	shuttledocked = 1;
-	dir = 8
+	dir = 8;
+	req_one_access_txt = "12, 48"
 	},
 /turf/open/floor/plating,
 /area/maintenance/aft/secondary)
@@ -49748,9 +49762,9 @@
 /obj/structure/fans/tiny,
 /obj/machinery/door/airlock/external{
 	name = "Mining Dock Airlock";
-	req_access_txt = "48";
 	shuttledocked = 1;
-	dir = 8
+	dir = 8;
+	req_one_access_txt = "12, 48"
 	},
 /turf/open/floor/plating,
 /area/maintenance/aft/secondary)
@@ -57239,9 +57253,9 @@
 	},
 /obj/machinery/door/airlock/external{
 	name = "Mining Dock Airlock";
-	req_access_txt = "48";
 	shuttledocked = 1;
-	dir = 8
+	dir = 8;
+	req_one_access_txt = "12, 48"
 	},
 /turf/open/floor/plasteel,
 /area/maintenance/aft/secondary)
@@ -232407,9 +232421,9 @@ btn
 sgP
 btn
 btn
-btn
-btn
-btn
+sgP
+sgP
+sgP
 sgP
 sgP
 sgP
@@ -232933,7 +232947,7 @@ sgP
 sgP
 sgP
 fNb
-hLl
+pJs
 rIA
 fNb
 sgP
@@ -233183,8 +233197,8 @@ btn
 btn
 btn
 btn
-btn
-btn
+sgP
+sgP
 sgP
 sgP
 sgP
@@ -233441,8 +233455,8 @@ btn
 btn
 btn
 btn
-btn
-btn
+sgP
+sgP
 sgP
 sgP
 sgP
@@ -233698,13 +233712,13 @@ btn
 btn
 btn
 btn
-btn
-btn
-btn
-btn
-btn
-btn
-btn
+sgP
+sgP
+sgP
+sgP
+sgP
+sgP
+sgP
 sgP
 hLl
 sgP
@@ -233955,14 +233969,14 @@ btn
 btn
 btn
 btn
-btn
-btn
-btn
-btn
-btn
-btn
-btn
-btn
+sgP
+sgP
+sgP
+sgP
+sgP
+sgP
+sgP
+sgP
 hLl
 sgP
 btn
@@ -234212,14 +234226,14 @@ btn
 btn
 btn
 btn
-btn
-btn
-btn
-btn
-btn
-btn
-btn
-btn
+sgP
+sgP
+sgP
+sgP
+sgP
+sgP
+sgP
+sgP
 hLl
 sgP
 btn
@@ -234470,13 +234484,13 @@ btn
 btn
 btn
 btn
-btn
-btn
-btn
-btn
-btn
-btn
-btn
+sgP
+sgP
+sgP
+sgP
+sgP
+sgP
+sgP
 hLl
 sgP
 btn
@@ -234727,13 +234741,13 @@ btn
 btn
 btn
 btn
-btn
-btn
-btn
-btn
-btn
-btn
-btn
+sgP
+sgP
+sgP
+sgP
+sgP
+sgP
+sgP
 hLl
 sgP
 btn
@@ -234985,12 +234999,12 @@ btn
 btn
 btn
 btn
-btn
-btn
-btn
-btn
-btn
-btn
+sgP
+sgP
+sgP
+sgP
+sgP
+sgP
 hLl
 sgP
 btn
@@ -235242,12 +235256,12 @@ btn
 btn
 btn
 btn
-btn
-btn
-btn
-btn
-btn
-btn
+sgP
+sgP
+sgP
+sgP
+sgP
+sgP
 hLl
 eKi
 btn
@@ -235499,12 +235513,12 @@ btn
 btn
 btn
 btn
-btn
-btn
-btn
-btn
-btn
-btn
+sgP
+sgP
+sgP
+sgP
+sgP
+sgP
 hLl
 sgP
 btn
@@ -235757,11 +235771,11 @@ btn
 btn
 btn
 btn
-btn
-btn
-btn
-btn
-btn
+sgP
+sgP
+sgP
+sgP
+sgP
 hLl
 sgP
 btn
@@ -236014,11 +236028,11 @@ btn
 btn
 btn
 btn
-btn
-btn
-btn
-btn
-btn
+sgP
+sgP
+sgP
+sgP
+sgP
 hLl
 sgP
 btn
