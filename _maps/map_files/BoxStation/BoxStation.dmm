@@ -7245,7 +7245,7 @@
 "fzN" = (/obj/structure/disposalpipe/segment,/turf/open/floor/plasteel/showroomfloor,/area/security/warden)
 "fAL" = (/obj/effect/mapping_helpers/airlock/cyclelink_helper{dir = 4},/obj/machinery/door/airlock/external{req_access_txt = "13"; dir = 4},/turf/open/floor/plating,/area/maintenance/fore/secondary)
 "fAN" = (/obj/docking_port/stationary{dir = 8; dwidth = 2; height = 5; shuttle_id = "laborcamp_home"; name = "fore bay 1"; roundstart_template = /datum/map_template/shuttle/labour/box; width = 9},/turf/open/space/basic,/area/space)
-"fBl" = (/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{dir = 4},/obj/machinery/washing_machine,/obj/effect/turf_decal/loading_area{dir = 1; icon_state = "drain"; name = "drain"},/turf/open/floor/plasteel/freezer,/area/crew_quarters/fitness/sauna)
+"fBl" = (/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{dir = 4},/obj/machinery/gear_painter,/obj/effect/turf_decal/loading_area{dir = 1; icon_state = "drain"; name = "drain"},/turf/open/floor/plasteel/freezer,/area/crew_quarters/fitness/sauna)
 "fDC" = (/obj/machinery/light,/obj/effect/turf_decal/tile/red,/obj/effect/turf_decal/tile/red{dir = 8},/obj/machinery/atmospherics/pipe/simple/supply/hidden,/turf/open/floor/plasteel,/area/security/brig)
 "fEc" = (/obj/structure/table/reinforced,/obj/item/reagent_containers/food/snacks/burger/cheese,/obj/item/ashtray{pixel_y = -15},/turf/open/floor/carpet,/area/cargo/miningdock)
 "fFW" = (/obj/effect/turf_decal/tile/red{dir = 4},/obj/effect/turf_decal/tile/red,/obj/effect/turf_decal/tile/red{dir = 1},/obj/effect/decal/cleanable/dirt,/obj/machinery/light{dir = 4},/turf/open/floor/plasteel,/area/security/prison/cells)

@@ -53401,7 +53401,7 @@
 /obj/effect/turf_decal/tile/neutral{
 	dir = 4
 	},
-/obj/machinery/washing_machine,
+/obj/machinery/gear_painter,
 /obj/machinery/airalarm{
 	dir = 4;
 	pixel_x = -22

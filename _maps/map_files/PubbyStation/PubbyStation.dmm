@@ -8427,7 +8427,7 @@
 /turf/open/floor/plasteel/cafeteria,
 /area/commons/dorms)
 "aqU" = (
-/obj/machinery/washing_machine,
+/obj/machinery/gear_painter,
 /obj/machinery/requests_console{
 	department = "Crew Quarters";
 	pixel_y = 30
