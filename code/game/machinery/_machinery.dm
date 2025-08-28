@@ -242,7 +242,9 @@ Class Procs:
 				continue
 			if(isliving(AM))
 				var/mob/living/L = am
-				if(L.buckled || L.mob_size >= MOB_SIZE_LARGE)
+				// GS13 EDIT - stupid fucking exception to allow HUGE FUCKING BLOBS to be buckled to adipoelectric generators
+				if(L.buckled || (L.mob_size >= MOB_SIZE_LARGE && !istype(src, /obj/machinery/power/adipoelectric_generator)))
+				// GS13 END EDIT
 					continue
 			target = am
 

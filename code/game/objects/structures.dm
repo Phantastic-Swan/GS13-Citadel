@@ -79,6 +79,15 @@
 		adjusted_climb_time *= 0.25 //aliens are terrifyingly fast
 	if(HAS_TRAIT(user, TRAIT_FREERUNNING)) //do you have any idea how fast I am???
 		adjusted_climb_time *= 0.8
+	// GS13 EDIT - slower climb speed from being a big, round fatty...
+	if(istype(user, /mob/living/carbon))
+		var/mob/living/carbon/human = user
+		var/slowdown_from_weight = (human.fatness - FATNESS_LEVEL_VERYFAT)/(2*(FATNESS_LEVEL_IMMOBILE - FATNESS_LEVEL_VERYFAT)) + 1
+		if(slowdown_from_weight > 1)
+			user.visible_message("<span class='warning'>It appears [user] increased weight causes them problems as they climb onto [src]...</span>", \
+								"<span class='notice'>It appears your increased weight causes you problems as you climb onto [src]...</span>")
+		adjusted_climb_time *= clamp(slowdown_from_weight, 1, 1.5)
+	// GS13 END EDIT
 	structureclimber = user
 	if(do_mob(user, user, adjusted_climb_time))
 		if(src.loc) //Checking if structure has been destroyed

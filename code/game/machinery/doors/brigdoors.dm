@@ -18,7 +18,9 @@
 /////////////////////////////////////////////////////////////////////////////////////////////////
 /obj/machinery/door_timer
 	name = "door timer"
-	icon = 'icons/obj/status_display.dmi'
+	// GS13 EDIT
+	icon = 'GainStation13/icons/obj/status_display.dmi'
+	// GS13 END EDIT
 	icon_state = "frame"
 	desc = "A remote control for a door."
 	plane = ABOVE_WALL_PLANE
@@ -177,7 +179,9 @@
 	if(maptext)
 		maptext = ""
 	cut_overlays()
-	add_overlay(mutable_appearance('icons/obj/status_display.dmi', state))
+	// GS13 EDIT
+	add_overlay(mutable_appearance('GainStation13/icons/obj/status_display.dmi', state))
+	// GS13 END EDIT
 
 
 //Checks to see if there's 1 line or 2, adds text-icons-numbers/letters over display
